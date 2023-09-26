@@ -119,11 +119,11 @@ function Footer({
     form: { placeholder: "", buttonText: "", helpText: "" },
   },
   sections = [{
-    "label": "Sobre",
+    "label": "Home",
     "items": [
       {
-        "href": "/quem-somos",
-        "label": "Quem somos",
+        "href": "/sobre-nos",
+        "label": "Sobre Nós",
       },
       {
         "href": "/termos-de-uso",
