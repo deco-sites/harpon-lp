@@ -1,5 +1,7 @@
 {
   "imports": {
+    "deco-sites/harpon-lp/": "./",
+
     "$store/": "./",
     "apps/": "https://denopkg.com/deco-cx/apps@0.9.13/",
     "$fresh/": "https://denopkg.com/deco-cx/fresh@1.3.6/",
