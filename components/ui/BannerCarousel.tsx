@@ -123,14 +123,14 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
         />
       </Picture>
       {action && (
-        <div class="absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 p-4 rounded glass">
-          <span class="text-6xl font-medium text-base-100">
+        <div class="hidden absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px]  flex-col gap-4 p-4 rounded">
+          <span class="text-[32px] font-semibold text-base-100">
             {action.title}
           </span>
-          <span class="font-medium text-xl text-base-100">
+          <span class=" hidden font-medium text-xl text-base-100">
             {action.subTitle}
           </span>
-          <Button class="glass">{action.label}</Button>
+          <Button class=" hidden glass">{action.label}</Button>
         </div>
       )}
     </a>
@@ -172,7 +172,7 @@ function Dots({ images, interval = 0 }: Props) {
 function Buttons() {
   return (
     <>
-      <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
+      <div class=" hidden  items-center justify-center z-10 col-start-1 row-start-2">
         <Slider.PrevButton class="btn btn-circle glass">
           <Icon
             class="text-base-100"
@@ -182,7 +182,7 @@ function Buttons() {
           />
         </Slider.PrevButton>
       </div>
-      <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
+      <div class="hidden items-center justify-center z-10 col-start-3 row-start-2">
         <Slider.NextButton class="btn btn-circle glass">
           <Icon
             class="text-base-100"

@@ -7,6 +7,7 @@ import CartButtonWake from "$store/islands/Header/Cart/wake.tsx";
 import CartButtonShopify from "$store/islands/Header/Cart/shopify.tsx";
 import Searchbar from "$store/islands/Header/Searchbar.tsx";
 import Image from "apps/website/components/Image.tsx";
+import HamburguerMenu from "$store/islands/Header/HamburguerMenu.tsx";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
 import type { INavItem } from "./NavItem.tsx";
 import NavItem from "./NavItem.tsx";
@@ -47,8 +48,9 @@ function Navbar({ items, searchbar, logo }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
-        <div class="flex-none w-44">
+      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 h-20">
+        <HamburguerMenu />
+        <div class="flex-none w-44 mt-[-150px] ml-[-130px]">
           {logo && (
             <a
               href="/"
@@ -59,31 +61,10 @@ function Navbar({ items, searchbar, logo }: {
             </a>
           )}
         </div>
-        <div class="flex-auto flex justify-center">
+        <div class="flex-auto flex justify-end ml-[500px] gap-[10px] text-white font-bold ">
           {items.map((item) => <NavItem item={item} />)}
         </div>
         <div class="flex-none w-44 flex items-center justify-end gap-2">
-          <SearchButton />
-          <Searchbar searchbar={searchbar} />
-          <a
-            class="btn btn-circle btn-sm btn-ghost"
-            href="/login"
-            aria-label="Log in"
-          >
-            <Icon id="User" size={24} strokeWidth={0.4} />
-          </a>
-          <a
-            class="btn btn-circle btn-sm btn-ghost"
-            href="/wishlist"
-            aria-label="Wishlist"
-          >
-            <Icon
-              id="Heart"
-              size={24}
-              strokeWidth={2}
-              fill="none"
-            />
-          </a>
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
           {platform === "wake" && <CartButtonWake />}

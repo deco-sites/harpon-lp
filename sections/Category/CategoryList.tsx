@@ -1,6 +1,10 @@
 import Header from "$store/components/ui/SectionHeader.tsx";
 import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
+import SimpleText from "$store/components/news/SimpleText.tsx";
+import ImagesProducts from "$store/components/news/ImagesProducts.tsx";
+import Diferencials from "$store/components/news/Diferencials.tsx";
+import FeaturedProducts from "$store/components/news/FeaturedProducts.tsx";
 import { useId } from "$store/sdk/useId.ts";
 import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
@@ -39,7 +43,7 @@ function CardText(
 ) {
   return (
     <div
-      class={`flex flex-col ${
+      class={`hidden flex-col ${
         alignment === "center" ? "text-center" : "text-left"
       }`}
     >
@@ -80,15 +84,19 @@ function CategoryList(props: Props) {
   return (
     <div
       id={id}
-      class="container py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10"
+      class="py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10"
     >
+      <SimpleText />
+      <ImagesProducts />
+      <Diferencials />
+      <FeaturedProducts />
       <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
       />
 
-      <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5">
+      <Slider class="hidden carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5">
         {list.map((
           { tag, label, description, href, image, buttonText },
           index,

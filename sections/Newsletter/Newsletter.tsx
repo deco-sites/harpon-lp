@@ -85,7 +85,7 @@ export default function Newsletter(props: Props) {
 
   return (
     <div
-      class={`${
+      class={`hidden ${
         bordered
           ? isReverse ? "bg-secondary-content" : "bg-secondary"
           : bgLayout

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="48" viewBox="0 0 168 48">
+  <g id="botão_comprar" data-name="botão comprar" transform="translate(-783 -695)">
+    <g id="Retângulo_19" data-name="Retângulo 19" transform="translate(783 695)" fill="none" stroke="#c8c8ca" stroke-width="1">
+      <rect width="168" height="48" stroke="none"/>
+      <rect x="0.5" y="0.5" width="167" height="47" fill="none"/>
+    </g>
+    <text id="comprar" transform="translate(826 725)" fill="#c8c8ca" font-size="16" font-family="AlbertSans-Bold, Albert Sans" font-weight="700"><tspan x="0" y="0">COMPRAR</tspan></text>
+  </g>
+</svg>

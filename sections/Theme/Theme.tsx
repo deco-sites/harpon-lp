@@ -370,7 +370,7 @@ function Section({
     [
       "--font-family",
       font?.family ||
-      "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+      "-apple-system, BlinkMacSystemFont, 'Albert Sans', 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
     ],
   ]
     .map(([name, value]) => ({ name, value }));

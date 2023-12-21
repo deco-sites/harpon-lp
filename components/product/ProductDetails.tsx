@@ -51,12 +51,7 @@ const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 function NotFound() {
   return (
     <div class="w-full flex justify-center items-center py-28">
-      <div class="flex flex-col items-center justify-center gap-6">
-        <span class="font-medium text-2xl">Página não encontrada</span>
-        <a href="/">
-          <Button>Voltar à página inicial</Button>
-        </a>
-      </div>
+      <h1>Teste</h1>
     </div>
   );
 }
@@ -93,6 +88,7 @@ function ProductInfo({ page, layout }: { page: ProductDetailsPage } & Props) {
         itemListElement={breadcrumbList?.itemListElement.slice(0, -1)}
       />
       {/* Code and name */}
+      
       <div class="mt-4 sm:mt-8">
         <div>
           {gtin && (
@@ -361,6 +357,9 @@ function ProductDetails({ page, layout }: Props) {
   return (
     <div class="container py-0 sm:py-10">
       {page ? <Details page={page} layout={layout} /> : <NotFound />}
+    <div>
+      <h1>Teste</h1>
+    </div>
     </div>
   );
 }

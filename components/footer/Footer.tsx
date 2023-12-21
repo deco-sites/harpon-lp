@@ -214,137 +214,70 @@ function Footer({
 
   return (
     <footer
-      class={`w-full flex flex-col pt-10 pb-2 md:pb-10 gap-10 ${
-        ColorClasses(layout)
-      }`}
+      class= 'bg-[#C8C8CA] w-full h-[420px] flex flex-col pt-10 pb-2 md:pb-10 gap-10' 
+       
     >
-      <div class="lg:container mx-6 lg:mx-auto">
-        {(!layout?.variation || layout?.variation == "Variation 1") && (
-          <div class="flex flex-col gap-10">
-            <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap gap-8 lg:gap-12">
-              {_logo}
-              {_sectionLinks}
-              {_newsletter}
-            </div>
-            <Divider />
-            <div class="flex flex-col md:flex-row gap-10 md:gap-14 md:items-end">
-              {_payments}
-              {_social}
-              <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 lg:items-end">
-                {_apps}
-                {_region}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
-            </div>
-          </div>
-        )}
-        {layout?.variation == "Variation 2" && (
-          <div class="flex flex-col gap-10">
-            <div class="flex flex-col md:flex-row gap-10">
-              <div class="flex flex-col gap-10 lg:w-1/2">
-                {_logo}
-                {_social}
-                {_payments}
-                {_apps}
-                {_region}
-              </div>
-              <div class="flex flex-col gap-10 lg:gap-20 lg:w-1/2 lg:pr-10">
-                {_newsletter}
-                {_sectionLinks}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
-            </div>
-          </div>
-        )}
-        {layout?.variation == "Variation 3" && (
-          <div class="flex flex-col gap-10">
-            {_logo}
-            <div class="flex flex-col lg:flex-row gap-14">
-              <div class="flex flex-col md:flex-row lg:flex-col md:justify-between lg:justify-normal gap-10 lg:w-2/5">
-                {_newsletter}
-                <div class="flex flex-col gap-10">
-                  {_payments}
-                  {_apps}
-                </div>
-              </div>
-              <div class="flex flex-col gap-10 lg:gap-20 lg:w-3/5 lg:items-end">
-                <div class="flex flex-col md:flex-row gap-10">
-                  {_sectionLinks}
-                  {_social}
-                </div>
-                {_region}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
-            </div>
-          </div>
-        )}
-        {layout?.variation == "Variation 4" && (
-          <div class="flex flex-col gap-10">
-            {_newsletter}
-            {layout?.hide?.newsletter ? <></> : <Divider />}
-            <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between">
-              {_sectionLinks}
-              <div class="flex flex-col md:flex-row lg:flex-col gap-10 lg:gap-10 lg:w-2/5 lg:pl-10">
-                <div class="flex flex-col md:flex-row gap-10 lg:gap-20">
-                  <div class="lg:flex-auto">
-                    {_payments}
-                  </div>
-                  <div class="lg:flex-auto">
-                    {_social}
-                  </div>
-                </div>
-                <div class="flex flex-col gap-10 lg:gap-10">
-                  {_region}
-                  {_apps}
-                </div>
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col md:flex-row md:justify-between gap-10 md:items-center">
-              {_logo}
-              <PoweredByDeco />
-            </div>
-          </div>
-        )}
-        {layout?.variation == "Variation 5" && (
-          <div class="flex flex-col gap-10">
-            {_newsletter}
-            {layout?.hide?.newsletter ? <></> : <Divider />}
-            {_logo}
-            <div class="flex flex-col md:flex-row gap-10 lg:gap-20 md:justify-between">
-              {_sectionLinks}
-              <div class="flex flex-col gap-10 md:w-2/5 lg:pl-10">
-                {_payments}
-                {_social}
-                {_apps}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10 md:items-center">
-              <PoweredByDeco />
-              <div class="flex flex-col md:flex-row gap-10 md:items-center">
-                {_links}
-                {_region}
-              </div>
-            </div>
-          </div>
-        )}
+      <div class='ml-[139px]'>
+        <img class='absolute mt-[30px]' src='logo-harpon.svg'/>
       </div>
-      {layout?.hide?.backToTheTop
-        ? <></>
-        : <BackToTop content={backToTheTop?.text} />}
+      <div class="flex  flex-grow mt-10 -mb-10 ml-[250px] text-center md:pl-20 md:mt-0 md:text-left">
+                <div class="w-[20%] ml-[50px] px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class='text-[#29323A] font-bold text-[18px]'>Home</h2>
+                  <h2 class='text-[#29323A] font-bold text-[18px] mt-4'>Sobre Nós</h2>
+                  <h2 class='text-[#29323A] font-bold text-[18px] mt-4'>Suporte</h2>
+                  <h2 class='text-[#29323A] font-bold text-[18px] mt-4'>Contato</h2>
+                </div>
+                <div class="w-[20%] ml-[-80px] px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class='text-[#29323A] font-bold text-[18px]'>Produtos</h2>
+                  <p class='text-[#29323A] text-normal font-bold mt-4'>Recapagem</p>
+                  <p class='text-[#29323A]'>Carbide</p>
+                  <p class='text-[#29323A]'>Fresas com ponta</p>
+                  <p class='text-[#29323A]'>Hastes</p>
+                  <p class='text-[#29323A]'>Flanges</p>
+                  <p class='text-[#29323A]'>Copos de corte</p>
+                </div>
+                <div class="w-[20%] ml-[-30px] px-4 lg:w-1/4 md:w-1/2">
+                  <p class='text-[#29323A] mt-[65px]'>Extrusoras</p>
+                  <p class='text-[#29323A]'>Sovelas</p>
+                  <p class='text-[#29323A]'>Escova Harpon</p>
+                  <p class='text-[#29323A]'>Roletes</p>
+                  <p class='text-[#29323A]'>Almofadas</p>
+
+                </div>
+                <div class="w-[20%] ml-[-60px] px-4 lg:w-1/4 md:w-1/2">
+                  <p class='text-[#29323A] text-normal font-bold mt-10' >Corte</p>
+                  <p class='text-[#29323A]'>Abrasivos</p>
+                  <p class='text-[#29323A]'>Orifício</p>
+                  <p class='text-[#29323A]'>Tubo de mistura</p>
+                  <p class='text-[#29323A]'>Acessórios e ferramentas</p>
+                </div>
+                <div class="w-[20%] px-4 lg:w-1/4 md:w-1/2">
+                  <p class='text-[#29323A] mt-[65px]'>Peças de reposição</p>
+                  <p class='text-[#29323A]'>Extrusoras</p>
+                  <p class='text-[#29323A]'>Hidrojato</p>
+                  <p class='text-[#29323A]'>Laser</p>
+                </div>
+        </div>
+        <div class='flex items-center ml-[139px] mt-[50px]'>
+            
+                <img src='icon-feather-phone.svg'></img>			
+                      <span class='text-[#29323A] text-center  ml-[10px]'>+55(11)1234-5678</span>
+                      <img class='ml-[30px]' src='icon-feather-map-pin.svg'></img>
+                      <span class='text-[#29323A] text-center  ml-[10px]'> Rua Nome do Endereço, 00 - Jardim Bairro - 01234-567</span>
+        </div>
+        
+      
+            
+            <div class="bg-[#29323A] flex items-center justify-center text-white text-sm"
+              style='height: 40px;'
+            >
+              <p>Política de Privacidade | Política de Cookies</p>
+              <div class='bg-[#29323A] h-10'></div>
+            </div>
+                                                                                                                                                                                                                                                                                                              
+        
+        
+        
     </footer>
   );
 }
