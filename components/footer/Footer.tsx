@@ -216,7 +216,7 @@ function Footer({
 
   return (
     <footer
-      class= 'bg-[#C8C8CA] w-full h-[420px] flex flex-col pt-10 pb-2 md:pb-10 gap-10  xs:h-max xs:mt-[-200px] 1xs:h-max 1xs:mt-[-120px] md:w-max lg:w-max ' 
+      class= 'bg-[#C8C8CA] w-full h-[420px] flex flex-col pt-10 pb-2 md:pb-10 gap-10  xs:h-max xs:mt-[-120px] 1xs:h-max 1xs:mt-[-120px] md:w-auto lg:w-max lg:h-auto ' 
        
     >
       <div class='ml-[139px] xs:ml-5 xs:mt-[-40px] 1xs:ml-5 md:ml-5 lg:ml-[30px]'>
@@ -268,9 +268,9 @@ function Footer({
         <div class='flex items-center ml-[139px] mt-[50px] xs:w-[250px] xs:block xs:ml-[70px] 1xs:block md:ml-[90px]'>
             
                 <img class='xs:w-[14px] xs:absolute 1xs:mt-5 1xs:mb-[-20px]' src='icon-feather-phone.svg'></img>			
-                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-[5px] 1xs:pl-[15px] 1xs:text-[17px]'>+55(11)1234-5678</span>
+                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-[5px] 1xs:pl-[15px] 1xs:text-[17px] md:whitespace-nowrap'>+55(11)1234-5678</span>
                       <img class='md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] 1xs:mb-[-22px] 1xs:mt-5 lg:pl-[15px] xl:pl-5' src='icon-feather-map-pin.svg'></img>
-                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-2 1xs:text-[17px] 1xs:pl-[15px]'> Rua Nome do Endereço, 00 - Jardim Bairro - 01234-567</span>
+                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-2 1xs:text-[17px] 1xs:pl-[15px] md:whitespace-nowrap'> Rua Nome do Endereço, 00 - Jardim Bairro - 01234-567</span>
         </div>
         
       

@@ -6,7 +6,7 @@ const WhatsAppButton: FunctionalComponent = () => {
 
     const handleClick = () => {
         // Lógica para abrir o link do WhatsApp
-        window.open('https://api.whatsapp.com/send?phone=5511970271231', '_blank');
+        window.open('https://api.whatsapp.com/send?phone=5511977205601', '_blank');
     };
 
     return (

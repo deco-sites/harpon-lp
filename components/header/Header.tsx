@@ -6,7 +6,7 @@ import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
-/* import WhatsAppButon from "$store/islands/WhatsAppButon.tsx"; */
+import WhatsAppButon from "$store/islands/WhatsAppButon.tsx";
 /* import { LanguageProvider } from "deco-sites/harpon-lp/context/LanguageContext.tsx"; */
 
 export interface NavItem {
@@ -63,7 +63,7 @@ function Header({
             <Navbar items={navItems} searchbar={searchbar} logo={logo} />
           </div>
         </Drawers>
-        {/* <WhatsAppButon /> */}
+        <WhatsAppButon />
       </header>
       {/* </LanguageProvider> */}
     </>

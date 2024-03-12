@@ -46,7 +46,7 @@ function SearchControls(
           <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
         </div>
 
-        <div class="flex flex-row items-center justify-between border-b border-base-200 sm:gap-4 sm:border-none xs:hidden">
+        <div class="flex flex-row items-center justify-between border-b border-base-200 sm:gap-4 sm:border-none xs:hidden 1xs:hidden md:hidden">
           <Button
             class={displayFilter ? "btn-ghost" : "btn-ghost sm:hidden"}
             onClick={() => {
