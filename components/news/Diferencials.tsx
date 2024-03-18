@@ -1,6 +1,6 @@
 export default function Diferencials () {
     return (
-        <div class='flex xl:justify-center mt-[150px] xs:mt-0 1xs:mt-0'>
+        <div class='flex mt-[150px] xs:mt-0 1xs:mt-0'>
             <div class='w-[675px] ml-0 xs:hidden 1xs:hidden'>
                 <img class='md:w-[400px] md:h-[640px] lg:h-[640px]' src='tire.png' alt='Pneu com faixa amarela'></img>
             </div>
