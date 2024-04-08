@@ -20,7 +20,7 @@ export default function FeaturedProducts() {
                     </g>
                 </svg>
             </div>
-           <div class="grid lg:flex lg:grid-cols-4 lg:gap-2 lg:mt-4 md:grid-cols-4 gap-2 mt-4 xs:grid-cols-2 xs:gap-5 1xs:grid-cols-2 1xs:gap-5 xl:flex">
+           <div class="grid lg:flex lg:grid-cols-4 lg:gap-2 lg:mt-4 md:grid-cols-4 gap-2 mt-4 xs:grid-cols-2 xs:gap-5 1xs:grid-cols-2 1xs:gap-5 xl:flex 2xl:flex">
            <div class="group section border border-solid border-[#E6E6E6] w-[260px] h-[299px] relative transition duration-300 ease-in-out xs:w-[150px] xs:h-[150px] 1xs:w-[180px] 1xs:h-[200px] md:w-[180px] md:h-[250px]"
                 >
                     <div class='group-hover:hidden'>

@@ -33,7 +33,7 @@ export function Search() {
             href="/login"
             aria-label="Log in"
           >
-            <div class='flex items-center group'>
+            <div class='flex items-center group 2xl:ml-[200px]'>
               <svg class='ml-[-15px] 1xs:w-[35px] 1xs:h-[25px]' xmlns="http://www.w3.org/2000/svg" width="19.987" height="22.25" viewBox="0 0 19.987 22.25">
                 <g  id="Icon_feather-user" data-name="Icon feather-user" transform="translate(-4.75 -3.25)">
                   <path class='group-hover:fill-[#E9F408]' id="Caminho_12" data-name="Caminho 12" d="M23.794,29.924a.943.943,0,0,1-.943-.943V26.718a3.587,3.587,0,0,0-3.583-3.583H10.218a3.583,3.583,0,0,0-3.583,3.583v2.263a.943.943,0,1,1-1.886,0V26.718a5.468,5.468,0,0,1,5.468-5.468h9.051a5.474,5.474,0,0,1,5.468,5.468v2.263A.943.943,0,0,1,23.794,29.924Z" transform="translate(0 -4.424)" fill="#fff"/>
@@ -43,7 +43,7 @@ export function Search() {
               <p class='ml-2 mt-[10px] text-base text-white font-normal group-hover:text-[#E9F408] xs:hidden 1xs:hidden'>Entre ou cadastre-se</p>
             </div>
           </a>
-    <hr class='w-[1080px] ml-[135px] divide-solid border-solid mt-5 text-[#4D5A65] xs:ml-0 1xs:ml-0 md:ml-0 lg:w-[900px] lg:ml-[50px]'></hr>
+    <hr class='w-[1080px] ml-[135px] divide-solid border-solid mt-5 text-[#4D5A65] xs:ml-0 1xs:ml-0 md:ml-0 lg:w-[900px] lg:ml-[50px] 2xl:w-[1600px]'></hr>
     </div>
   )
 }

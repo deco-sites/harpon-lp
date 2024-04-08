@@ -222,14 +222,14 @@ function Footer({
       <div class='ml-[139px] xs:ml-5 xs:mt-[-40px] 1xs:ml-5 md:ml-5 lg:ml-[30px]'>
         <img class='absolute  xs:mt-[10px] xs:w-[120px] 1xs:mt-0 lg:mt-0' src='logo-harpon.svg'/>
       </div>
-      <div class="flex  flex-grow mt-10 h-[150px] -mb-10 ml-[250px] text-center md:pl-20 md:mt-0 md:text-left xs:ml-[50px] 1xs:text-justify 1xs:ml-10 md:ml-[120px] lg:ml-[50px] xl:text-justify">
+      <div class="flex  flex-grow mt-10 h-[150px] -mb-10 ml-[250px] text-center md:pl-20 md:mt-0 md:text-left xs:ml-[50px] 1xs:text-justify 1xs:ml-10 md:ml-[120px] lg:ml-[50px] xl:text-justify 2xl:text-justify">
                 <div class="w-[20%] ml-[50px] px-4 lg:w-1/4 md:w-1/2 xs:ml-0 xs:text-justify xs:w-0 lg:text-justify">
                   <h2 class='text-[#29323A] font-bold md:text-[18px] xs:text-[16px] 1xs:text-lg'>Home</h2>
                   <h2 class='text-[#29323A] font-bold md:text-[18px] mt-4 whitespace-[nowrap] xs:text-[16px]  xs:whitespace-[nowrap] 1xs:text-lg'>Sobre Nós</h2>
                   <h2 class='text-[#29323A] font-bold md:text-[18px] mt-4 xs:text-[16px] 1xs:text-lg'>Suporte</h2>
                   <h2 class='text-[#29323A] font-bold md:text-[18px] mt-4 xs:text-[16px] 1xs:text-lg'>Contato</h2>
                 </div>
-                <div class="w-[20%] ml-[-60px] px-4 lg:w-1/4 md:w-1/2 xs:text-justify xs:ml-[90px] 1xs:ml-10 lg:text-justify lg:ml-[-50px]">
+                <div class="w-[20%] ml-[-60px] px-4 lg:w-1/4 md:w-1/2 xs:text-justify xs:ml-[90px] 1xs:ml-10 lg:text-justify lg:ml-[-50px] 2xl:text-justify">
                   <h2 class='text-[#29323A] font-bold text-[18px] xs:text-sm'>Produtos</h2>
                   <p class='text-[#29323A] text-normal font-bold mt-4 xs:text-sm'>Recapagem</p>
                   <p class='text-[#29323A] xs:hidden 1xs:hidden'>Carbide</p>
@@ -238,27 +238,27 @@ function Footer({
                   <p class='text-[#29323A] xs:hidden 1xs:hidden'>Flanges</p>
                   <p class='text-[#29323A] xs:hidden 1xs:hidden'>Copos de corte</p>
                 </div>
-                <div class="w-[20%] ml-[-30px] px-4 lg:w-1/4 md:w-1/2 xs:hidden 1xs:hidden md:hidden lg:text-justify lg:ml-[-10px]">
+                <div class="w-[20%] ml-[-30px] px-4 lg:w-1/4 md:w-1/2 xs:hidden 1xs:hidden md:hidden lg:text-justify lg:ml-[-10px] 2xl:text-justify">
                   <p class='text-[#29323A] mt-[65px]'>Extrusoras</p>
                   <p class='text-[#29323A]'>Sovelas</p>
                   <p class='text-[#29323A]'>Escova Harpon</p>
                   <p class='text-[#29323A]'>Roletes</p>
                   <p class='text-[#29323A]'>Almofadas</p>
                 </div>
-                <div class="w-[20%] ml-[-40px] px-4 lg:w-1/4 md:w-1/2 xs:hidden 1xs:hidden md:hidden lg:text-justify lg:ml-[-40px] ">
+                <div class="w-[20%] ml-[-40px] px-4 lg:w-1/4 md:w-1/2 xs:hidden 1xs:hidden md:hidden lg:text-justify lg:ml-[-40px] 2xl:text-justify ">
                   <p class='text-[#29323A] mt-[65px]'>Ferramentas</p>
                   <p class='text-[#29323A]'>Serras</p>
                   <p class='text-[#29323A]'>Reparos e manchão</p>
                   <p class='text-[#29323A]'>Engates e pinos</p>
                 </div>
-                <div class="w-[20%] px-4 lg:w-1/4 md:w-1/2 lg:text-justify">
+                <div class="w-[20%] px-4 lg:w-1/4 md:w-1/2 lg:text-justify 2xl:text-justify">
                   <p class='text-[#29323A] text-normal font-bold mt-10 xs:text-sm xs:absolute xs:ml-[-60px] xs:mt-[80px] 1xs:ml-[-77px] 1xs:mt-[90px] ' >Corte</p>
                   <p class='text-[#29323A] xs:hidden 1xs:hidden'>Abrasivos</p>
                   <p class='text-[#29323A] xs:hidden 1xs:hidden'>Orifício</p>
                   <p class='text-[#29323A] xs:hidden 1xs:hidden'>Tubo de mistura</p>
                   <p class='text-[#29323A] xs:hidden 1xs:hidden whitespace-nowrap'>Acessórios e ferramentas</p>
                 </div>
-                <div class="w-[20%] px-4 lg:w-1/4 md:w-1/2 xs:hidden 1xs:hidden md:hidden lg:text-justify">
+                <div class="w-[20%] px-4 lg:w-1/4 md:w-1/2 xs:hidden 1xs:hidden md:hidden lg:text-justify 2xl:text-justify">
                   <p class='text-[#29323A] mt-[65px]'>Peças de reposição</p>
                   <p class='text-[#29323A]'>Extrusoras</p>
                   <p class='text-[#29323A]'>Hidrojato</p>
