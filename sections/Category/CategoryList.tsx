@@ -84,7 +84,7 @@ function CategoryList(props: Props) {
   return (
     <div
       id={id}
-      class="py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10 xs:overflow-x-hidden 1xs:overflow-x-hidden md:overflow-x-hidden md:overflow-y-hidden"
+      class="py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10 xs:overflow-x-hidden 1xs:overflow-x-hidden  md:overflow-x-hidden md:overflow-y-hidden"
     >
       <SimpleText />
       <ImagesProducts />

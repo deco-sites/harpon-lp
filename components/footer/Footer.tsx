@@ -220,9 +220,9 @@ function Footer({
        
     >
       <div class='ml-[139px] xs:ml-5 xs:mt-[-40px] 1xs:ml-5 md:ml-5 lg:ml-[30px]'>
-        <img class='absolute mt-[30px] xs:mt-[10px] xs:w-[120px] 1xs:mt-0 lg:mt-0' src='logo-harpon.svg'/>
+        <img class='absolute  xs:mt-[10px] xs:w-[120px] 1xs:mt-0 lg:mt-0' src='logo-harpon.svg'/>
       </div>
-      <div class="flex  flex-grow mt-10 -mb-10 ml-[250px] text-center md:pl-20 md:mt-0 md:text-left xs:ml-[50px] 1xs:text-justify 1xs:ml-10 md:ml-[120px] lg:ml-[50px] xl:text-justify">
+      <div class="flex  flex-grow mt-10 h-[150px] -mb-10 ml-[250px] text-center md:pl-20 md:mt-0 md:text-left xs:ml-[50px] 1xs:text-justify 1xs:ml-10 md:ml-[120px] lg:ml-[50px] xl:text-justify">
                 <div class="w-[20%] ml-[50px] px-4 lg:w-1/4 md:w-1/2 xs:ml-0 xs:text-justify xs:w-0 lg:text-justify">
                   <h2 class='text-[#29323A] font-bold md:text-[18px] xs:text-[16px] 1xs:text-lg'>Home</h2>
                   <h2 class='text-[#29323A] font-bold md:text-[18px] mt-4 whitespace-[nowrap] xs:text-[16px]  xs:whitespace-[nowrap] 1xs:text-lg'>Sobre Nós</h2>
@@ -265,19 +265,20 @@ function Footer({
                   <p class='text-[#29323A]'>Laser</p>
                 </div>
         </div>
-        <div class='flex items-center ml-[139px] mt-[50px] xs:w-[250px] xs:block xs:ml-[70px] 1xs:block md:ml-[90px]'>
+                <div class='w-[50px] h-[50px] ml-auto mr-[50px]'>
+                <a href='https://instagram.com/_harpon ' target='_blank'><img class='w-[40px]' src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Ícone do Instagram" ></img></a>
+                </div>
+        <div class='flex items-center h-[10px] mb-5 ml-[139px] xs:w-[250px] xs:block xs:ml-[70px] 1xs:block md:ml-[90px]'>
             
                 <img class='xs:w-[14px] xs:absolute 1xs:mt-5 1xs:mb-[-20px]' src='icon-feather-phone.svg'></img>			
-                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-[5px] 1xs:pl-[15px] 1xs:text-[17px] md:whitespace-nowrap'>+55(11)1234-5678</span>
-                      <img class='md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] 1xs:mb-[-22px] 1xs:mt-5 lg:pl-[15px] xl:pl-5' src='icon-feather-map-pin.svg'></img>
-                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-2 1xs:text-[17px] 1xs:pl-[15px] md:whitespace-nowrap'> Rua Nome do Endereço, 00 - Jardim Bairro - 01234-567</span>
+                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-[5px] 1xs:pl-[15px] 1xs:text-[17px] md:whitespace-nowrap'>+55(11)4556-0929</span>
+                      <img class='ml-[180px] md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] 1xs:mb-[-22px] 1xs:mt-5 lg:pl-[15px] xl:pl-5' src='icon-feather-map-pin.svg'></img>
+                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-2 1xs:text-[17px] 1xs:pl-[15px] md:whitespace-nowrap'> Av. Doutor Mauro Lindemberg Monteiro, 1259 Jardim Santa Fé, Osasco São Paulo - Brasil</span>
         </div>
         
       
             
-            <div class="bg-[#29323A] flex items-center justify-center text-white text-sm  xs:mb-[-8px] xs:text-xs 1xs:mb-[-8px]"
-              style='height: 40px;'
-            >
+            <div class="bg-[#29323A] -mb-3 -mt-[30px] flex items-center justify-center text-white text-sm  xs:mb-[-8px] xs:text-xs 1xs:mb-[-8px]">
               <p class='xs:px-5 xs:mx-[10px] 1xs:text-base 1xs:ml-[25px]'>Política de Privacidade | Política de Cookies</p>
               <div class='bg-[#29323A] h-10'></div>
             </div>

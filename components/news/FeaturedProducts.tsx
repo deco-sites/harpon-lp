@@ -1,6 +1,6 @@
 export default function FeaturedProducts() {
     return (
-        <div class='container mx-auto p-4 mt-[150px] mb-[-230px] xs:mt-0 xs:mb-0 1xs:mt-0'>
+        <div class='container mx-auto p-4 mt-[150px] mb-[-230px] xs:mt-0 xs:mb-0 1xs:mt-0 1xs:h-[600px] md:h-[550px]'>
            <h1 class='text-[36px] font-normal xs:text-[20px] 1xs:text-2xl'>PRODUTOS EM{' '} 
            <span style={{ fontWeight: 'bold' }}>DESTAQUE</span>
            </h1> 
@@ -78,7 +78,7 @@ export default function FeaturedProducts() {
                         <img class='xs:w-[90px] xs:absolute 1xs:w-[150px] 1xs:absolute md:w-[160px] md:absolute md:mt-20 ' src='flanges.png '></img>
                     </div>
                     
-                    <p class='ml-5 mt-5 font-bold text-[20px] font-[Albert Sans] group xs:mt-[35px] xs:ml-[45px] xs:pt-[10px] xs:text-xs 1xs:text-base 1xs:ml-[50px] 1xs:pt-[30px] md:pl-5 md:pt-[90px]'>ESCOVA EMBORRACHADA</p>
+                    <p class='ml-5 mt-5 font-bold text-[20px] font-[Albert Sans] group xs:mt-[35px] xs:ml-[35px] xs:pt-[10px] xs:text-xs 1xs:text-base 1xs:ml-[30px] 1xs:pt-[30px] md:pl-2 md:pt-[90px] md:text-lg'>ESCOVA EMBORRACHADA</p>
                     
                     <div class=' group'>
                     <a href ='/moredetails'>

@@ -62,7 +62,13 @@ function Navbar({ items, searchbar, logo }: {
           )}
         </div>
         <div class="flex-auto flex justify-end ml-[500px] gap-[10px] text-white font-bold md:mr-0 md:ml-[150px] lg:ml-[50px] lg:mr-[-120px]">
-          {items.map((item) => <NavItem item={item} />)}
+          {items.map((item) => {
+            if(item.label !== "Produtos") {
+              return <NavItem item={item} />
+            } else {
+              return null;
+            }
+          })}
         </div>
         <div class="flex-none w-44 flex items-center justify-end gap-2">
           {platform === "vtex" && <CartButtonVTEX />}
