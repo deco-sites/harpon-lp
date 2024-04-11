@@ -98,7 +98,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     <a
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative h-[600px] overflow-y-hidden w-full"
+      class="relative 2xl:h-[800px] h-[600px] overflow-y-hidden w-full"
     >
       <Picture preload={lcp}>
       <div className="absolute w-[450px] pl-[80px] pt-[150px] pb-[150px] text-[36px] font-[Albert Sans] font-normal text-white xs:w-min xs:text-2xl xs:mt-[90px] xs:pl-[80px] 1xs:text-[26px] 1xs:w-min 1xs:mt-[90px] 1xs:pl-[100px]">

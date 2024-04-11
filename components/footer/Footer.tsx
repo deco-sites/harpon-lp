@@ -266,7 +266,9 @@ function Footer({
                 </div>
         </div>
                 <div class='w-[50px] h-[50px] ml-auto mr-[50px]'>
-                <a href='https://instagram.com/_harpon ' target='_blank'><img class='w-[40px]' src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Ícone do Instagram" ></img></a>
+                <a href='https://instagram.com/_harpon ' target='_blank'>
+                  <img src='instagram-icon.png' alt='Ícone do Instagram'></img>
+                </a>
                 </div>
         <div class='flex items-center h-[10px] mb-5 ml-[139px] xs:w-[250px] xs:block xs:ml-[70px] 1xs:block md:ml-[90px]'>
             
