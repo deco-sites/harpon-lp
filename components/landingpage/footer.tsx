@@ -31,7 +31,7 @@ export default function LandingPageFooter() {
             <h2 class="text-[#29323A] text-lg  font-bold text-[18px] xs:text-sm">
               Produtos
             </h2>
-            <a href="https://www.harpon.com.br">
+            <a href="https://www.harpon.com.br/recauchutagem">
               <h2 class="text-[#29323A] font-bold text-[18px] mt-[15px] xs:text-sm">
                 Recapagem
               </h2>
