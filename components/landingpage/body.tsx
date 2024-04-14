@@ -1,6 +1,6 @@
 export default function ImagesProducts() {
     return (
-      <div className="flex relative gap-[20px] ml-[180px] mb-[100px] mt-[100px] xs:w-max xs:flex-col xs:mt-0 1xs:w-max 1xs:flex-col 1xs:mt-0 md:w-max">
+      <div className="flex relative gap-[20px] ml-[180px] mb-[100px] mt-[100px] xs:w-max xs:flex-col xs:mt-0 1xs:w-max 1xs:flex-col 1xs:mt-0 md:w-max 2xl:ml-[400px] 2xl:mt-[200px]">
         <div className="relative group">
           <div className="image-container">
             <div className="image-zoom" style={{ overflow: "hidden" }}>
