@@ -11,9 +11,9 @@ import { useOffer } from "$store/sdk/useOffer.ts";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/footer.tsx";
-import ImagesProducts from "deco-sites/harpon-lp/components/landingpage/body.tsx";
-import LandingPageHeader from "deco-sites/harpon-lp/components/landingpage/header.tsx";
+import LandingPageFooter from "../landingpage/Footer.tsx";
+import ImagesProducts from "../landingpage/Body.tsx";
+import LandingPageHeader from "../landingpage/Header.tsx";
 
 export interface Props {
   products: Product[] | null;

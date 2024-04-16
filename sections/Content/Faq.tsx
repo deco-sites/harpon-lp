@@ -1,4 +1,5 @@
 import Header from "$store/components/ui/SectionHeader.tsx";
+import WaterJetHome from "deco-sites/harpon-lp/components/waterjet/WaterJetHome.tsx";
 
 export interface Question {
   question: string;
@@ -95,7 +96,8 @@ export default function FAQ(props: Props) {
 
   return (
     <>
-      {(!layout?.variation || layout?.variation === "Compact") && (
+    <WaterJetHome />
+      {/* {(!layout?.variation || layout?.variation === "Compact") && (
         <div class="w-full container px-4 py-8 flex flex-col gap-4 lg:gap-8 lg:py-10 lg:px-40">
           <div class="flex flex-col gap-8 lg:gap-10">
             <Header
@@ -147,7 +149,7 @@ export default function FAQ(props: Props) {
             <Contact {...contact} />
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }
