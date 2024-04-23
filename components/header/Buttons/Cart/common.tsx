@@ -24,7 +24,7 @@ function CartButton({ loading, currency, total, items }: Props) {
   };
 
   return (
-    <div class="indicator group">
+    <div class="indicator group hidden">
       <span
         class={`indicator-item badge badge-secondary badge-sm flex items-center bg-white text-[#29323A] mt-[-85px] mr-[175px] w-[14px] h-[14px] group-hover:bg-[#E9F408] md:mr-[150px] md:mt-[-100px] lg:mr-[40px] ${
           totalItems === 0 ? "block" : ""

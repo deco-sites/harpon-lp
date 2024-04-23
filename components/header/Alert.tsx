@@ -29,7 +29,7 @@ export function Search() {
 
       
       <a
-            class="btn btn-sm btn-ghost ml-10 xs:mb-[-20px] md:ml-5"
+            class="hidden btn btn-sm btn-ghost ml-10 xs:mb-[-20px] md:ml-5"
             href="/login"
             aria-label="Log in"
           >

@@ -6,10 +6,24 @@ export default function Navbar()  {
     const [isRecapagemItem1SubMenuOpen, setRecapagemItem1SubMenuOpen] = useState(false)
     const [isRecapagemItem2SubMenuOpen, setRecapagemItem2SubMenuOpen] = useState(false)
     const [isCorteSubMenuOpen, setCorteSubMenuOpen] = useState(false)
-    const [isTechTiresSubMenuOpen, setTechTiresSubMenuOpen] = useState(false)
-    const [isToolsSubMenuOpen, setToolsSubMenuOpen] = useState(false)
-    const [isSawsSubMenuOpen, setSawsSubMenuOpen] = useState(false)
+    const [isRaspagemSubMenuOpen, setRaspagemSubMenuOpen] = useState(false)
+    const [isArVaporMenuOpen, setArVaporMenuOpen] = useState(false)
+    const [isArVaporMenu2Open, setArVaporMenu2Open] = useState(false)
+    const [isBorrachariaMenuOpen, setBorrachariaMenuOpen] = useState(false)
+    const [isBorracharia2MenuOpen, setBorracharia2MenuOpen] = useState(false)
+    const [isBorracharia3MenuOpen, setBorracharia3MenuOpen] = useState(false)
     const [isRepairSubMenuOpen, setRepairSubMenuOpen] = useState(false)
+    const [isCimentacaoMenuOpen, setCimentacaoMenuOpen] = useState(false)
+    const [isConsertoMenuOpen, setConsertoMenuOpen] = useState(false)
+    const [isCoberturaMenuOpen, setCoberturaMenuOpen] = useState(false)
+    const [isEnchimentoMenuOpen, setEnchimentoMenuOpen] = useState(false)
+    const [isSegurancaMenuOpen, setSegurancaMenuOpen] = useState(false)
+    const [isInspecaoFinalMenuOpen, setInspecaoFinalMenuOpen] = useState(false)
+    const [isEscareacaoMenuOpen, setEscareacaoMenuOpen] = useState(false)
+    const [isEscareacao2MenuOpen, setEscareacao2MenuOpen] = useState(false)
+    const [isVulcanizacaoMenuOpen, setVulcanizacaoMenuOpen] = useState(false)
+    const [isVulcanizacao2MenuOpen, setVulcanizacao2MenuOpen] = useState(false)
+    
     
     const openMenu = () => {
         setIsMenuOpen(true)
@@ -42,28 +56,49 @@ export default function Navbar()  {
     setRecapagemItem2SubMenuOpen(false);
   };
 
-  const openTechTiresSubMenu = () => {
-    setTechTiresSubMenuOpen(true)
+  const openRaspagemSubMenu = () => {
+    setRaspagemSubMenuOpen(true)
   }
 
-  const closeTechTiresSubMenu = () => {
-    setTechTiresSubMenuOpen(false)
+  const closeRaspagemSubMenu = () => {
+    setRaspagemSubMenuOpen(false)
   }
 
-  const openToolsSubMenu = () => {
-    setToolsSubMenuOpen(true)
+  const openArVaporMenu = () => {
+    setArVaporMenuOpen(true)
   }
 
-  const closeToolsSubMenu = () => {
-    setToolsSubMenuOpen(false)
+  const closeArVaporMenu = () => {
+    setArVaporMenuOpen(false)
+  }
+  const openArVapor2Menu = () => {
+    setArVaporMenu2Open(true)
   }
 
-  const openSawsSubMenu = () => {
-    setSawsSubMenuOpen(true)
+  const closeArVapor2Menu = () => {
+    setArVaporMenu2Open(false)
   }
 
-  const closeSawsSubMenu = () => {
-    setSawsSubMenuOpen(false)
+  const openBorrachariaMenu = () => {
+    setBorrachariaMenuOpen(true)
+  }
+
+  const closeBorrachariaMenu = () => {
+    setBorrachariaMenuOpen(false)
+  }
+  const openBorracharia2Menu = () => {
+    setBorracharia2MenuOpen(true)
+  }
+
+  const closeBorracharia2Menu = () => {
+    setBorracharia2MenuOpen(false)
+  }
+  const openBorracharia3Menu = () => {
+    setBorracharia3MenuOpen(true)
+  }
+
+  const closeBorracharia3Menu = () => {
+    setBorracharia3MenuOpen(false)
   }
 
   const openRepairSubMenu = () => {
@@ -72,6 +107,78 @@ export default function Navbar()  {
 
   const closeRepairSubMenu = () => {
     setRepairSubMenuOpen(false)
+  }
+
+  const openEscareacaoMenu = () => {
+    setEscareacaoMenuOpen(true)
+  }
+  const closeEscareacaoMenu = () => {
+    setEscareacaoMenuOpen(false)
+  }
+  const openEscareacao2Menu = () => {
+    setEscareacao2MenuOpen(true)
+  }
+  const closeEscareacao2Menu = () => {
+    setEscareacao2MenuOpen(false)
+  }
+
+  const openCimentacaoMenu = () => {
+    setCimentacaoMenuOpen(true)
+  }
+
+  const closeCimentacaoMenu = () => {
+    setCimentacaoMenuOpen(false)
+  }
+
+  const openConsertoMenu = () => {
+    setConsertoMenuOpen(true)
+  }
+
+  const closeConsertoMenu = () => {
+    setConsertoMenuOpen(false)
+  }
+
+  const openCoberturaMenu = () => {
+    setCoberturaMenuOpen(true)
+  }
+
+  const closeCoberturaMenu = () => {
+    setCoberturaMenuOpen(false)
+  }
+
+  const openEnchimentoMenu = () => {
+    setEnchimentoMenuOpen(true)
+  }
+
+  const closeEnchimentoMenu = () => {
+    setEnchimentoMenuOpen(false)
+  }
+
+  const openVulcanizacaoMenu = () => {
+    setVulcanizacaoMenuOpen(true)
+  }
+  const closeVulcanizacaoMenu = () => {
+    setVulcanizacaoMenuOpen(false)
+  }
+  const openVulcanizacao2Menu = () => {
+    setVulcanizacao2MenuOpen(true)
+  }
+  const closeVulcanizacao2Menu = () => {
+    setVulcanizacao2MenuOpen(false)
+  }
+
+  const openSegurancaMenu = () => {
+    setSegurancaMenuOpen(true)
+  }
+  const closeSegurancaMenu = () => {
+    setSegurancaMenuOpen(false)
+  }
+
+  const openInspecaoFinalMenu = () => {
+    setInspecaoFinalMenuOpen(true)
+  }
+  const closeInspecaoFinalMenu = () => {
+    setInspecaoFinalMenuOpen(false)
   }
 
 
@@ -124,7 +231,7 @@ export default function Navbar()  {
                 href="#"
                 className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
-                Recapagem
+                Categorias
               </a>
               {isRecapagemSubMenuOpen && (
                 <ul
@@ -146,7 +253,7 @@ export default function Navbar()  {
                       href="#"
                       className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                     >
-                     Carbide
+                     Inspeção inicial
                     </a>
                     {isRecapagemItem1SubMenuOpen && (
                       <ul
@@ -162,104 +269,74 @@ export default function Navbar()  {
                       >
                         <li
                           onMouseEnter={openRecapagemItem2SubMenu}
-                    onMouseLeave={closeRecapagemItem2SubMenu}
+                          onMouseLeave={closeRecapagemItem2SubMenu}
                         >
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Cônico
-                          </a>
-                          {isRecapagemItem2SubMenuOpen && (
-                              <ul
-                        className="absolute top-0 left-full mt-0"
-                        style={{
-                          width: "211px",
-                          height: "450px",
-                          background: "#FFFFFF",
-                          backgroundRepeat: "no-repeat",
-                          boxShadow: "0px 12px 19px #0000001A",
-                          opacity: 1,
-                        }}
-                      >
-                        <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Submenu Item 3 (Recapagem)
+                            Furadeira pneumática
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Submenu Item 4 (Recapagem)
-                          </a>
-                        </li>
-                      </ul>
-                          )}
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Copo
+                            Alicate
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Bolacha
+                            Sovela
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            S
+                            Cordão e pendente
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Flat Disc
+                            Martelo bola
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            FR- Faca circular
+                            Bloco de espuma
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Pirulito
+                            Lanterna para inspeção
                           </a>
                         </li>
                         <li 
-                          onMouseEnter={openTechTiresSubMenu}
-                          onMouseLeave={closeTechTiresSubMenu}
+                          /* onMouseEnter={openTechTiresSubMenu}
+                          onMouseLeave={closeTechTiresSubMenu} */
                         >
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Tech tires
+                            Aspirador de pó
                           </a>
-                          {isTechTiresSubMenuOpen && (
+                          {/* {isTechTiresSubMenuOpen && (
                             <ul className="absolute top-0 left-full mt-0"
                             style={{
                               width: "209px",
@@ -272,140 +349,1024 @@ export default function Navbar()  {
                                 <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
                             Reto/Angular
                           </a>
                         </li>
                             </ul>
-                          )}
+                          )} */}
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            DW
+                            Giz
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            CW
+                            Marcador líquido
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Supar
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Himapel
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Copo chato
+                            Bico para limpeza
                           </a>
                         </li>
                       </ul>
                     )}
                   </li>
-                  <li>
+                  <li
+                      onMouseEnter={openRaspagemSubMenu}
+                      onMouseLeave={closeRaspagemSubMenu}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                      Fresas com ponta
+                      Raspagem
                     </a>
+                    {isRaspagemSubMenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Borracha para aro expansivo
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Escova fita nylon
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Facas circulares
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Espaçador para cj de raspa
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Pedras de afiar
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Trenas
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Escova para limpeza
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Serras
+                              </a>
+                        </li>
+                            </ul>
+                      )}
                   </li>
-                  <li>
+                  <li
+                    onMouseEnter={(e) => {
+                      openEscareacaoMenu();
+                      openEscareacao2Menu();
+                    }}
+                    onMouseLeave={(e) => {
+                      closeEscareacaoMenu();
+                      closeEscareacao2Menu();
+                    }}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                      Hastes
+                      Escareação
                     </a>
+                    {(isEscareacaoMenuOpen && isEscareacao2MenuOpen) && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "219px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Furadeira reversível
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Fresas
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Carbide com haste
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] whitespace-nowrap text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Carbide de acabamento
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Carbide
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Carbide cônico
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Carbide desbaste
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Carbide tipo copo arredondado 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Carbide tipo copo paralelo
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Carbide tipo disco
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Esmerilhadeira
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Punho para eixo flexível
+                              </a>
+                        </li>
+                        {isEscareacao2MenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Mola
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Eixo flexível
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Haste
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Engate
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Porca
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Adaptador
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Escova aço
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Flanges para escovas
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Escova aço latonado
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Escova emborrachada
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Disco de corte
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Ponta montada
+                              </a>
+                        </li>
+                        </ul>
+                        )}
+                            </ul>
+                      )}
                   </li>
-                  <li>
+                  <li
+                          onMouseEnter={openCimentacaoMenu}
+                          onMouseLeave={closeCimentacaoMenu}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                      Flanges
+                      Cimentação
                     </a>
+                    {isCimentacaoMenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Serras
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Flange para escova
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Engate rápido de ½
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Vazador
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Copo de corte
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Escova de aço
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Esmerilhadeira
+                              </a>
+                        </li>
+                            </ul>
+                      )}
                   </li>
-                  <li>
+                  <li
+                    onMouseEnter={openConsertoMenu}
+                    onMouseLeave={closeConsertoMenu}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                      Copos de corte
+                      Conserto
                     </a>
+                    {isConsertoMenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Esmerilhadeira 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Máquina e serra para corte de borracha 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Facas
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Martelete pneumático
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Furadeira elétrica
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Pincel
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Escova manual
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Tesoura forjada 10" ou 12"
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Abridor de pneu 100 a 530 MM
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Régua metálica
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Rolete
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Caneta
+                              </a>
+                        </li>
+                            </ul>
+                      )}
                   </li>
-                  <li>
+                  <li
+                    onMouseEnter={openCoberturaMenu}
+                    onMouseLeave={closeCoberturaMenu}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                     Extrusores
+                     Cobertura
                     </a>
+                    {isCoberturaMenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Grampeador 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Chave de fenda/martelo 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Almofadas
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Faca de aço
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Filme propileno perfurado
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Borracha para dreno
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                CJ eletrônico de cortar
+                              </a>
+                        </li>
+                            </ul>
+                      )}
                   </li>
-                  <li>
+                  <li
+                    onMouseEnter={openEnchimentoMenu}
+                    onMouseLeave={closeEnchimentoMenu}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                      Sovelas
+                      Enchimento
                     </a>
+                    {isEnchimentoMenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Extrusora 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Fuso 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Furadeira pneumática
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Mangueira espiral
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Conector
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Bico de extrusão
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Balancim mecânico até 5kg
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Termostato
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Fio de costura pneu trama 10
+                              </a>
+                        </li>
+                            </ul>
+                      )}
                   </li>
-                  <li>
+                  <li
+                    onMouseEnter={(e) => {
+                      openVulcanizacaoMenu();
+                      openVulcanizacao2Menu();
+                    }}
+                    onMouseLeave={(e) => {
+                      closeVulcanizacaoMenu();
+                      closeVulcanizacao2Menu();
+                    }}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                      Escova Harpon
+                      Vulcanização
                     </a>
+                    {(isVulcanizacaoMenuOpen && isVulcanizacao2MenuOpen) && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Testador de envelope  
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Vacuômetro ang. ¼" glicerina 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Bomba de vácuo
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Válvula
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Tampa pino
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Pino com retenção
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Engate autoclave
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Engate exaustão
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Engate inflação
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Engate pcl-16
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Outros
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Válvula removível
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Mangueira de silicone 
+                              </a>
+                        </li>
+                        {isVulcanizacao2MenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Mangueira de teflon
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Terminal de mangueira teflon
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Borracha de vedação
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Líquidos 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Engate rápido 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Regulador de ar
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Bexiga para conserto de pneus 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Borrachas 
+                              </a>
+                        </li>
+                        </ul>
+                        )}
+                            </ul>
+                      )}
                   </li>
-                  <li>
+                  <li
+                    onMouseEnter={openSegurancaMenu}
+                    onMouseLeave={closeSegurancaMenu}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                      Roletes
+                      Equipamentos de segurança
                     </a>
+                    {isSegurancaMenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Óculos de segurança 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Vestuário 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Protetor facial de acrílico
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Respirador 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Luva
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Protetor auricular
+                              </a>
+                        </li>
+                            </ul>
+                      )}
                   </li>
-                  <li>
+                  <li
+                          onMouseEnter={openInspecaoFinalMenu}
+                          onMouseLeave={closeInspecaoFinalMenu}
+                  >
                     <a
                       href="#"
-                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                      className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                     >
-                      Almofadas
+                      Inspeção final
                     </a>
-                  </li>
-                  <li 
-                          onMouseEnter={openToolsSubMenu}
-                          onMouseLeave={closeToolsSubMenu}
-                        >
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Ferramentas
-                          </a>
-                          {isToolsSubMenuOpen && (
+                    {isInspecaoFinalMenuOpen && (
                             <ul className="absolute top-0 left-full mt-0"
                             style={{
                               width: "209px",
@@ -418,123 +1379,525 @@ export default function Navbar()  {
                                 <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Pneumáticas
+                            Lâmina
                           </a>
                         </li>
                                 <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Extrusora
+                            Pistola para pintura
                           </a>
-                        </li>
-                                <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Manuais
-                          </a>
-                        </li>
-                            </ul>
-                          )}
-                        </li>
-                        <li 
-                          onMouseEnter={openSawsSubMenu}
-                          onMouseLeave={closeSawsSubMenu}
-                        >
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Serras
-                          </a>
-                          {isSawsSubMenuOpen && (
-                            <ul className="absolute top-0 left-full mt-0"
-                            style={{
-                              width: "209px",
-                              height: "450px",
-                              background: "#FFFFFF",
-                              backgroundRepeat: "no-repeat",
-                              boxShadow: "0px 12px 19px #0000001A",
-                              opacity: 1,
-                            }}>
-                                <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Circular
-                          </a>
-                        </li>
-                                <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Separadores
-                          </a>
-                        </li>
-                            </ul>
-                          )}
-                        </li>
-                        <li 
-                          onMouseEnter={openRepairSubMenu}
-                          onMouseLeave={closeRepairSubMenu}
-                        >
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Reparos e manchão
-                          </a>
-                          {isRepairSubMenuOpen && (
-                            <ul className="absolute top-0 left-full mt-0"
-                            style={{
-                              width: "209px",
-                              height: "450px",
-                              background: "#FFFFFF",
-                              backgroundRepeat: "no-repeat",
-                              boxShadow: "0px 12px 19px #0000001A",
-                              opacity: 1,
-                            }}>
-                                <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Saco de ar
-                          </a>
-                        </li>
-                                <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Envelope 
-                          </a>
-                        </li>
-                                <li>
-                          <a
-                            href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
-                          >
-                            Bladders
-                          </a>
-                        </li>
-                            </ul>
-                          )}
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover-bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
                           >
-                            Engates e pinos
+                            Tip trimmer
                           </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Raspador lixa
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Tinta black tire 5 kg
+                          </a>
+                        </li>
+                            </ul>
+                          )}
+                  </li>
+                  <li 
+                          onMouseEnter={(e) => {
+                            openArVaporMenu();
+                            openArVapor2Menu();
+                          }}
+                          onMouseLeave={(e) => {
+                            closeArVaporMenu();
+                            closeArVapor2Menu();
+                          }}
+                        >
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Linha de ar e vapor
+                          </a>
+                          {(isArVaporMenuOpen && isArVaporMenu2Open) && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                                <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Mangueira p/ar ibs
+                          </a>
+                        </li>
+                                <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Válvula de retenção
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Injeção de caldeira comodoro
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Escova tubular de aço
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Gaxeta para pistão
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Visor
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Indicador de nível de caldeira ½
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Vidro indicador de nível 5/8
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Separador de umidade
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Conj. lubrificante
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Válvula
+                          </a>
+                        </li>
+                        {isArVaporMenu2Open && (
+                          <ul className="absolute top-0 left-full mt-0"
+                          style={{
+                            width: "209px",
+                            height: "450px",
+                            background: "#FFFFFF",
+                            backgroundRepeat: "no-repeat",
+                            boxShadow: "0px 12px 19px #0000001A",
+                            opacity: 1,
+                          }}>
+                            <li>
+                        <a
+                          href="#"
+                          className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                        >
+                          Regulador
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                        >
+                          Copo
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                        >
+                          Manômetro e termômetro
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                        >
+                          Engate rápido
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                        >
+                          Espigão e abraçadeiras
+                        </a>
+                      </li>
+                          </ul>
+                        )}
+                            </ul>
+                          )}
+                        </li>
+                        <li 
+                          onMouseEnter={(e) => {
+                            openBorrachariaMenu();
+                            openBorracharia2Menu();
+                            openBorracharia3Menu();
+                          }}
+                          onMouseLeave={(e) => {
+                            closeBorrachariaMenu();
+                            closeBorracharia2Menu();
+                            closeBorracharia3Menu();
+                          }}
+                        >
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] text-base font-[Albert Sans] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Borracharia
+                          </a>
+                          {(isBorrachariaMenuOpen && isBorracharia2MenuOpen && isBorracharia3MenuOpen) && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                                <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Profundímetro
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Calibrador
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Calibrador pneu
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Bico prendedor
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Bico inflador
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Aferidor e adaptador
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Tampa
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Válvula para pneus sem camara
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Calibrador
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Válvula
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Extensão
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Tarraxas
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Suporte
+                          </a>
+                        </li>
+                        {isBorracharia2MenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Núcleo de válvula
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Marreta
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Embalagens
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Calibrador eletrônico 110/220 V
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Chaves
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Espátula
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Kit de monstagem e desmontagem de pneus
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Tarraxas
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Assentador de talão ast-20
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Soquetes
+                          </a>
+                        </li>
+                        {isBorracharia3MenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Destalonador de pneus dtl 10
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Cavalete
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Macaco hidráulico
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Máquina de vulcanizar + resistência + termostato
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Anel
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Moto esmeril ½ CV 110 ou 220V
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Estação ressulcadora
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Marcador
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                          >
+                            Pasta para monstagem
+                          </a>
+                        </li>
+                        </ul>
+                        )}
+                        </ul>
+                        )}
+                            </ul>
+                          )}
                         </li>
                 </ul>
               )}
