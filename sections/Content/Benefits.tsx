@@ -47,14 +47,14 @@ export default function Benefits(
 
     return (
       <>
-        <WaterJetProducts />
+        {/* <WaterJetProducts /> */}
       </>
     );
   });
 
   return (
     <>
-      <WaterJetProducts />
+      {/* <WaterJetProducts /> */}
     </>
   );
 }

@@ -1,9 +1,6 @@
 import Header from "$store/components/ui/SectionHeader.tsx";
 import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
-import SimpleText from "$store/components/news/SimpleText.tsx";
-import ImagesProducts from "$store/components/news/ImagesProducts.tsx";
-import Diferencials from "$store/components/news/Diferencials.tsx";
 import FeaturedProducts from "$store/components/news/FeaturedProducts.tsx";
 import { useId } from "$store/sdk/useId.ts";
 import Image from "apps/website/components/Image.tsx";
@@ -86,9 +83,6 @@ function CategoryList(props: Props) {
       id={id}
       class="py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10 xs:overflow-x-hidden 1xs:overflow-x-hidden  md:overflow-x-hidden md:overflow-y-hidden"
     >
-      <SimpleText />
-      <ImagesProducts />
-      <Diferencials />
       <FeaturedProducts />
       <Header
         title={header.title}

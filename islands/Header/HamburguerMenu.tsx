@@ -21,6 +21,7 @@ export default function Navbar()  {
     const [isInspecaoFinalMenuOpen, setInspecaoFinalMenuOpen] = useState(false)
     const [isEscareacaoMenuOpen, setEscareacaoMenuOpen] = useState(false)
     const [isEscareacao2MenuOpen, setEscareacao2MenuOpen] = useState(false)
+    const [isEscareacao3MenuOpen, setEscareacao3MenuOpen] = useState(false)
     const [isVulcanizacaoMenuOpen, setVulcanizacaoMenuOpen] = useState(false)
     const [isVulcanizacao2MenuOpen, setVulcanizacao2MenuOpen] = useState(false)
     
@@ -120,6 +121,12 @@ export default function Navbar()  {
   }
   const closeEscareacao2Menu = () => {
     setEscareacao2MenuOpen(false)
+  }
+  const openEscareacao3Menu = () => {
+    setEscareacao3MenuOpen(true)
+  }
+  const closeEscareacao3Menu = () => {
+    setEscareacao3MenuOpen(false)
   }
 
   const openCimentacaoMenu = () => {
@@ -475,10 +482,12 @@ export default function Navbar()  {
                     onMouseEnter={(e) => {
                       openEscareacaoMenu();
                       openEscareacao2Menu();
+                      openEscareacao3Menu();
                     }}
                     onMouseLeave={(e) => {
                       closeEscareacaoMenu();
                       closeEscareacao2Menu();
+                      closeEscareacao3Menu();
                     }}
                   >
                     <a
@@ -699,6 +708,90 @@ export default function Navbar()  {
                                 Ponta montada
                               </a>
                         </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Aplicador de cola
+                              </a>
+                        </li>
+                        {isEscareacao2MenuOpen && (
+                            <ul className="absolute top-0 left-full mt-0"
+                            style={{
+                              width: "209px",
+                              height: "450px",
+                              background: "#FFFFFF",
+                              backgroundRepeat: "no-repeat",
+                              boxShadow: "0px 12px 19px #0000001A",
+                              opacity: 1,
+                            }}>
+                              <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Lata e tampa com pincel e cola
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Batedor/misturador de cola manual
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Escova de nylon sem cabo
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Pincel para cola de 3" e 4" L
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Pistola para cola, filtro e bico spray
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Pano de algodão
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Torneira para tambor de cola 
+                              </a>
+                        </li>
+                        <li>
+                              <a
+                                href="#"
+                                className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover-bg-gray-700 dark:hover-text-white"
+                              >
+                                Benzineira
+                              </a>
+                        </li>
+                        </ul>
+                        )}
                         </ul>
                         )}
                             </ul>

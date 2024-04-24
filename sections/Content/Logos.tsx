@@ -48,7 +48,7 @@ function Logos(props: Props) {
 
   return (
     <>
-      <WaterJetDetails />
+      {/* <WaterJetDetails /> */}
     </>
   );
 }

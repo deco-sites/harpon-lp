@@ -1,15 +1,23 @@
+import SimpleText from "deco-sites/harpon-lp/components/news/SimpleText.tsx";
+import BannerCarousel from "deco-sites/harpon-lp/components/ui/BannerCarousel.tsx";
+import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx";
+
 export default function ImagesProducts() {
     return (
+      <>
+      <BannerCarousel />
       <div className="flex relative gap-[20px] justify-center mb-[150px] mt-[142px] xs:w-max xs:flex-col xs:mt-[200px] xs:ml-[100px] 1xs:w-max 1xs:flex-col 1xs:mt-0 md:w-max 2xl:justify-center 2xl:mt-[200px]">
         <div className="relative group">
           <div className="image-container">
             <div className="image-zoom" style={{ overflow: "hidden" }}>
               <div className="zoomable-image">
-                <img
-                  src="waterjet.png"
-                  alt="Homem montando pneu"
-                  className="transition-transform hover:scale-110 xs:w-[800px] 1xs:w-[430px]"
-                />
+                <a href='#'>
+                  <img
+                    src="waterjet.png"
+                    alt="Homem montando pneu"
+                    className="transition-transform hover:scale-110 xs:w-[800px] 1xs:w-[430px]"
+                  />
+                </a>
               </div>
             </div>
            {/*  <a class="xs:text-[10px] 1xs:text-sm md:text-sm" href="https://www.harpon.com.br/waterjet"> */}
@@ -29,11 +37,13 @@ export default function ImagesProducts() {
           <div className="image-container">
             <div className="image-zoom" style={{ overflow: "hidden" }}>
               <div className="zoomable-image">
-                <img
-                  src="recauchutagem.png"
-                  alt="Homem montando pneu"
-                  className="transition-transform hover:scale-110 xs:w-[800px] 1xs:w-[430px]  lg:w-max"
-                />
+                <a href='https://www.harpon.com.br/recauchutagem'>
+                  <img
+                    src="recauchutagem.png"
+                    alt="Homem montando pneu"
+                    className="transition-transform hover:scale-110 xs:w-[800px] 1xs:w-[430px]  lg:w-max"
+                  />
+                </a>
               </div>
             </div>
             <a
@@ -54,6 +64,13 @@ export default function ImagesProducts() {
           </div>
         </div>
       </div>
+        <div>
+        <SimpleText />
+        </div>
+        <div>
+        <Diferencials />
+        </div>
+      </>
     );
   }
   

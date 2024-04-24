@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-irregular-whitespace
 import BackToTop from "$store/components/footer/BackToTop.tsx";
 import ColorClasses from "$store/components/footer/ColorClasses.tsx";
 import Divider from "$store/components/footer/Divider.tsx";
@@ -11,6 +12,7 @@ import Social from "$store/components/footer/Social.tsx";
 import Newsletter from "$store/islands/Newsletter.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
+import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
 
 
 
@@ -215,8 +217,12 @@ function Footer({
     : <ExtraLinks content={extraLinks} />;
 
   return (
-    <footer
-      class= 'bg-[#C8C8CA] w-full h-[420px] flex flex-col pt-10 pb-2 md:pb-10 gap-10  xs:h-max xs:mt-[-120px] 1xs:h-max 1xs:mt-[-120px] md:w-auto lg:w-max lg:h-auto ' 
+    <>
+      <LandingPageFooter />
+    </>
+  )
+    {/* <footer
+      class= 'bg-[#C8C8CA] w-full h-[420px] flex flex-col mt-[200px] pt-10 pb-2 md:pb-10 gap-10  xs:h-max xs:mt-[-120px] 1xs:h-max 1xs:mt-[-120px] md:w-auto lg:w-max lg:h-auto ' 
        
     >
       <div class='ml-[139px] xs:ml-5 xs:mt-[-40px] 1xs:ml-5 md:ml-5 lg:ml-[30px]'>
@@ -288,8 +294,8 @@ function Footer({
         
         
         
-    </footer>
-  );
+    </footer> */}
+
 }
 
 export default Footer;
