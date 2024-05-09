@@ -88,33 +88,12 @@ const ProductList : FunctionalComponent = () => {
         }
     }, [selectedCategories]);
     
+    const handleProductClick = (productId: string) => {
+        let newSelectedProduct = [productId]
+        localStorage.setItem('selectedProduct', newSelectedProduct)
+    }
     
 
-    useEffect(() => {
-     console.log('products:', products)
-    }, [products]);
-    
-
-    /* useEffect(() => {
-        console.log(selectedCategories)
-    }, [selectedCategories]) */
-/* 
-    const loadSelectedCategoriesFromLocalStorageOnClick = () => {
-        console.log('entrou na função');
-        // Obtenha a string de selectedCategories do localStorage
-        const storedSelectedCategories = localStorage.getItem('selectedCategories');
-        console.log(storedSelectedCategories);
-
-        // Verifique se há algo armazenado
-        if (storedSelectedCategories) {
-            // Converta a string em um array
-            const selectedCategoriesArray = JSON.parse(storedSelectedCategories);
-            console.log(selectedCategoriesArray);
-
-            // Atualize o estado de selectedCategories com o novo array
-            setSelectedCategories(selectedCategoriesArray);
-        }
-    }; */
       
     return (
         <>
@@ -173,13 +152,13 @@ const ProductList : FunctionalComponent = () => {
                              <img class='mt-5 ml-5 xs:w-[70px] xs:mt-[5px] xs:ml-[5px] 1xs:w-20 1xs:mt-[5px] 1xs:ml-[5px] md:w-[100px] lg:w-[120px]' src='tag.svg'></img>
                          </div>
                          <div class="flex items-center justify-center mb-2 mt-[15px] group xs:mt-[15px] 1xs:mt-2">
-                             <img class='xs:w-28 1xs:w-[135px] lg:w-[200px]' src={prod.image}></img>
+                             <img class='h-[160px] xs:w-28 1xs:w-[135px] lg:w-[200px]' src={prod.image}></img>
                          </div>
                          
                          <p class='ml-5 mt-5 font-bold text-[20px] font-[Albert Sans] group xs:mt-0 xs:ml-10 xs:text-base 1xs:mt-[-5px] 1xs:ml-10 1xs:text-lg md:text-2xl lg:text-3xl lg:ml-[50px]'>{prod.name}</p>
                          
                          <div class=' group'>
-                             <a href ='/moredetails'>
+                             <a href ='/moredetails' onClick={() => handleProductClick(prod.id)}>
                                  <span class='hidden border border-solid w-[212px] h-[32px] bg-[#29323A] text-white text-center ml-[25px] p-1 group-hover:block hover:bg-[#E9F408] hover:text-[#29323A]'>MAIS DETALHES</span>
                              </a>
                              <svg class=' ml-[200px] mt-[-25px] group-hover:rotate-45' xmlns="http://www.w3.org/2000/svg" width="15.359" height="15.359" viewBox="0 0 15.359 15.359">
