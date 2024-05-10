@@ -146,29 +146,16 @@ const ProductList : FunctionalComponent = () => {
             
         <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-400px] ml-[410px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-0 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 md:grid-cols-2     md:ml-[280px] lg:ml-[280px] ">
                    {products.map(prod => (
-                     <div key={prod.id} class="w-[260px] h-[299px] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 md:h-[250px] lg:w-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"
+                    <a href ='/moredetails' onClick={() => handleProductClick(prod.id)}>
+                     <div key={prod.id} class="w-[260px] h-[299px] hover:bg-[#E9F408] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 md:h-[250px] lg:w-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"
                      >
-                         <div class='group-hover:hidden'>
-                             <img class='mt-5 ml-5 xs:w-[70px] xs:mt-[5px] xs:ml-[5px] 1xs:w-20 1xs:mt-[5px] 1xs:ml-[5px] md:w-[100px] lg:w-[120px]' src='tag.svg'></img>
-                         </div>
                          <div class="flex items-center justify-center mb-2 mt-[15px] group xs:mt-[15px] 1xs:mt-2">
                              <img class='h-[160px] xs:w-28 1xs:w-[135px] lg:w-[200px]' src={prod.image}></img>
                          </div>
                          
                          <p class='ml-5 mt-5 font-bold text-[20px] font-[Albert Sans] group xs:mt-0 xs:ml-10 xs:text-base 1xs:mt-[-5px] 1xs:ml-10 1xs:text-lg md:text-2xl lg:text-3xl lg:ml-[50px]'>{prod.name}</p>
-                         
-                         <div class=' group'>
-                             <a href ='/moredetails' onClick={() => handleProductClick(prod.id)}>
-                                 <span class='hidden border border-solid w-[212px] h-[32px] bg-[#29323A] text-white text-center ml-[25px] p-1 group-hover:block hover:bg-[#E9F408] hover:text-[#29323A]'>MAIS DETALHES</span>
-                             </a>
-                             <svg class=' ml-[200px] mt-[-25px] group-hover:rotate-45' xmlns="http://www.w3.org/2000/svg" width="15.359" height="15.359" viewBox="0 0 15.359 15.359">
-                               <g class='group'  id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(-13.605 9.815) rotate(-45)">
-                                 <path class='group-hover:fill-[#29323A]' id="Caminho_762" data-name="Caminho 762" d="M19.492,18.9H7.589a.9.9,0,1,1,0-1.8h11.9a.9.9,0,1,1,0,1.8Z" transform="translate(0 -4.46)" fill="#fff"/>
-                                 <path class='group-hover:fill-[#29323A]' id="Caminho_763" data-name="Caminho 763" d="M18,20.481a.858.858,0,0,1-.636-.29,1.059,1.059,0,0,1,0-1.4l4.782-5.253L17.364,8.288a1.059,1.059,0,0,1,0-1.4.844.844,0,0,1,1.273,0l5.419,5.952a1.059,1.059,0,0,1,0,1.4l-5.419,5.952A.858.858,0,0,1,18,20.481Z" transform="translate(-3.838)" fill="#fff"/>
-                               </g>
-                             </svg>
-                         </div>
                      </div>
+                    </a>
                    ))}
             </div>
         </>

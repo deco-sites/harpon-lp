@@ -9,7 +9,7 @@ interface Product {
     price: number;
     code: string;
     image: string;
-    variations: any[]
+    variations: Variations[];
 }
 
 interface Variations {
@@ -20,7 +20,7 @@ interface Variations {
 
 const ProductDetails : FunctionalComponent = () => {
     const [product, setProduct] = useState<Product>({});
-    const [variations, setVariations] = useState<any[]>([])
+    const [variations, setVariations] = useState<any[]>([]);
 
     useEffect(() => {
         // Obtém a string armazenada no localStorage
@@ -30,7 +30,7 @@ const ProductDetails : FunctionalComponent = () => {
             axios.get(`https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/get-product-information/${selectedProduct}`)
                 .then((response: any) => {
                     setProduct(response.data);
-                    setVariations(response.data.variation);
+                    setVariations(response.data.variations);
                 }).catch((error: any) => {
                     console.log(error);
                 });
@@ -39,8 +39,13 @@ const ProductDetails : FunctionalComponent = () => {
 
     useEffect(()=> {
         console.log(product)
-        console.log(product.variations)
+        console.log(variations)
     }, [product])
+
+    const handleClick = () => {
+        // Lógica para abrir o link do WhatsApp
+        window.open('https://api.whatsapp.com/send?phone=5511977205601&text=Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20deste%20produto%21', '_blank');
+    };
 
     return (
         <>
@@ -62,12 +67,12 @@ const ProductDetails : FunctionalComponent = () => {
         <span class='text-sm ml-[10px]'>{product.code}</span>
         <p class='text-[#29323A] text-base font-bold mt-5 mb-[10px]'>Selecione o tamanho:</p>
         <select class='border border-solid bg-[#F2F2F2] w-[444px] h-10 text-sm mb-[30px] xs:w-[350px] 1xs:w-[380px] lg:w-[320px]'>
-                {/* {variations.map(vari =>(
-                    <option key={vari.id} class='text-sm text-[#29323A]'>{vari.name}</option>
-                ))} */}
+                {variations.map(vari =>(
+                    <option key={vari.id} class='text-sm text-[#29323A]'>{vari.name}, {vari.description}</option>
+                ))}
             </select>
             <div class='flex gap-5 md:absolute'>
-              <svg class='xs:w-[120px] 1xs:w-[200px]' xmlns="http://www.w3.org/2000/svg" width="168" height="48" viewBox="0 0 168 48">
+              {/* <svg class='xs:w-[120px] 1xs:w-[200px]' xmlns="http://www.w3.org/2000/svg" width="168" height="48" viewBox="0 0 168 48">
               <g id="botão_comprar" data-name="botão comprar" transform="translate(-783 -695)">
                 <g id="Retângulo_19" data-name="Retângulo 19" transform="translate(783 695)" fill="none" stroke="#c8c8ca" stroke-width="1">
                   <rect width="168" height="48" stroke="none"/>
@@ -75,13 +80,17 @@ const ProductDetails : FunctionalComponent = () => {
                 </g>
                 <text id="comprar" transform="translate(826 725)" fill="#c8c8ca" font-size="16" font-family="AlbertSans-Bold, Albert Sans" font-weight="700"><tspan x="0" y="0">COMPRAR</tspan></text>
                </g>
-              </svg>
-              <div class='group'>
+              </svg> */}
+            <a>
+              <div class='group ml-[80px]'
+                onClick={handleClick}
+                >
               <svg class='xs:w-[180px] 1xs:w-[230px] lg:w-[180px]'  id="botão_cotar" data-name="botão cotar" xmlns="http://www.w3.org/2000/svg" width="260"    height="48" viewBox="0 0 260 48">
                <rect class='group-hover:fill-[#E9F408]' id="Retângulo_19" data-name="Retângulo 19" width="260" height="48" fill="#29323a"/>
                 <text class=' group-hover:fill-[#29323A] lg:text-xl' id="cotar" transform="translate(102 30)" fill="#fff" font-size="16" font-family="AlbertSans-Bold, Albert Sans" font-weight="700"><tspan x="0" y="0">COTAR</tspan></text>
               </svg>
               </div>
+            </a>  
             </div>
       </div>
       <div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[250px] ml-[231px] xs:ml-0 xs:mt-[180px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[180px] 1xs:w-[380px] 1xs:h-[250px] md:ml-[100px] lg:ml-[120px]'
