@@ -43,8 +43,10 @@ const ProductDetails : FunctionalComponent = () => {
     }, [product])
 
     const handleClick = () => {
-        // Lógica para abrir o link do WhatsApp
-        window.open('https://api.whatsapp.com/send?phone=5511977205601&text=Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20deste%20produto%21', '_blank');
+        const mensagem = `Gostaria de solicitar um orçamento deste produto: ${product.name}!`;
+        const mensagemCodificada = encodeURIComponent(mensagem);
+        window.open(`https://api.whatsapp.com/send?phone=5511977205601&text=${mensagemCodificada}`, '_blank');
+
     };
 
     return (
