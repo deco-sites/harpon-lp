@@ -38,7 +38,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
 
     
     return (
-        <div class='container p-4 mt-[50px] xs:mt-0 xs:mb-0 1xs:mt-0 1xs:h-[600px] md:h-[550px]'>
+        <div class='container h-[450px] p-4 mt-[50px] xs:mt-0 xs:mb-0 1xs:mt-0 1xs:h-[600px] md:h-[550px]'>
             <h1 class='text-[36px] ml-[20px] font-normal xs:text-[20px] 1xs:text-2xl'>
                 <span style={{ fontWeight: 'bold' }}>CATEGORIAS</span>
             </h1>
@@ -57,7 +57,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
                         {categories.map(category => (
                             <a href='/productlist' onClick={() => handleCategoryClick(category.name)}>
                                 <div key={category.id} class="group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out hover:bg-[#E9F408] xs:w-[150px] xs:h-[150px] 1xs:w-[180px] 1xs:h-[200px] md:w-[180px] md:h-[250px]">
-                                    <p class='flex justify-center my-[30px] font-bold text-[20px] uppercase text-center font-[Albert Sans] group xs:mt-[35px] xs:ml-[45px] xs:pt-[10px] xs:text-xs 1xs:text-base 1xs:ml-[50px] 1xs:pt-[30px] md:pl-5 md:pt-[90px]'>{category.name}</p>
+                                    <p class='flex justify-center my-[30px] font-bold text-lg uppercase text-center font-[Albert Sans] group xs:mt-[35px] xs:ml-[45px] xs:pt-[10px] xs:text-xs 1xs:text-base 1xs:ml-[50px] 1xs:pt-[30px] md:pl-5 md:pt-[90px]'>{category.name}</p>
                                 </div>
                             </a>
                         ))}

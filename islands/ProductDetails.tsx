@@ -106,7 +106,8 @@ const ProductDetails : FunctionalComponent = () => {
                         </div>
                       </a>  
                     </div>
-                  </div><div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[100px] ml-[131px] xs:ml-0 xs:mt-[180px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[180px] 1xs:w-[380px] 1xs:h-[250px] md:ml-[100px] lg:ml-[120px]'
+                  </div>
+                  <div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[100px] ml-[131px] xs:ml-0 xs:mt-[180px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[180px] 1xs:w-[380px] 1xs:h-[250px] md:ml-[100px] lg:ml-[120px]'
 
                   >
                     <img class='max-h-[400px]  xs:w-[270px] xs:ml-10 xs:mt-10 1xs:w-[270px] 1xs:ml-10 1xs:mt-10' src={product.image}></img>
