@@ -43,7 +43,7 @@ const ProductDetails : FunctionalComponent = () => {
     }, [product])
 
     const handleClick = () => {
-        const mensagem = `Gostaria de solicitar um orçamento deste produto: ${product.name}!`;
+        const mensagem = `Gostaria de solicitar um orçamento deste produto: ${product.name}.`;
         const mensagemCodificada = encodeURIComponent(mensagem);
         window.open(`https://api.whatsapp.com/send?phone=5511977205601&text=${mensagemCodificada}`, '_blank');
 
@@ -51,13 +51,13 @@ const ProductDetails : FunctionalComponent = () => {
 
     return (
         <>
-            <div class='flex ml-[139px] mt-[150px] xs:mt-[30px] xs:ml-0 1xs:mt-[30px] 1xs:ml-0 md:mt-[60px] md:ml-[100px] lg:ml-5'>
+            <div class='flex ml-[139px] mt-[50px] xs:mt-[30px] xs:ml-0 1xs:mt-[30px] 1xs:ml-0 md:mt-[60px] md:ml-[100px] lg:ml-5'>
         <a href='/'><p class='font-bold'>Home &#62;</p></a> <a href='productlist'><p class='font-bold'>Todos os Produtos &#62;</p></a> <span class='ml-2'>{product.name}</span>
       </div>
-      <div class='ml-[783px] xs:ml-0 1xs:ml-0 md:ml-[100px] lg:ml-[672px]'>
+      <div class='ml-[683px] -mt-10 xs:ml-0 1xs:ml-0 md:ml-[100px] lg:ml-[672px]'>
         <h1 class='text-4xl text-[#29323A] font-bold xs:text-[28px] 1xs:text-3xl'>{product.name}</h1>
       </div>
-      <div class='ml-[783px] mt-[-50px] xs:ml-0 xs:mt-[320px] 1xs:mt-[320px] 1xs:ml-0 md:ml-[100px] md:mt-[600px] lg:ml-[672px]'>
+      <div class='ml-[683px] mt-[-50px] xs:ml-0 xs:mt-[320px] 1xs:mt-[320px] 1xs:ml-0 md:ml-[100px] md:mt-[600px] lg:ml-[672px]'>
       {product.description && (
     <>
         <h2 class='text-[#29323A] text-base font-bold'>Descrição:</h2>
@@ -67,12 +67,16 @@ const ProductDetails : FunctionalComponent = () => {
 
         <p class='inline text-[#29323A] text-base font-bold'>Código:</p>
         <span class='text-sm ml-[10px]'>{product.code}</span>
-        <p class='text-[#29323A] text-base font-bold mt-5 mb-[10px]'>Selecione o tamanho:</p>
-        <select class='border border-solid bg-[#F2F2F2] w-[444px] h-10 text-sm mb-[30px] xs:w-[350px] 1xs:w-[380px] lg:w-[320px]'>
-                {variations.map(vari =>(
-                    <option key={vari.id} class='text-sm text-[#29323A]'>{vari.name}, {vari.description}</option>
-                ))}
-            </select>
+        {variations && variations.length > 0 && (
+            <>
+                <p className='text-[#29323A] text-base font-bold mt-5 mb-[10px]'>Selecione o tamanho:</p>
+                <select className='border border-solid bg-[#F2F2F2] w-[444px] h-10 text-sm mb-[30px] xs:w-[350px] 1xs:w-[380px] lg:w-[320px]'>
+                    {variations.map(vari => (
+                        <option key={vari.id} value={vari.id} className='text-sm text-[#29323A]'>{vari.name}, {vari.description}</option>
+                    ))}
+                </select>
+            </>
+)}
             <div class='flex gap-5 md:absolute'>
               {/* <svg class='xs:w-[120px] 1xs:w-[200px]' xmlns="http://www.w3.org/2000/svg" width="168" height="48" viewBox="0 0 168 48">
               <g id="botão_comprar" data-name="botão comprar" transform="translate(-783 -695)">
@@ -84,7 +88,7 @@ const ProductDetails : FunctionalComponent = () => {
                </g>
               </svg> */}
             <a>
-              <div class='group ml-[80px]'
+              <div class='group ml-[80px] mt-10 cursor-pointer'
                 onClick={handleClick}
                 >
               <svg class='xs:w-[180px] 1xs:w-[230px] lg:w-[180px]'  id="botão_cotar" data-name="botão cotar" xmlns="http://www.w3.org/2000/svg" width="260"    height="48" viewBox="0 0 260 48">
@@ -95,10 +99,10 @@ const ProductDetails : FunctionalComponent = () => {
             </a>  
             </div>
       </div>
-      <div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[250px] ml-[231px] xs:ml-0 xs:mt-[180px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[180px] 1xs:w-[380px] 1xs:h-[250px] md:ml-[100px] lg:ml-[120px]'
+      <div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[100px] ml-[131px] xs:ml-0 xs:mt-[180px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[180px] 1xs:w-[380px] 1xs:h-[250px] md:ml-[100px] lg:ml-[120px]'
       
       >
-        <img class='max-h-[350px] max-w-[200px] mt-[50px] ml-[90px] xs:w-[270px] xs:ml-10 xs:mt-10 1xs:w-[270px] 1xs:ml-10 1xs:mt-10' src={product.image}></img>
+        <img class='max-h-[400px]  xs:w-[270px] xs:ml-10 xs:mt-10 1xs:w-[270px] 1xs:ml-10 1xs:mt-10' src={product.image}></img>
       </div>
       {/* <div class='inline-grid gap-5 absolute mt-[250px] ml-[139px] xs:inline-flex xs:w-[65px] xs:h-[65px] xs:mt-[450px] xs:ml-0 1xs:inline-flex 1xs:w-[65px] 1xs:h-[65px] 1xs:mt-[450px] 1xs:ml-0 md:inline-flex md:ml-[100px] md:mt-[710px] lg:ml-5'>
         <img class='w-[76px] md:w-[100px]' src={product.image}></img>
@@ -106,7 +110,7 @@ const ProductDetails : FunctionalComponent = () => {
         <img class='w-[76px] md:w-[100px]' src={product.image}></img>
         <img class='w-[76px] md:w-[100px]' src={product.image}></img>
       </div> */}
-      <div class='mx-auto p-4 mt-[139px] mb-[100px] ml-[139px] xs:ml-0 xs:mt-5 1xs:ml-0 1xs:mt-5 md:ml-0 lg:ml-5'>
+      {/* <div class='mx-auto p-4 mt-[139px] mb-[100px] ml-[139px] xs:ml-0 xs:mt-5 1xs:ml-0 1xs:mt-5 md:ml-0 lg:ml-5'>
            <h1 class='text-[36px] font-normal xs:text-xl 1xs:text-2xl md:ml-[100px]'>VOCÊ TAMBÉM{' '} 
            <span style={{ fontWeight: 'bold' }}>PODE GOSTAR</span> 
            </h1> 
@@ -183,7 +187,7 @@ const ProductDetails : FunctionalComponent = () => {
                     <p class='absolute bottom-5 left-5 font-bold text-[20px] font-[Albert Sans] md:text-[28px]'>FLANGES</p>
                 </div>
            </div>
-        </div>
+        </div> */}
         </>
     )
 }

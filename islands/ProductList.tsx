@@ -147,7 +147,7 @@ const ProductList : FunctionalComponent = () => {
         <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-400px] ml-[410px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-0 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 md:grid-cols-2     md:ml-[280px] lg:ml-[280px] ">
                    {products.map(prod => (
                     <a href ='/moredetails' onClick={() => handleProductClick(prod.id)}>
-                     <div key={prod.id} class="w-[260px] h-[299px] hover:bg-[#E9F408] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 md:h-[250px] lg:w-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"
+                     <div key={prod.id} class="w-[260px] h-[299px] hover:border-[#E9F408] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 md:h-[250px] lg:w-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"
                      >
                          <div class="flex items-center justify-center mb-2 mt-[15px] group xs:mt-[15px] 1xs:mt-2">
                              <img class='h-[160px] xs:w-28 1xs:w-[135px] lg:w-[200px]' src={prod.image}></img>
