@@ -84,7 +84,11 @@ const ProductList : FunctionalComponent = () => {
                     }
                 }).catch((error: any) => {
                     console.log(error);
+                })
+                .finally(() => {
+                    setLoading(false); // Define como false após a conclusão da requisição
                 });
+                
         }
     }, [selectedCategories]);
     
@@ -93,8 +97,7 @@ const ProductList : FunctionalComponent = () => {
         localStorage.setItem('selectedProduct', newSelectedProduct)
     }
     
-
-      
+ 
     return (
         <>
             <div class='inline-flex items-center ml-[200px] xs:mt-20 xs:ml-[10px] 1xs:mt-20 1xs:ml-[10px] md:mt-20 md:ml-[50px] lg:mt-20 lg:ml-[50px] xl:mt-20 xl:ml-[139px]'>
@@ -113,7 +116,7 @@ const ProductList : FunctionalComponent = () => {
           <svg class='mr-[-30px] z-10 xs:mt-[50px] 1xs:mt-[50px]' xmlns="http://www.w3.org/2000/svg" width="16.419" height="16.423" viewBox="0 0 16.419 16.423">
             <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search" d="M20.726,19.727,16.16,15.118a6.508,6.508,0,1,0-.988,1L19.709,20.7a.7.7,0,0,0,.992.026A.707.707,0,0,0,20.726,19.727Zm-9.68-3.553a5.139,5.139,0,1,1,3.634-1.505A5.107,5.107,0,0,1,11.046,16.174Z" transform="translate(-4.5 -4.493)" fill="#29323A"/>
            </svg>
-             <input class="w-[444px] h-10 pl-[50px] text-left bg-[#F2F2F2] text-[#29323A] text-sm xs:block xs:text-base xs:w-[350px] xs:mt-[50px] 1xs:block 1xs:text-lg 1xs:w-[400px] 1xs:mt-[50px] md:w-[320px]" type="search" id="MagnifyingGlass" placeholder="Faça uma busca" />
+             <input class="w-[444px] h-10 pl-[70px] text-left bg-[#F2F2F2] text-[#29323A] text-sm xs:block xs:text-base xs:w-[350px] xs:mt-[50px] 1xs:block 1xs:text-lg 1xs:w-[400px] 1xs:mt-[50px] md:w-[320px]" type="search" id="MagnifyingGlass" placeholder="Faça uma busca" />
             <p class='font-bold text-[#29323A] ml-[120px] xs:text-xs xs:ml-[-180px] xs:mt-[-60px] xs:w-min 1xs:mt-[-60px] 1xs:w-min 1xs:text-sm 1xs:ml-[-220px] md:ml-[15px] lg:ml-[10px]'>Ordenar por:</p>
             <select class='border border-solid bg-[#F2F2F2] w-[157px] h-10 ml-[5px] p-[2px] text-sm xs:text-xs xs:w-[125px] xs:h-[30px] xs:mt-[-60px] 1xs:text-sm 1xs:w-[145px] 1xs:h-[30px] 1xs:mt-[-60px] md:ml-0 md:w-[145px]'>
                 <option class='text-sm text-[#29323A]'>Mais Relevantes</option>
@@ -129,22 +132,29 @@ const ProductList : FunctionalComponent = () => {
             <div class='xs:mt-0 xs:grid xs:grid-cols-2 mt-[400px] 1xs:mt-0 1xs:grid 1xs:grid-cols-2 md:mt-5 lg:mt-5 xl:mt-[10px]'>
             {categories.map(category => (
                 <div key={category.id} class="xs:text-xs 1xs:text-sm uppercase">
-                    <input
-                    class='ml-[139px] mt-2 xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px] md:ml-[50px] lg:ml-[50px]'
-                    type='checkbox'
-                    value={category.id}
-                    checked={selectedCategories.includes(category.name)}
-                    onChange={(e) => handleCategoryChange(category.id, category.name, e.target.checked)}
-            disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
-                />
-                    {category.name}
+                    <label className="flex items-center">
+                        <input
+                            className="hidden"
+                            type="checkbox"
+                            value={category.id}
+                            checked={selectedCategories.includes(category.name)}
+                            onChange={(e) => handleCategoryChange(category.id, category.name, e.target.checked)}
+                            disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
+                        />
+                        <span className={`ml-[139px] mt-2 font-[Albert-Sans] cursor-pointer hover:bg-[#E9F408] hover:border-black xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px] md:ml-[50px] lg:ml-[50px] w-5 h-5 border ${selectedCategories.includes(category.name) ? 'border-black bg-[#E9F408]' : 'border-gray-400'}`}></span>
+                        <span className="ml-2 cursor-pointer">{category.name}</span>
+                        </label>
                 </div>
             ))}
             </div>
-            <hr class='ml-[139px] mt-[30px] w-[260px] text-[#C8C8CA] border xs:ml-0 xs:w-[380px] 1xs:ml-0 1xs:w-[410px] md:ml-[50px] lg:ml-[50px] md:w-[180px]'></hr>  
         </div>
             
-        <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-400px] ml-[410px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-0 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 md:grid-cols-2     md:ml-[280px] lg:ml-[280px] ">
+        {loading ? (
+            <div class='flex justify-center items-center h-full'>
+                <img src='loading.gif' alt='Carregando...' />
+            </div>
+        ): (
+            <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-320px] ml-[430px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-0 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 md:grid-cols-2     md:ml-[280px] lg:ml-[280px] ">
                    {products.map(prod => (
                     <a href ='/moredetails' onClick={() => handleProductClick(prod.id)}>
                      <div key={prod.id} class="w-[260px] h-[299px] hover:border-[#E9F408] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 md:h-[250px] lg:w-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"
@@ -158,6 +168,7 @@ const ProductList : FunctionalComponent = () => {
                     </a>
                    ))}
             </div>
+        )}
         </>
     )
 }

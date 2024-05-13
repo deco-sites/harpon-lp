@@ -28,7 +28,7 @@ export default function ImagesProducts() {
                 EM BREVE
               </p>
             {/* </a> */}
-            <div className="absolute bottom-[190px]  left-[30px] text-[32px] font-[Albert Sans] font-normal text-white xs:text-4xl xs:mb-[120px] 1xs:text-xl ">
+            <div className="absolute bottom-[190px]  left-[30px] text-[32px] font-[Albert-Sans] font-normal text-white xs:text-4xl xs:mb-[120px] 1xs:text-xl ">
               <span style={{ fontWeight: "bold" }}>WATERJET</span>
             </div>
           </div>

@@ -101,7 +101,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
       class="relative 2xl:h-[800px] h-[600px] overflow-y-hidden w-full"
     >
       <Picture preload={lcp}>
-      <div className="absolute w-[450px] pl-[80px] pt-[150px] pb-[150px] text-[36px] font-[Albert Sans] font-normal text-white xs:w-min xs:text-2xl xs:mt-[90px] xs:pl-[80px] 1xs:text-[26px] 1xs:w-min 1xs:mt-[90px] 1xs:pl-[100px]">
+      <div className="absolute w-[500px] pl-[130px] pt-[150px] pb-[150px] text-[42px] font-[Albert Sans] font-normal text-white xs:w-min xs:text-2xl xs:mt-[90px] xs:pl-[80px] 1xs:text-[26px] 1xs:w-min 1xs:mt-[90px] 1xs:pl-[100px]">
               PARA EMPRESAS E PNEUS{' '}
               
               <span style={{ fontWeight: 'bold' }}>QUE NUNCA PARAM</span>
