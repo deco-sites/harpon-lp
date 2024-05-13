@@ -52,7 +52,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
                     <div class='flex items-center group'>
                         {/* Seu código para o botão "VER TODOS" */}
                     </div>
-                    <div class="grid grid-cols-4 ml-[20px] -mb-[250px] lg:gap-2 lg:mt-4 md:grid-cols-4 gap-5 mt-4 xs:grid-cols-2 xs:gap-5 1xs:grid-cols-2 1xs:gap-5 xl:grid 2xl:grid">
+                    <div class="grid grid-cols-4 ml-[20px] -mb-[150px] lg:gap-2 lg:mt-4 md:grid-cols-4 gap-5 mt-4 xs:grid-cols-2 xs:gap-5 1xs:grid-cols-2 1xs:gap-5 xl:grid 2xl:grid">
                         {/* Renderiza as categorias */}
                         {categories.map(category => (
                             <a href='/productlist' onClick={() => handleCategoryClick(category.name)}>
