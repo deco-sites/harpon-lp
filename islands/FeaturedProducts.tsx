@@ -38,7 +38,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
 
     
     return (
-        <div class='container h-[450px] p-4 mt-[50px] xs:mt-0 xs:mb-0 1xs:mt-0 1xs:h-[600px] md:h-[550px]'>
+        <div class='container p-4 mt-[50px] xs:mt-0 xs:mb-0 1xs:mt-0 1xs:h-[600px] md:h-[550px]'>
             <h1 class='text-[36px] ml-[20px] font-normal xs:text-[20px] 1xs:text-2xl'>
                 <span style={{ fontWeight: 'bold' }}>CATEGORIAS</span>
             </h1>
