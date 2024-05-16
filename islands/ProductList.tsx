@@ -92,6 +92,7 @@ const ProductList : FunctionalComponent = () => {
         }
     }, [selectedCategories]);
     
+    
     const handleProductClick = (productId: string) => {
         let newSelectedProduct = [productId]
         localStorage.setItem('selectedProduct', newSelectedProduct)

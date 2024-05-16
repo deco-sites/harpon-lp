@@ -1,7 +1,14 @@
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
+import axios from 'https://cdn.skypack.dev/axios';
+
+interface Category {
+  id: string,
+  name: string,
+}
 
 export default function Navbar()  {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [categories, setCategories] = useState<Category[]>([]);
     const [isRecapagemSubMenuOpen, setRecapagemSubMenuOpen] = useState(false)
     const [isRecapagemItem1SubMenuOpen, setRecapagemItem1SubMenuOpen] = useState(false)
     const [isRecapagemItem2SubMenuOpen, setRecapagemItem2SubMenuOpen] = useState(false)
@@ -24,6 +31,21 @@ export default function Navbar()  {
     const [isEscareacao3MenuOpen, setEscareacao3MenuOpen] = useState(false)
     const [isVulcanizacaoMenuOpen, setVulcanizacaoMenuOpen] = useState(false)
     const [isVulcanizacao2MenuOpen, setVulcanizacao2MenuOpen] = useState(false)
+
+    useEffect(() => {
+      console.log("Teste")
+      axios.get('https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/categories')
+      .then((response:any) => {
+         setCategories(response.data) 
+      }).catch((error:any) =>{
+          console.log(error)
+      });
+  },[])
+
+  const handleCategoryClick = (categoryName: string) => {
+    let newSelectedCategories = [categoryName]
+    localStorage.setItem('selectedCategories', newSelectedCategories[0])
+}
     
     
     const openMenu = () => {
