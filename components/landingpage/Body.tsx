@@ -5,6 +5,7 @@ import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx"
 export default function ImagesProducts() {
     return (
       <>
+      <a href="/promocao-carbide" target='_blank'><img class='mb-[100px]' src='banner-promocao.jfif' alt='Banner Cabide' ></img></a>
       <BannerCarousel />
       <div className="flex relative gap-[20px] justify-center mb-[150px] mt-[142px] xs:w-max xs:flex-col xs:mt-[200px] xs:ml-[100px] 1xs:w-max 1xs:flex-col 1xs:mt-0 md:w-max 2xl:justify-center 2xl:mt-[200px]">
         <div className="relative group">

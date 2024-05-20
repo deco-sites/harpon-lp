@@ -34,18 +34,22 @@ const ProductList : FunctionalComponent = () => {
     },[]) 
 
     const handleCategoryChange = (categoryId: string, categoryName: string, isChecked: boolean) => {
-        if (isChecked) {
-            // Adicionar a categoria ao array selectedCategories
-            setSelectedCategories(prevCategories => [...prevCategories, categoryName]);
-        } else {
-            // Verificar se há mais de uma categoria selecionada
-            if (selectedCategories.length === 1) {
-                // Se houver apenas uma categoria selecionada, não permita que o usuário a remova
-                return;
+        setSelectedCategories(prevCategories => {
+            let updatedCategories;
+            if (isChecked) {
+                // Remover a categoria se já estiver presente e adicionar no início do array
+                updatedCategories = prevCategories.filter(cat => cat !== categoryName);
+                updatedCategories = [categoryName, ...updatedCategories];
+            } else {
+                // Remover a categoria do array
+                updatedCategories = prevCategories.filter(cat => cat !== categoryName);
             }
-            // Remover a categoria do array selectedCategories
-            setSelectedCategories(prevCategories => prevCategories.filter(cat => cat !== categoryName));
-        }
+    
+            // Log da ordem atual das categorias
+            console.log('Ordem das categorias:', updatedCategories);
+    
+            return updatedCategories;
+        });
     };
     
     
@@ -66,32 +70,41 @@ const ProductList : FunctionalComponent = () => {
     
     useEffect(() => {
         console.log("Novo estado de selectedCategories:", selectedCategories);
+
         if (selectedCategories.length === 0) {
-            setProducts([])
+            setProducts([]);
+            return; // Certifica-se de que a função não continue se não houver categorias selecionadas
         }
-        // Verifica se há categorias selecionadas
-        if (selectedCategories.length > 0) {
-            axios.post('https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories', {
-                    categories: selectedCategories
-                })
-                .then((response: any) => {
-                    console.log(response.data);
-                    // Concatenando todos os arrays de produtos em um único array
-                    const allProducts = response.data.reduce((acc: any[], curr: any[]) => acc.concat(curr), []);
-                    
-                    if (allProducts.length > 0) {
-                        setProducts(allProducts);
-                    }
-                }).catch((error: any) => {
-                    console.log(error);
-                })
-                .finally(() => {
-                    setLoading(false); // Define como false após a conclusão da requisição
-                });
-                
-        }
+
+        setLoading(true); // Define como true no início da requisição
+
+        axios.post('https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories', {
+            categories: selectedCategories
+        })
+        .then((response: any) => {
+            console.log(response.data);
+
+            // Colocar os produtos da última categoria selecionada no início
+            const allProducts = selectedCategories.reduce((acc, category, index) => {
+                const productsForCategory = response.data[index] || [];
+                if (index === 0) {
+                    return [...productsForCategory, ...acc];
+                } else {
+                    return [...acc, ...productsForCategory];
+                }
+            }, []);
+
+            setProducts(allProducts);
+        })
+        .catch((error: any) => {
+            console.log(error);
+        })
+        .finally(() => {
+            setLoading(false); // Define como false após a conclusão da requisição
+        });
+
     }, [selectedCategories]);
-    
+
     
     const handleProductClick = (productId: string) => {
         let newSelectedProduct = [productId]
