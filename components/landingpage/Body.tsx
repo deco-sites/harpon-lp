@@ -5,6 +5,7 @@ import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx"
 export default function ImagesProducts() {
     return (
       <>
+      <a href="/promocao-carbide" target='_blank'><img class='mb-[100px] w-full' src='banner-atual.png' alt='Banner Cabide' ></img></a>
       <BannerCarousel />
       <div className="flex relative gap-[20px] justify-center mb-[150px] mt-[142px] xs:w-max xs:flex-col xs:mt-[200px] xs:ml-[100px] 1xs:w-max 1xs:flex-col 1xs:mt-0 md:w-max 2xl:justify-center 2xl:mt-[200px]">
         <div className="relative group">
@@ -28,7 +29,7 @@ export default function ImagesProducts() {
                 EM BREVE
               </p>
             {/* </a> */}
-            <div className="absolute bottom-[190px]  left-[30px] text-[32px] font-[Albert-Sans] font-normal text-white xs:text-4xl xs:mb-[120px] 1xs:text-xl ">
+            <div className="absolute bottom-[190px]  left-[30px] text-[32px]  font-normal text-white xs:text-4xl xs:mb-[120px] 1xs:text-xl ">
               <span style={{ fontWeight: "bold" }}>WATERJET</span>
             </div>
           </div>

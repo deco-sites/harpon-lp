@@ -1,5 +1,6 @@
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import LandingPageHeader from "deco-sites/harpon-lp/components/landingpage/Header.tsx";
 
 /**
  * @titleBy alt
@@ -123,8 +124,7 @@ export default function BannnerGrid(props: Props) {
     banners = [],
   } = { ...DEFAULT_PROPS, ...props };
 
-  return (
-    <section class="container w-full px-4 md:px-0 mx-auto">
+  {/* <section class="container w-full px-4 md:px-0 mx-auto">
       {title &&
         (
           <div class="py-6 md:py-0 md:pb-[40px] flex items-center mt-6">
@@ -172,6 +172,53 @@ export default function BannnerGrid(props: Props) {
           </a>
         ))}
       </div>
-    </section>
+    </section> */}
+
+  return (
+    <>
+      <div>
+        <LandingPageHeader />
+      </div>
+      <div class='bg-[#E4E4E4]'>
+        <div class='bg-[#E4E4E4] h-[50px]'></div>
+        <div class='flex justify-center h-[120px] w-[900px] bg-[#E9F408] mx-[300px] mb-[50px]'>
+          <h1 class='text-[#29323A]  font-bold text-4xl text-center mb-[50px] pt-[15px]'>
+            Participe do Programa Carbide Boomerang <br></br>
+            e ganhe créditos para a sua próxima compra!
+          </h1>
+        </div>
+        <div class='grid justify-center w-[800px] mx-[370px] my-5'>
+            <p class='text-[#29323A] text-2xl  text-center'>
+          As regras são simples:
+            </p>
+            <p class='text-[#29323A] text-2xl  text-left mt-5'>
+            <span style={{ fontWeight: 'bold', fontSize:'24px' }}>1.</span> Envie os seus carbides usados para a Harpon.
+            </p>
+            <p class='text-[#29323A] text-2xl  text-left mt-5'>
+            <span style={{ fontWeight: 'bold', fontSize:'24px' }}>2.</span> Nós realizamos uma triagem, separando os carbides sem condições de uso para o descarte da forma adequada.
+            </p>
+            <p class='text-[#29323A] text-2xl  text-left mt-5'>
+            <span style={{ fontWeight: 'bold', fontSize:'24px' }}>3.</span> Os itens em boas condições de reaproveitamento são validados.
+            </p>
+            <p class='text-[#29323A] text-2xl  text-left mt-5'>
+            <span style={{ fontWeight: 'bold', fontSize:'24px' }}>4.</span> Dentro de 48 horas, retornamos informando o valor do seu voucher a partir da quantidade e tipo de carcaças reaproveitadas.
+            </p>
+            <p class='text-[#29323A] text-2xl  text-left mt-5'>
+            <span style={{ fontWeight: 'bold', fontSize:'24px' }}>5.</span> Geramos um crédito de até R$ 87 (consultar tabela abaixo) por carbide para você utilizar comprando qualquer produto Harpon.
+            </p>
+            <p class='text-[#29323A] text-2xl  text-left mt-5'>
+            A cada compra, você pode abater, no máximo, 30% do valor da nota. Caso o crédito não seja zerado, poderá ser abatido na próxima compra, sem limite de prazo.
+            </p>
+            <p class='text-[#29323A] text-2xl  text-left mt-5'>
+            Participe e contribua para o avanço da economia circular!
+            </p>
+        </div>
+            <div class='flex justify-center'>
+        <img src='tabela-promocao.jfif' alt='Tabela de valores'></img>
+            </div>
+      </div>
+
+    </>
+    
   );
 }

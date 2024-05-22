@@ -262,7 +262,7 @@ export const MenuHamburguer: FunctionalComponent = () => {
                                   <a
                                     href="/moredetails"
                                     onClick={() => handleProductClick(prod.id)}
-                                    className="block pt-2 pl-3 pr-4 text-sm text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                                    className="block pt-2 pl-3 pr-4 text-sm  text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                                   >
                                     {prod.name}
                                   </a>
@@ -287,14 +287,14 @@ export const MenuHamburguer: FunctionalComponent = () => {
                                     .filter((prod) =>
                                       prod.categoryId === category.id
                                     )
-                                    .slice(12, 27) // Exibe os produtos a partir do 11º produto
+                                    .slice(12, 27) // Exibe os produtos a partir do 12º produto
                                     .map((prod, index) => (
                                       <li key={prod.id}>
                                         <a
                                           href="/moredetails"
                                           onClick={() =>
                                             handleProductClick(prod.id)}
-                                          className="block pt-2 pl-3 pr-4 text-sm text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                                          className="block pt-2 pl-3 pr-4 text-sm  text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                                         >
                                           {prod.name}
                                         </a>
@@ -320,14 +320,14 @@ export const MenuHamburguer: FunctionalComponent = () => {
                                           .filter((prod) =>
                                             prod.categoryId === category.id
                                           )
-                                          .slice(27) // Exibe os produtos a partir do 11º produto
+                                          .slice(27) // Exibe os produtos a partir do 28º produto
                                           .map((prod, index) => (
                                             <li key={prod.id}>
                                               <a
                                                 href="/moredetails"
                                                 onClick={() =>
                                                   handleProductClick(prod.id)}
-                                                className="block pt-2 pl-3 pr-4 text-sm text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                                                className="block pt-2 pl-3 pr-4 text-sm  text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                                               >
                                                 {prod.name}
                                               </a>
