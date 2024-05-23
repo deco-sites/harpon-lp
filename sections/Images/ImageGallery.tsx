@@ -1,6 +1,7 @@
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import Login from "deco-sites/harpon-lp/islands/Login.tsx";
 
 /**
  * @titleBy alt
@@ -185,20 +186,21 @@ export default function Gallery(props: Props) {
       ? "sm:row-span-3"
       : "sm:row-span-2";
 
+      {/* <section class="container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
+        <Header
+          title={title}
+          description={description}
+          alignment={layout?.headerAlignment || "center"}
+        />
+        <ul class="grid grid-flow-col grid-cols-2 grid-rows-6 gap-4 list-none">
+          {banners?.map((banner, index) => (
+            <li class={`${mobileItemLayout(index)} ${desktopItemLayout(index)}`}>
+              <Banner {...banner} borderRadius={props.layout?.borderRadius} />
+            </li>
+          ))}
+        </ul>
+      </section> */}
   return (
-    <section class="container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
-      <Header
-        title={title}
-        description={description}
-        alignment={layout?.headerAlignment || "center"}
-      />
-      <ul class="grid grid-flow-col grid-cols-2 grid-rows-6 gap-4 list-none">
-        {banners?.map((banner, index) => (
-          <li class={`${mobileItemLayout(index)} ${desktopItemLayout(index)}`}>
-            <Banner {...banner} borderRadius={props.layout?.borderRadius} />
-          </li>
-        ))}
-      </ul>
-    </section>
+      <Login />
   );
 }
