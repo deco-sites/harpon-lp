@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'preact/hooks';
 import { FunctionalComponent } from 'preact';
+import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
 import axios from 'https://cdn.skypack.dev/axios';
 import ProductContext from '../context/ProductContext.tsx'
 
@@ -38,14 +39,18 @@ export const FeaturedProducts: FunctionalComponent = () => {
 
     
     return (
-        <div class='container p-4 mt-[50px] xs:mt-0 xs:mb-0 1xs:mt-0 1xs:h-[600px] md:h-[550px]'>
+        <>
+            <div>
+                <a href="/promocao-carbide" target='_blank'><img class='w-full' src='banner-atual.png' alt='Banner Cabide' ></img></a>
+            </div>
+         <div class='container p-4 mb-[150px] xs:mt-0 xs:mb-0 1xs:mt-0 1xs:h-[600px] md:h-[550px]'>
             <h1 class='text-[36px] ml-[20px] font-normal xs:text-[20px] 1xs:text-2xl'>
                 <span style={{ fontWeight: 'bold' }}>CATEGORIAS</span>
             </h1>
             {/* Exibe o GIF de carregamento enquanto as categorias estão sendo carregadas */}
             {loading ? (
                 <div class='flex justify-center items-center h-full'>
-                    <img src='loading.gif' alt='Carregando...' />
+                    <img src='loading.gif' alt='Carregando...' class='w-20' />
                 </div>
             ) : (
                 <div>
@@ -65,6 +70,10 @@ export const FeaturedProducts: FunctionalComponent = () => {
                 </div>
             )}
         </div>
+        <div>
+            <LandingPageFooter />
+        </div>
+        </>
     )
 }
 

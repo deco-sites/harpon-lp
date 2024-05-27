@@ -21,11 +21,11 @@ export const Login: FunctionalComponent = () => {
       </div>
       <div>
         <form
-          class="w-[500px] mx-[525px] border border-solid border-[#29323A] p-5 mt-[100px] mb-[118px]"
+          class="w-[500px] mx-auto border border-solid border-[#29323A] p-5 mt-[133px] mb-[118px]"
           method="POST"
         >
           <div class="pb-8 text-center">
-            <span class="text-2xl font-semibold">Log In</span>
+            <span class="text-2xl font-semibold">Entre</span>
           </div>
 
           <div>
@@ -53,7 +53,7 @@ export const Login: FunctionalComponent = () => {
                 id="password"
                 type={showPassword ? "text" : "password"}
                 name="password"
-                placeholder="Password"
+                placeholder="Senha"
                 required
                 class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#E9F408]"
               />
@@ -86,7 +86,7 @@ export const Login: FunctionalComponent = () => {
                 name="remember"
                 class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500"
               />
-              <span class="ms-2 text-sm text-gray-600">Remember Me</span>
+              <span class="ms-2 text-sm text-gray-600">Lembrar de mim</span>
             </label>
           </div>
 
@@ -95,18 +95,18 @@ export const Login: FunctionalComponent = () => {
               class="hover:underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               href="#"
             >
-              Forgot your password?
+              Esqueceu sua senha?
             </a>
 
             <button class="ms-4 inline-flex items-center px-4 py-2 bg-[#E9F408] border border-transparent rounded-md font-semibold text-xs text-[#29323A] uppercase tracking-widest focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-              Sign In
+              Entrar
             </button>
-            <p class="ml-[10px]">or</p>
+            <p class="ml-[10px]">ou</p>
             <button
               onClick={handleSignUpClick}
               class="ms-4 inline-flex items-center px-4 py-2 bg-[#E9F408] border border-transparent rounded-md font-semibold text-xs text-[#29323A] uppercase tracking-widest focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
             >
-              Sign Up
+              Cadastrar
             </button>
           </div>
         </form>

@@ -25,25 +25,25 @@ export const Register: FunctionalComponent = () => {
             </div>
             <div>
                 <form
-                    class="w-[500px] mx-auto border border-solid border-[#29323A] p-5 mt-[100px] mb-[118px]"
+                    class="w-[500px] mx-auto border border-solid border-[#29323A] p-5 mt-[111px] mb-[118px]"
                     method="POST"
                 >
                     <div class="pb-8 text-center">
-                        <span class="text-2xl font-semibold">Register</span>
+                        <span class="text-2xl font-semibold">Cadastrar-se</span>
                     </div>
                     <div>
-                        <label class="block font-bold text-sm text-[#29323A]" for="name">Name</label>
+                        <label class="block font-bold text-sm text-[#29323A]" for="name"></label>
                         <input
                             type="text"
                             name="name"
-                            placeholder="Name"
+                            placeholder="Nome"
                             class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#E9F408]"
                             value={name}
                             onInput={(e) => setName((e.target as HTMLInputElement).value)}
                         />
                     </div>
                     <div class="mt-4">
-                        <label class="block font-bold text-sm text-[#29323A]" for="email">Email</label>
+                        <label class="block font-bold text-sm text-[#29323A]" for="email"></label>
                         <input
                             type="email"
                             name="email"
@@ -54,13 +54,13 @@ export const Register: FunctionalComponent = () => {
                         />
                     </div>
                     <div class="mt-4">
-                        <label class="block font-bold text-sm text-[#29323A]" for="password">Password</label>
+                        <label class="block font-bold text-sm text-[#29323A]" for="password"></label>
                         <div class="relative">
                             <input
                                 id="password"
                                 type={showPassword ? "text" : "password"}
                                 name="password"
-                                placeholder="Password"
+                                placeholder="Senha"
                                 required
                                 class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#E9F408]"
                                 value={password}
@@ -91,7 +91,7 @@ export const Register: FunctionalComponent = () => {
                             }`}
                             disabled={!isFormValid}
                         >
-                            Create Account
+                            Criar conta
                         </button>
                     </div>
                 </form>

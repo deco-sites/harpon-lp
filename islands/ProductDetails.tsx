@@ -57,12 +57,12 @@ const ProductDetails : FunctionalComponent = () => {
         <>
             {loading ? (
                 <div class='flex justify-center items-center h-full'>
-                <img src='loading.gif' alt='Carregando...' />
+                <img src='loading.gif' alt='Carregando...' class='w-20' />
                 </div>
             ): (
                 <>
                 <div class='flex ml-[139px] mt-[50px] xs:mt-[30px] xs:ml-0 1xs:mt-[30px] 1xs:ml-0 md:mt-[60px] md:ml-[100px] lg:ml-5'>
-                  <a href='/'><p class='font-bold'>Home &#62;</p></a> <a href='productlist'><p class='font-bold'>Todos os Produtos &#62;</p></a> <span class='ml-2'>{product.name}</span>
+                  <a href='/'><p class='font-bold'>Home &#62;</p></a> <a href='productlist'><p class='font-bold'>Todos os produtos &#62;</p></a> <span class='ml-2'>{product.name}</span>
                 </div><div class='ml-[683px] -mt-10 xs:ml-0 1xs:ml-0 md:ml-[100px] lg:ml-[672px]'>
                     <h1 class='text-4xl text-[#29323A] font-bold xs:text-[28px] 1xs:text-3xl'>{product.name}</h1>
                   </div><div class='ml-[683px] mt-[-50px] xs:ml-0 xs:mt-[320px] 1xs:mt-[320px] 1xs:ml-0 md:ml-[100px] md:mt-[600px] lg:ml-[672px]'>
@@ -101,7 +101,7 @@ const ProductDetails : FunctionalComponent = () => {
                         >
                           <svg class='xs:w-[180px] 1xs:w-[230px] lg:w-[180px]' id="botão_cotar" data-name="botão cotar" xmlns="http://www.w3.org/2000/svg" width="260" height="48" viewBox="0 0 260 48">
                             <rect class='group-hover:fill-[#E9F408]' id="Retângulo_19" data-name="Retângulo 19" width="260" height="48" fill="#29323a" />
-                            <text class=' group-hover:fill-[#29323A] lg:text-xl' id="cotar" transform="translate(102 30)" fill="#fff" font-size="16" font-family="AlbertSans-Bold, Albert Sans" font-weight="700"><tspan x="0" y="0">COTAR</tspan></text>
+                            <text class=' group-hover:fill-[#29323A] lg:text-xl' id="cotar" transform="translate(102 30)" fill="#fff" font-size="16" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">COTAR</tspan></text>
                           </svg>
                         </div>
                       </a>  

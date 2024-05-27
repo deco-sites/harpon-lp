@@ -165,7 +165,7 @@ const ProductList : FunctionalComponent = () => {
             
         {loading ? (
             <div class='flex justify-center items-center h-full'>
-                <img src='loading.gif' alt='Carregando...' />
+                <img src='loading.gif' alt='Carregando...' class='w-20' />
             </div>
         ): (
             <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-320px] ml-[430px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-0 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 md:grid-cols-2     md:ml-[280px] lg:ml-[280px] ">
