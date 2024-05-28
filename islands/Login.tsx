@@ -1,9 +1,14 @@
 import { FunctionalComponent } from "preact";
-import { useState } from "preact/hooks";
+import { useState, useContext } from "preact/hooks";
+import { AuthContext } from "deco-sites/harpon-lp/context/AuthProvider.tsx";
 import LandingPageHeader from "deco-sites/harpon-lp/components/landingpage/Header.tsx";
+import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
+import { ForggotPassword } from "deco-sites/harpon-lp/islands/ForggotPassword.tsx"
 
 export const Login: FunctionalComponent = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [showForggotPassword, setShowForggotPassword] = useState(false);
+  const { toggleAuthMode } = useContext(AuthContext);
 
   const handleSignUpClick = (event: { preventDefault: () => void; }) => {
     event.preventDefault(); // Previne o envio do formulário
@@ -14,12 +19,19 @@ export const Login: FunctionalComponent = () => {
     setShowPassword(!showPassword);
   };
 
+  const handleForggotPasswordClick = () => {
+    setShowForggotPassword(true); // Exibe o componente de esquecer a senha quando clicar no link correspondente
+  };
+
   return (
     <>
       <div>
         <LandingPageHeader />
       </div>
       <div>
+      {showForggotPassword ? (
+          <ForggotPassword />
+        ) : (
         <form
           class="w-[500px] mx-auto border border-solid border-[#29323A] p-5 mt-[133px] mb-[118px]"
           method="POST"
@@ -91,26 +103,28 @@ export const Login: FunctionalComponent = () => {
           </div>
 
           <div class="flex items-center justify-end mt-4">
-            <a
+            <button
+            onClick={handleForggotPasswordClick}
               class="hover:underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              href="#"
             >
               Esqueceu sua senha?
-            </a>
+            </button>
 
             <button class="ms-4 inline-flex items-center px-4 py-2 bg-[#E9F408] border border-transparent rounded-md font-semibold text-xs text-[#29323A] uppercase tracking-widest focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
               Entrar
             </button>
             <p class="ml-[10px]">ou</p>
             <button
-              onClick={handleSignUpClick}
+              onClick={toggleAuthMode}
               class="ms-4 inline-flex items-center px-4 py-2 bg-[#E9F408] border border-transparent rounded-md font-semibold text-xs text-[#29323A] uppercase tracking-widest focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
             >
               Cadastrar
             </button>
           </div>
         </form>
+        )}
       </div>
+      <LandingPageFooter />
     </>
   );
 };

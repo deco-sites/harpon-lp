@@ -1,6 +1,8 @@
 import { FunctionalComponent } from "preact";
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect, useContext } from "preact/hooks";
+import { AuthContext } from "deco-sites/harpon-lp/context/AuthProvider.tsx"
 import LandingPageHeader from "deco-sites/harpon-lp/components/landingpage/Header.tsx";
+import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
 
 export const Register: FunctionalComponent = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -8,10 +10,15 @@ export const Register: FunctionalComponent = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isFormValid, setIsFormValid] = useState(false);
+    const { toggleAuthMode } = useContext(AuthContext);
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
+
+    const handleBackClick = () => {
+        toggleAuthMode();
+    }
 
     useEffect(() => {
         const isFormFilled = name.trim() !== "" && email.trim() !== "" && password.trim() !== "";
@@ -85,6 +92,12 @@ export const Register: FunctionalComponent = () => {
                         </div>
                     </div>
                     <div class="flex items-center justify-end mt-4">
+                            <button
+                    onClick={handleBackClick}
+                    class="ms-4 mr-5 inline-flex items-center px-4 py-2 bg-[#E9F408] border border-transparent rounded-md font-semibold text-xs text-[#29323A] uppercase tracking-widest focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
+                    >
+                    Voltar
+                    </button>
                         <button
                             class={`inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 ${
                                 isFormValid ? 'bg-[#E9F408] text-[#29323A]' : 'bg-gray-300 text-gray-500 cursor-not-allowed'
@@ -96,6 +109,7 @@ export const Register: FunctionalComponent = () => {
                     </div>
                 </form>
             </div>
+            <LandingPageFooter />
         </>
     );
 }

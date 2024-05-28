@@ -1,7 +1,8 @@
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import Login from "deco-sites/harpon-lp/islands/Login.tsx";
+/* import Login from "deco-sites/harpon-lp/islands/Login.tsx"; */
+import RootUser from "deco-sites/harpon-lp/islands/User.tsx";
 
 /**
  * @titleBy alt
@@ -135,7 +136,7 @@ function Banner(
   const { borderRadius, srcMobile, srcDesktop, alt } = props;
   const radiusDesktop = RADIUS.desktop[borderRadius?.desktop ?? "none"];
   const radiusMobile = RADIUS.mobile[borderRadius?.desktop ?? "none"];
-
+  
   return (
     <a
       href={props.href}
@@ -200,7 +201,8 @@ export default function Gallery(props: Props) {
           ))}
         </ul>
       </section> */}
+      {/* <Login /> */}
   return (
-      <Login />
+      <RootUser />
   );
 }

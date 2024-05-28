@@ -1,6 +1,7 @@
 import { AppProps } from "$fresh/server.ts";
 import GlobalTags from "$store/components/GlobalTags.tsx";
 import Theme from "$store/sections/Theme/Theme.tsx";
+import RootUser from "deco-sites/harpon-lp/islands/User.tsx"
 
 const sw = () =>
   addEventListener("load", () =>
@@ -18,6 +19,7 @@ function App(props: AppProps) {
 
       {/* Rest of Preact tree */}
       <props.Component />
+      <RootUser />
 
       {/* Include service worker */}
       <script
