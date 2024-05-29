@@ -157,9 +157,9 @@ function Dots({ images, interval = 0 }: Props) {
           `,
         }}
       />
-      <ul class="carousel justify-center col-span-full gap-4 z-10 row-start-4">
+      <ul class="carousel justify-center col-span-full gap-4 z-10 row-start-4 xs:hidden">
         {images?.map((_, index) => (
-          <li class="carousel-item">
+          <li class="carousel-item xs:hidden">
             {/* <Slider.Dot index={index}>
               <div class="py-5">
                 <div
@@ -213,11 +213,13 @@ function BannerCarousel(props: Props) {
       class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
     >
       <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
-        {images?.map((image, index) => (
-          <Slider.Item index={index} class="carousel-item w-full">
-            <BannerItem image={image} lcp={index === 0 && preload} />
-          </Slider.Item>
-        ))}
+      {images?.map((image, index) => (
+      index === 0 && (
+        <Slider.Item index={index} class="carousel-item w-full" key={index}>
+          <BannerItem image={image} lcp={preload} />
+        </Slider.Item>
+    )
+  ))}
       </Slider>
 
       {/* <Buttons /> */}

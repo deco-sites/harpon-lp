@@ -39,7 +39,7 @@ function ProductShelf({
   
 
   return (
-    <div>
+    <div class='overflow-x-hidden'>
       <LandingPageHeader />
       <ImagesProducts />
       <LandingPageFooter />
