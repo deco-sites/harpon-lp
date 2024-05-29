@@ -30,7 +30,7 @@ export function Search() {
       
       <a
             class="hidden btn btn-sm btn-ghost ml-10 xs:mb-[-20px] md:ml-5"
-            href="/entrar-ou-cadastrar"
+            href="/entrar"
             aria-label="Log in"
           >
             <div class='flex items-center group 2xl:ml-[200px]'>
