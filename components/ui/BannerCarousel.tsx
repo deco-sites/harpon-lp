@@ -128,7 +128,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           alt={alt}
         /> */}
       </Picture>
-      {action && (
+      {/* {action && (
         <div class="hidden absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px]  flex-col gap-4 p-4 rounded">
           <span class="text-[32px] font-semibold text-base-100">
             {action.title}
@@ -138,7 +138,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           </span>
           <Button class=" hidden glass">{action.label}</Button>
         </div>
-      )}
+      )} */}
     </a>
   );
 }
@@ -160,14 +160,14 @@ function Dots({ images, interval = 0 }: Props) {
       <ul class="carousel justify-center col-span-full gap-4 z-10 row-start-4">
         {images?.map((_, index) => (
           <li class="carousel-item">
-            <Slider.Dot index={index}>
+            {/* <Slider.Dot index={index}>
               <div class="py-5">
                 <div
                   class="w-16 sm:w-20 h-0.5 rounded group-disabled:animate-progress bg-gradient-to-r from-base-100 from-[length:var(--dot-progress)] to-[rgba(255,255,255,0.4)] to-[length:var(--dot-progress)]"
                   style={{ animationDuration: `${interval}s` }}
                 />
               </div>
-            </Slider.Dot>
+            </Slider.Dot> */}
           </li>
         ))}
       </ul>
@@ -175,7 +175,7 @@ function Dots({ images, interval = 0 }: Props) {
   );
 }
 
-function Buttons() {
+/* function Buttons() {
   return (
     <>
       <div class=" hidden  items-center justify-center z-10 col-start-1 row-start-2">
@@ -200,7 +200,7 @@ function Buttons() {
       </div>
     </>
   );
-}
+} */
 
 function BannerCarousel(props: Props) {
   const { images, preload, interval } = { ...DEFAULT_PROPS, ...props };
@@ -220,11 +220,11 @@ function BannerCarousel(props: Props) {
         ))}
       </Slider>
 
-      <Buttons />
+      {/* <Buttons /> */}
 
       <Dots images={images} interval={interval} />
 
-      <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
+      {/* <SliderJS rootId={id} interval={interval && interval * 1e3} infinite /> */}
     </div>
   );
 }

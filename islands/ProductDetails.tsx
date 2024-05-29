@@ -72,7 +72,6 @@ const ProductDetails : FunctionalComponent = () => {
                         <p class='text-sm text-[#29323A] mb-5 w-[490px] xs:w-[350px] 1xs:w-[350px] lg:w-auto'>{product.description}</p>
                       </>
                     )}
-
                     <p class='inline text-[#29323A] text-base font-bold'>Código:</p>
                     <span class='text-sm ml-[10px]'>{product.code}</span>
                     {variations && variations.length > 0 && (
