@@ -4,7 +4,7 @@ export default function Diferencials () { /* Teste*/
             <div class='w-[700px] ml-0 xs:hidden 1xs:hidden'>
                 <img class='w-full md:w-[400px] md:h-[640px] lg:h-[640px]' src='tire.png' alt='Pneu com faixa amarela'></img>
             </div>
-            <div class='w-[55%] bg-[#29323A] xs:w-max xs:m-auto 1xs:w-full md:w-full'>
+            <div class='w-[55%] bg-[#29323A] xs:w-full xs:m-auto 1xs:w-full md:w-full'>
                 <h1 class='text-white  text-4xl text-center font-[Albert Sans] mt-[50px] xs:text-[20px] xs:whitespace-[nowrap] xs:px-[50px] 1xs:text-[26px] md:text-[30px] md:mr-2 lg:ml-10 lg:w-max'>NOSSOS{' '} 
                 <span style={{ fontWeight: 'bold' }}>DIFERENCIAIS</span>
                 </h1>

@@ -1,7 +1,7 @@
 export default function SimpleText() {
     return (
         
-            <div class='flex mt-[150px] ml-[75px] mb-[100px] xs:w-max xs:flex-col xs:mt-0 xs:mb-0  1xs:w-max 1xs:flex-col 1xs:mt-0 1xs:px-20 1xs:mb-0 md:ml-[-20px]'>
+            <div class='flex mt-[150px] ml-[75px] mb-[100px] xs:w-max xs:flex-col xs:mt-0 xs:mb-0  1xs:w-max 1xs:flex-col 1xs:-mt-20 1xs:mb-[50px] md:ml-[-20px]'>
                 <div class='w-[50%] p-4 2xl:ml-[75px]'>
                     <h1 class='text-3xl mt-12 font-[Albert Sans] w-[439px] xs:text-[20px] xs:w-[200px] 1xs:text-2xl '>NUNCA{' '} 
                     <span style={{ fontWeight: 'bold' }}>PARAMOS</span></h1>

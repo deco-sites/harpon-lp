@@ -1,11 +1,11 @@
 export default function LandingPageFooter() {
     return (
-      <div class="bg-[#C8C8CA] w-full h-[150px] flex flex-col xs:w-auto xs:h-[350px] xs:mt-[100px]">
-        <img class="absolute ml-[50px] mt-[50px] xs:mt-3 xs:ml-5" src="logo-harpon.svg" />
+      <div class="bg-[#C8C8CA] w-full h-[150px] flex flex-col xs:w-auto xs:h-[310px] xs:mt-0 1xs:h-[310px]">
+        <img class="absolute ml-[50px] mt-[50px] xs:mt-3 xs:ml-5 1xs:mt-3 1xs:ml-5" src="logo-harpon.svg" />
         <div class="w-[50px] h-[50px] ml-auto mr-[200px] 2xl:mr-[100px]">
           <a href="https://instagram.com/_harpon " target="_blank">
             <img
-              class="mt-[50px] z-10 absolute xs:mt-3 xs:ml-[150px]"
+              class="mt-[50px] z-10 absolute xs:mt-3 xs:ml-[150px] 1xs:mt-3 1xs:ml-[150px]"
               src="instagram-icon.png"
               alt="Ícone do Instagram"
             >
@@ -41,21 +41,21 @@ export default function LandingPageFooter() {
             </h2>
           </div>
         </div> */}
-        <div class="inline-flex items-center ml-[400px] absolute mt-[50px] xs:block xs:relative xs:ml-0 xs:mt-[100px]">
+        <div class="inline-flex items-center ml-[400px] absolute mt-[50px] xs:block xs:relative xs:ml-0 xs:mt-[100px] 1xs:block 1xs:relative 1xs:ml-0">
           <img
-            class="xs:w-[14px] xs:absolute xs:ml-10 1xs:mt-5 1xs:mb-[-20px]"
+            class="xs:w-[14px] xs:absolute xs:ml-10 1xs:mt-5 1xs:mb-[-20px] 1xs:ml-10"
             src="icon-feather-phone.svg"
           >
           </img>
-          <span class="flex text-[#29323A] ml-[10px] xs:text-sm xs:px-[5px] xs:ml-[50px] 1xs:pl-[15px] 1xs:text-[17px] md:whitespace-nowrap">
+          <span class="flex text-[#29323A] ml-[10px] xs:text-sm xs:px-[5px] xs:ml-[50px] 1xs:ml-[50px] 1xs:pl-[15px] 1xs:text-[17px] md:whitespace-nowrap">
             +55(11)4556-0929
           </span>
           <img
-            class="ml-[180px] md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] xs:ml-10 1xs:mb-[-22px] 1xs:mt-5 lg:pl-[15px] xl:pl-5"
+            class="ml-[180px] md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] xs:ml-10 1xs:mb-[-22px] 1xs:mt-5 1xs:ml-10 lg:pl-[15px] xl:pl-5"
             src="icon-feather-map-pin.svg"
           >
           </img>
-          <span class="flex text-[#29323A] ml-[10px] xs:text-sm xs:px-2 xs:ml-[50px] 1xs:text-[17px] 1xs:pl-[15px] md:whitespace-nowrap">
+          <span class="flex text-[#29323A] ml-[10px] xs:text-sm xs:px-2 xs:ml-[50px] 1xs:text-[17px] 1xs:pl-[15px] 1xs:ml-[50px] md:whitespace-nowrap">
             Av. Doutor Mauro Lindemberg Monteiro, 1259<br />Jardim Santa Fé,
             Osasco São Paulo - Brasil
           </span>
