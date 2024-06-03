@@ -81,7 +81,7 @@ function CategoryList(props: Props) {
   return (
     <div
       id={id}
-      class="h-[550px] py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10 1xs:overflow-x-hidden  md:overflow-x-hidden md:overflow-y-hidden 2xl:mt-[50px]"
+      class="h-[550px] py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10  md:overflow-x-hidden md:overflow-y-hidden 2xl:mt-[50px]"
     >
       <FeaturedProducts />
       <Header
