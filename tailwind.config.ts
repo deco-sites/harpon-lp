@@ -10,7 +10,7 @@ export default {
       // => @media (min-width: 320px and max-width: 425px) { ... }
     '1xs': {'min': '411px', 'max': '539px'},
       // => @media (min-width: 320px and max-width: 425px) { ... }
-    'sm': {'min': '640px', 'max': '767px'},
+    'sm': {'min': '540px', 'max': '767px'},
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
       'md': {'min': '768px', 'max': '1023px'},

@@ -79,7 +79,7 @@ const ProductDetails : FunctionalComponent = () => {
                         <p className='text-[#29323A] text-base font-bold mt-5 mb-[10px]'>Selecione o tamanho:</p>
                         <select className='border border-solid bg-[#F2F2F2] w-[444px] h-10 text-sm mb-[30px] xs:w-[350px] 1xs:w-[380px] lg:w-[320px]'>
                           {variations.map(vari => (
-                            <option key={vari.id} value={vari.id} className='text-sm text-[#29323A]'>{vari.name}, {vari.description}</option>
+                            <option key={vari.id} value={vari.id} className='text-sm text-[#29323A]'>{vari.name} - {vari.description}</option>
                           ))}
                         </select>
                       </>

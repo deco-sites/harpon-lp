@@ -114,7 +114,7 @@ const ProductList : FunctionalComponent = () => {
  
     return (
         <>
-            <div class='inline-flex items-center ml-[200px] xs:mt-20 xs:ml-[10px] 1xs:mt-20 1xs:ml-[10px] md:mt-20 md:ml-[50px] lg:mt-20 lg:ml-[50px] xl:mt-20 xl:ml-[139px]'>
+            <div class='inline-flex items-center ml-[139px] xs:mt-20 xs:ml-[10px] 1xs:mt-20 1xs:ml-[10px] md:mt-20 md:ml-[50px] lg:mt-20 lg:ml-[50px] xl:mt-20 xl:ml-[139px]'>
         <a href='/'><p class='font-bold'>Home &#62;</p></a>
         <p class='text-[#29323A] '>{/* &#62;  */}Todos os produtos</p>
       </div>
@@ -141,9 +141,9 @@ const ProductList : FunctionalComponent = () => {
             </div>
             </div>
             <div>
-                <p class='text-normal font-bold mt-[-350px] ml-[139px] xs:mt-5 xs:ml-[10px] 1xs:mt-5 1xs:ml-[10px] md:mt-[50px] md:ml-[50px] lg:mt-[50px] lg:ml-[50px] xl:mt-[30px]'>Recauchutagem</p>
+                <p class='text-normal font-bold ml-[139px] xs:mt-5 xs:ml-[10px] 1xs:mt-5 1xs:ml-[10px] md:mt-[50px] md:ml-[50px] lg:mt-[50px] lg:ml-[50px] xl:mt-[30px]'>Recauchutagem</p>
             </div>
-            <div class='xs:mt-0 xs:grid xs:grid-cols-2 mt-[400px] 1xs:mt-0 1xs:grid 1xs:grid-cols-2 md:mt-5 lg:mt-5 xl:mt-[10px]'>
+            <div class='xs:mt-0 xs:grid xs:grid-cols-2 mt-5 1xs:mt-0 1xs:grid 1xs:grid-cols-2 md:mt-5 lg:mt-5 xl:mt-[10px]'>
             {categories.map(category => (
                 <div key={category.id} class="xs:text-xs 1xs:text-sm uppercase">
                     <label className="flex items-center">
