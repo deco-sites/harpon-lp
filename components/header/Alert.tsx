@@ -15,7 +15,7 @@ export interface Props {
 export function Search() {
   return (
     <div class='justify-center items-center'>
-      <div class="inline-flex items-center mt-5 ml-[35%] xs:ml-[270px] 1xs:ml-[280px] md:ml-[400px] lg:ml-[250px]">
+      <div class="inline-flex items-center mt-5 ml-[35%] xs:ml-[270px] 1xs:ml-[280px] md:ml-[200px] lg:ml-[250px]">
       {/* <select class='hidden border-solid bg-[#3D4B58] w-[120px] h-10 ml-[-160px] mr-[60px] p-2 text-sm text-[#C8C8CA]'>
                 <option class='text-sm text-[#C8C8CA]'>Português</option>
                 <option class='text-sm text-[#C8C8CA]'>English</option>

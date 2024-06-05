@@ -62,7 +62,7 @@ function Navbar({ items, searchbar, logo }: {
             </a>
           )}
         </div>
-        <div class="flex-auto flex justify-end ml-[500px] gap-[10px] text-white font-bold md:mr-0 md:ml-[150px] lg:ml-[50px] lg:mr-[-120px]">
+        <div class="flex-auto flex justify-end ml-[500px] gap-[10px] text-white font-bold  md:mr-0 md:ml-[320px] lg:ml-[50px] lg:mr-[-120px]">
           {items.map((item) => {
             if(item.label !== "Produtos") {
               return <NavItem item={item} />

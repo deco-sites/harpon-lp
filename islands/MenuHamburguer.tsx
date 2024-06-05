@@ -49,7 +49,7 @@ export const MenuHamburguer: FunctionalComponent = () => {
     console.log("Novo estado de selectedCategories:", setCategories);
     if (setCategories.length === 0) {
       setProducts([]);
-    }
+    }6
     // Verifica se há categorias selecionadas
     if (setCategories.length > 0) {
       axios.post(
