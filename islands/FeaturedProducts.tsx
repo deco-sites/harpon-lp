@@ -41,7 +41,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
     return (
         <>
             <div>
-                <a href="/promocao-carbide" target='_blank'><img class='w-full -mt-[70px] xs:-mt-[70px] 1xs:-mt-[70px]' src='banner-atual.png' alt='Banner Cabide' ></img></a>
+                <a href="/promocao-carbide" target='_blank'><img class='w-full -mt-[70px] xs:-mt-[70px] 1xs:-mt-[70px] 2xl:-mt-[110px]' src='banner-atual.png' alt='Banner Cabide' ></img></a>
             </div>
          <div class='container p-4 mb-[150px] xs:mt-0 xs:ml-0 xs:mb-[150px] 1xs:mt-0 1xs:-ml-[15px] md:h-[550px] lg:mt-[142px]'>
             <h1 class='text-[36px] ml-[20px] font-normal xs:text-[20px] 1xs:text-2xl md:ml-0'>
