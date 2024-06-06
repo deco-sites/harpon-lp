@@ -114,7 +114,7 @@ const ProductList : FunctionalComponent = () => {
  
     return (
         <>
-            <div class='inline-flex items-center ml-[139px] xs:mt-20 xs:ml-[10px] 1xs:mt-20 1xs:ml-[10px] md:mt-20 md:ml-[50px] lg:mt-20 lg:ml-[50px] xl:mt-20 xl:ml-[139px]'>
+            <div class='inline-flex items-center ml-[139px] xs:mt-3 xs:ml-[10px] 1xs:mt-3 1xs:ml-[10px] md:mt-20 md:ml-[50px] lg:mt-20 lg:ml-[50px] xl:mt-20 xl:ml-[139px]'>
         <a href='/'><p class='font-bold'>Home &#62;</p></a>
         <p class='text-[#29323A] '>{/* &#62;  */}Todos os produtos</p>
       </div>
@@ -174,10 +174,10 @@ const ProductList : FunctionalComponent = () => {
                      <div key={prod.id} class="w-[260px] h-[299px] hover:border-[#E9F408] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 md:h-[250px] lg:w-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"
                      >
                          <div class="flex items-center justify-center mb-2 mt-[15px] group xs:mt-[15px] 1xs:mt-2">
-                             <img class='h-[160px] xs:w-28 1xs:w-[135px] lg:w-[200px]' src={prod.image}></img>
+                             <img class='h-[160px] xs:w-[90px] xs:h-[80px] 1xs:w-[135px] lg:w-[200px]' src={prod.image}></img>
                          </div>
                          
-                         <p class='ml-5 mt-5 font-bold text-[20px] group xs:mt-0 xs:ml-10 xs:text-base 1xs:mt-[-5px] 1xs:ml-10 1xs:text-lg md:text-2xl lg:text-3xl lg:ml-[50px]'>{prod.name}</p>
+                         <p class='ml-5 mt-5 font-bold text-[20px] group xs:mt-0 xs:ml-10 xs:text-sm 1xs:mt-[-5px] 1xs:ml-10 1xs:text-lg md:text-2xl lg:text-3xl lg:ml-[50px]'>{prod.name}</p>
                      </div>
                     </a>
                    ))}

@@ -20,91 +20,53 @@ interface Product {
 export const MenuHamburguer: FunctionalComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
   const [subMenuCategories, setSubMenuCategories] = useState(false);
-  /* const [menuProducts, setMenuProducts] = useState(false); */
-  const [openSubmenus, setOpenSubmenus] = useState<{ [key: string]: boolean }>(
-    {},
-  );
-  const [isMouseOverSubmenu, setIsMouseOverSubmenu] = useState<
-    { [key: string]: boolean }
-  >({});
+  const [openSubmenus, setOpenSubmenus] = useState<{ [key: string]: boolean }>({});
+  const [isMouseOverSubmenu, setIsMouseOverSubmenu] = useState<{ [key: string]: boolean }>({});
   const [additionalSubmenuOpen, setAdditionalSubmenuOpen] = useState(false);
-  const [additionalSecondSubMenuOpen, setAdditionalSecondSubMenuOpen] =
-    useState(false);
+  const [additionalSecondSubMenuOpen, setAdditionalSecondSubMenuOpen] = useState(false);
 
   useEffect(() => {
-    console.log("Teste");
-    axios.get(
-      "https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/categories",
-    )
+    axios.get("https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/categories")
       .then((response: any) => {
         setCategories(response.data);
-      }).catch((error: any) => {
+      })
+      .catch((error: any) => {
         console.log(error);
       });
   }, []);
 
   useEffect(() => {
-    console.log("Novo estado de selectedCategories:", setCategories);
-    if (setCategories.length === 0) {
-      setProducts([]);
-    }
-    // Verifica se há categorias selecionadas
-    if (setCategories.length > 0) {
+    if (selectedCategories.length > 0) {
       axios.post(
         "https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories",
         {
-          categories: setCategories,
-        },
+          categories: selectedCategories,
+        }
       )
-        .then((response: any) => {
-          console.log(response.data);
-          // Concatenando todos os arrays de produtos em um único array
-          const allProducts = response.data.reduce(
-            (acc: any[], curr: any[]) => acc.concat(curr),
-            [],
-          );
-
-          if (allProducts.length > 0) {
-            setProducts(allProducts);
-          }
-        }).catch((error: any) => {
-          console.log(error);
-        });
+      .then((response: any) => {
+        const allProducts = response.data.reduce((acc: any[], curr: any[]) => acc.concat(curr), []);
+        setProducts(allProducts);
+      })
+      .catch((error: any) => {
+        console.log(error);
+      });
     }
-  }, [setCategories]);
+  }, [selectedCategories]);
 
-  useEffect(() => {
-    const newOpenSubmenus: { [key: string]: boolean } = {};
-    categories.forEach((category) => {
-      newOpenSubmenus[category.id] = openSubmenus[category.id] || false;
-    });
-    setOpenSubmenus(newOpenSubmenus);
-  }, [categories]);
-
-  const handleSubmenuMouseEnter = (categoryId: string) => {
-    setIsMouseOverSubmenu((prevState) => ({
-      ...prevState,
-      [categoryId]: true,
-    }));
-  };
-
-  const handleSubmenuMouseLeave = (categoryId: string) => {
-    setIsMouseOverSubmenu((prevState) => ({
-      ...prevState,
-      [categoryId]: false,
-    }));
+  const handleSubmenuMouseEnter = (categoryName: string) => {
+    setSelectedCategories([categoryName]);
   };
 
   const handleCategoryClick = (categoryName: string) => {
-    let newSelectedCategories = [categoryName];
-    localStorage.setItem("selectedCategories", newSelectedCategories[0]);
+    localStorage.setItem("selectedCategories", categoryName);
+    setSelectedCategories([categoryName]);
   };
 
   const handleProductClick = (productId: string) => {
-    let newSelectedProduct = [productId];
-    localStorage.setItem("selectedProduct", newSelectedProduct);
+    localStorage.setItem("selectedProduct", productId);
   };
 
   const toggleSubmenu = (categoryId: string) => {
@@ -137,14 +99,6 @@ export const MenuHamburguer: FunctionalComponent = () => {
   const closeSubMenuOpen = () => {
     setSubMenuCategories(false);
   };
-
-  /* const openMenuProducts = () => {
-    setMenuProducts(true);
-  };
-
-  const closeMenuProducts = () => {
-    setMenuProducts(false);
-  }; */
 
   return (
     <>
@@ -179,8 +133,7 @@ export const MenuHamburguer: FunctionalComponent = () => {
               width: "100%",
               height: "30px",
             }}
-          >
-          </div>
+          ></div>
           {isMenuOpen && (
             <ul
               className="absolute mt-2 ml-0 z-10"
@@ -197,10 +150,7 @@ export const MenuHamburguer: FunctionalComponent = () => {
               onMouseEnter={openMenu}
               onMouseLeave={closeMenu}
             >
-              <li
-                onMouseEnter={subMenuOpen}
-                onMouseLeave={closeSubMenuOpen}
-              >
+              <li onMouseEnter={subMenuOpen} onMouseLeave={closeSubMenuOpen}>
                 <a
                   href="#"
                   className="block pt-2 pl-3 pr-4 text-[16px] text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
@@ -221,18 +171,18 @@ export const MenuHamburguer: FunctionalComponent = () => {
                   >
                     {categories.map((category) => (
                       <li
-                        key={category.id}
-                        /* onMouseEnter={openMenuProducts}
-                                            onMouseLeave={closeMenuProducts} */
+                        key={category.name}
                         onMouseEnter={(e) => {
-                          toggleSubmenu(category.id);
-                          toggleAdditionalSubmenu(category.id);
-                          toggleAdditionalSecondSubmenu(category.id);
+                          toggleSubmenu(category.id)
+                          handleSubmenuMouseEnter(category.name)
+                          toggleAdditionalSubmenu(category.id)
+                          toggleAdditionalSecondSubmenu(category.id)
                         }}
                         onMouseLeave={(e) => {
-                          toggleSubmenu(category.id);
-                          toggleAdditionalSubmenu(category.id);
-                          toggleAdditionalSecondSubmenu(category.id);
+                          toggleSubmenu(category.id)
+                          handleSubmenuMouseEnter(category.name)
+                          toggleAdditionalSubmenu(category.id)
+                          toggleAdditionalSecondSubmenu(category.id)
                         }}
                       >
                         <a
@@ -256,8 +206,8 @@ export const MenuHamburguer: FunctionalComponent = () => {
                           >
                             {products
                               .filter((prod) => prod.categoryId === category.id)
-                              .slice(0, 12) // Limita a exibição para os primeiros 10 produtos
-                              .map((prod, index) => (
+                              .slice(0, 12)
+                              .map((prod) => (
                                 <li key={prod.id}>
                                   <a
                                     href="/moredetails"
@@ -268,10 +218,9 @@ export const MenuHamburguer: FunctionalComponent = () => {
                                   </a>
                                 </li>
                               ))}
-                            {additionalSubmenuOpen && products.filter((prod) =>
-                                  prod.categoryId === category.id
-                                ).length > 12 &&
-                              (
+                            {additionalSubmenuOpen &&
+                              products.filter((prod) => prod.categoryId === category.id)
+                                .length > 12 && (
                                 <ul
                                   className="absolute top-0 left-full mt-0"
                                   style={{
@@ -284,16 +233,13 @@ export const MenuHamburguer: FunctionalComponent = () => {
                                   }}
                                 >
                                   {products
-                                    .filter((prod) =>
-                                      prod.categoryId === category.id
-                                    )
-                                    .slice(12, 27) // Exibe os produtos a partir do 12º produto
-                                    .map((prod, index) => (
+                                    .filter((prod) => prod.categoryId === category.id)
+                                    .slice(12, 27)
+                                    .map((prod) => (
                                       <li key={prod.id}>
                                         <a
                                           href="/moredetails"
-                                          onClick={() =>
-                                            handleProductClick(prod.id)}
+                                          onClick={() => handleProductClick(prod.id)}
                                           className="block pt-2 pl-3 pr-4 text-sm  text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                                         >
                                           {prod.name}
@@ -301,10 +247,8 @@ export const MenuHamburguer: FunctionalComponent = () => {
                                       </li>
                                     ))}
                                   {additionalSecondSubMenuOpen &&
-                                    products.filter((prod) =>
-                                        prod.categoryId === category.id
-                                      ).length > 27 &&
-                                    (
+                                    products.filter((prod) => prod.categoryId === category.id)
+                                      .length > 27 && (
                                       <ul
                                         className="absolute top-0 left-full mt-0"
                                         style={{
@@ -317,16 +261,13 @@ export const MenuHamburguer: FunctionalComponent = () => {
                                         }}
                                       >
                                         {products
-                                          .filter((prod) =>
-                                            prod.categoryId === category.id
-                                          )
-                                          .slice(27) // Exibe os produtos a partir do 28º produto
-                                          .map((prod, index) => (
+                                          .filter((prod) => prod.categoryId === category.id)
+                                          .slice(27)
+                                          .map((prod) => (
                                             <li key={prod.id}>
                                               <a
                                                 href="/moredetails"
-                                                onClick={() =>
-                                                  handleProductClick(prod.id)}
+                                                onClick={() => handleProductClick(prod.id)}
                                                 className="block pt-2 pl-3 pr-4 text-sm  text-[#29323A] rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                                               >
                                                 {prod.name}
