@@ -1,8 +1,10 @@
 import SimpleText from "deco-sites/harpon-lp/components/news/SimpleText.tsx";
 import BannerCarousel from "deco-sites/harpon-lp/components/ui/BannerCarousel.tsx";
 import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx";
+import { DEVELOPER_SITE } from '../../config.ts'
 
 export default function ImagesProducts() {
+ 
     return (
       <>
       <BannerCarousel />
@@ -23,12 +25,12 @@ export default function ImagesProducts() {
            {/*  <a class="xs:text-[10px] 1xs:text-sm md:text-sm" href="https://www.harpon.com.br/waterjet"> */}
               <p
                 style={{ border: "solid 1px white", padding: "8px" }}
-                className="absolute z-10 mt-[-20px] ml-[200px] image-overlay font-bold text-[#29323A] bg-[#E9F408] xs:text-[18px] xs:ml-[140px] xs:-mt-5 1xs:ml-[160px] sm:text-sm sm:ml-20 md:ml-[130px]"
+                className="absolute z-10 mt-[-20px] ml-[200px] image-overlay font-bold text-[#29323A] bg-[#E9F408] xs:text-sm xs:ml-[140px] xs:-mt-5 1xs:ml-[160px] sm:text-sm sm:ml-20 md:ml-[130px]"
               >
                 EM BREVE
               </p>
             {/* </a> */}
-            <div className="absolute bottom-[190px]  left-[30px] text-[32px]  font-normal text-white xs:text-4xl xs:mb-0 xs:mt-5 xs:relative 1xs:text-2xl 1xs:relative sm:relative sm:text-2xl sm:mt-20 md:relative md:mt-5 md:text-2xl lg:-mb-5">
+            <div className="absolute bottom-[190px]  left-[30px] text-[32px]  font-normal text-white xs:text-[20px] xs:mb-0 xs:mt-5 xs:relative 1xs:text-2xl 1xs:relative sm:relative sm:text-2xl sm:mt-20 md:relative md:mt-5 md:text-2xl lg:-mb-5">
               <span style={{ fontWeight: "bold" }}>WATERJET</span>
             </div>
           </div>
@@ -37,7 +39,7 @@ export default function ImagesProducts() {
           <div className="image-container">
             <div className="image-zoom" style={{ overflow: "hidden" }}>
               <div className="zoomable-image">
-                <a href='https://www.harpon.com.br/recauchutagem'>
+                <a href={`${DEVELOPER_SITE}/recauchutagem`}>
                   <img
                     src="recauchutagem.png"
                     alt="Homem montando pneu"
@@ -48,17 +50,17 @@ export default function ImagesProducts() {
             </div>
             <a
               class="xs:text-[10px] 1xs:text-sm md:text-sm"
-              href="https://www.harpon.com.br/recauchutagem"
+              href={`${DEVELOPER_SITE}/recauchutagem`}
             >
               <p
                 style={{ border: "solid 1px white", padding: "8px" }}
-                className="absolute z-10 mt-[-20px] ml-[200px] image-overlay font-bold text-[#29323A] bg-[#E9F408] xs:text-[18px] xs:ml-[120px] 1xs:ml-[160px] sm:ml-20 sm:text-sm md:ml-[130px]"
+                className="absolute z-10 mt-[-20px] ml-[200px] image-overlay font-bold text-[#29323A] bg-[#E9F408] xs:text-sm xs:ml-[120px] 1xs:ml-[160px] sm:ml-20 sm:text-sm md:ml-[130px]"
               >
                 VISITE A LOJA
               </p>
             </a>
   
-            <div className="absolute bottom-[190px] left-[30px] text-[32px] font-[Albert Sans] font-normal text-white xs:text-4xl xs:mb-0 xs:relative xs:mt-5 1xs:text-2xl 1xs:mb-[-30px] sm:relative sm:text-2xl sm:mt-20 md:mb-[-60px] md:relative md:mt-5 md:text-2xl lg:-mb-5">
+            <div className="absolute bottom-[190px] left-[30px] text-[32px] font-[Albert Sans] font-normal text-white xs:text-[20px] xs:mb-0 xs:relative xs:mt-5 1xs:text-2xl 1xs:mb-[-30px] sm:relative sm:text-2xl sm:mt-20 md:mb-[-60px] md:relative md:mt-5 md:text-2xl lg:-mb-5">
               <span style={{ fontWeight: "bold" }}>RECAUCHUTAGEM</span>
             </div>
           </div>

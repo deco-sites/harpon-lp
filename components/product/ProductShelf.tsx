@@ -24,6 +24,7 @@ export interface Props {
     headerfontSize?: "Normal" | "Large";
   };
   cardLayout?: cardLayout;
+  developer: string;
 }
 
 function ProductShelf({
@@ -32,6 +33,7 @@ function ProductShelf({
   description,
   layout,
   cardLayout,
+  developer,
 }: Props) {
   const id = useId();
   const platform = usePlatform();

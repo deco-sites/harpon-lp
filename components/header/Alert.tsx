@@ -15,7 +15,7 @@ export interface Props {
 export function Search() {
   return (
     <div class='justify-center items-center'>
-      <div class="inline-flex items-center mt-5 ml-[35%] xs:ml-[270px] 1xs:ml-[280px] sm:ml-[30%] md:ml-[200px] lg:ml-[250px]">
+      <div class="inline-flex items-center mt-5 ml-[35%] xs:ml-[100px] 1xs:ml-[280px] sm:ml-[30%] md:ml-[200px] lg:ml-[250px]">
       {/* <select class='hidden border-solid bg-[#3D4B58] w-[120px] h-10 ml-[-160px] mr-[60px] p-2 text-sm text-[#C8C8CA]'>
                 <option class='text-sm text-[#C8C8CA]'>Português</option>
                 <option class='text-sm text-[#C8C8CA]'>English</option>
@@ -24,7 +24,7 @@ export function Search() {
           <svg class='mr-[-15px] z-10 xs:w-[30] xs:h-5 1xs:w-[35px] 1xs:h-[25px]' xmlns="http://www.w3.org/2000/svg" width="16.419" height="16.423" viewBox="0 0 16.419 16.423">
             <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search" d="M20.726,19.727,16.16,15.118a6.508,6.508,0,1,0-.988,1L19.709,20.7a.7.7,0,0,0,.992.026A.707.707,0,0,0,20.726,19.727Zm-9.68-3.553a5.139,5.139,0,1,1,3.634-1.505A5.107,5.107,0,0,1,11.046,16.174Z" transform="translate(-4.5 -4.493)" fill="#fff"/>
            </svg>
-        <input class="w-80 h-10 pl-[50px] ml-[-20px] text-left bg-[#3D4B58] text-[#C8C8CA] xs:hidden 1xs:hidden md:w-[240px]" type="search" id="MagnifyingGlass" placeholder="O que você procura?" />
+        <input class="w-80 h-10 pl-[50px] ml-[-20px] text-left bg-[#3D4B58] text-[#C8C8CA] xs:w-[240px] 1xs:hidden md:w-[240px]" type="search" id="MagnifyingGlass" placeholder="O que você procura?" />
       </div>
 
       
