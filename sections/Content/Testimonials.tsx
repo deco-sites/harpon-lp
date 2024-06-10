@@ -134,7 +134,7 @@ export default function Testimonials(
   };
 
   return (
-    <div class="w-full h-[600px] px-4 py-8 flex flex-col gap-14 lg:gap-20 lg:py-10 lg:px-0">
+    <div class="w-full h-[600px] pl-4 py-8 flex flex-col gap-14 lg:gap-20 lg:py-10 lg:px-0">
       <Header
         title={title}
         description={description}

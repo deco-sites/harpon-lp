@@ -50,7 +50,7 @@ export default function ImagesProducts() {
             </div>
             <a
               class="xs:text-[10px] 1xs:text-sm md:text-sm"
-              href={`${DEVELOPER_SITE}/recauchutagem`}
+              href={`!${DEVELOPER_SITE} www.harpon.com.br/recauchutagem`}
             >
               <p
                 style={{ border: "solid 1px white", padding: "8px" }}

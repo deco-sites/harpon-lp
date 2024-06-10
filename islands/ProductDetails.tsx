@@ -61,11 +61,12 @@ const ProductDetails : FunctionalComponent = () => {
                 </div>
             ): (
                 <>
-                <div class='flex ml-[139px] mt-[50px] xs:mt-[30px] xs:ml-0 1xs:mt-[30px] 1xs:ml-0 md:mt-[60px] md:ml-[100px] lg:ml-5'>
-                  <a href='/'><p class='font-bold'>Home &#62;</p></a> <a href='productlist'><p class='font-bold'>Todos os produtos &#62;</p></a> <span class='ml-2'>{product.name}</span>
-                </div><div class='ml-[683px] -mt-10 xs:ml-0 1xs:ml-0 md:ml-[100px] lg:ml-[672px]'>
-                    <h1 class='text-4xl text-[#29323A] font-bold xs:text-[28px] 1xs:text-3xl'>{product.name}</h1>
-                  </div><div class='ml-[683px] mt-[-50px] xs:ml-0 xs:mt-[320px] 1xs:mt-[320px] 1xs:ml-0 md:ml-[100px] md:mt-[600px] lg:ml-[672px]'>
+                <div class='flex ml-[139px] mt-[50px] xs:mt-0 xs:-ml-3 xs:whitespace-nowrap xs:text-sm 1xs:mt-0 1xs:ml-0 1xs:whitespace-nowrap 1xs:text-sm md:mt-[60px] md:ml-[100px] lg:ml-5'>
+                  <a href='/'><p class='font-bold'>Home &#62;</p></a> <a href='productlist'><p class='font-bold'>Todos os produtos &#62;</p></a> <span class='xs:overflow-x-hidden'>{product.name}</span>
+                </div><div class='ml-[683px] -mt-3 xs:ml-0 1xs:ml-0 md:ml-[100px] lg:ml-[672px]'>
+                    <h1 class='text-4xl text-[#29323A] font-bold xs:text-xl 1xs:text-xl'>{product.name}</h1>
+                  </div>
+                  <div class='ml-[683px] mt-[-50px] xs:ml-0 xs:mt-[240px] 1xs:mt-[260px] 1xs:ml-0 md:ml-[100px] md:mt-[600px] lg:ml-[672px]'>
                     {product.description && (
                       <>
                         <h2 class='text-[#29323A] text-base font-bold'>Descrição:</h2>
@@ -77,7 +78,7 @@ const ProductDetails : FunctionalComponent = () => {
                     {variations && variations.length > 0 && (
                       <>
                         <p className='text-[#29323A] text-base font-bold mt-5 mb-[10px]'>Selecione o tamanho:</p>
-                        <select className='border border-solid bg-[#F2F2F2] w-[444px] h-10 text-sm mb-[30px] xs:w-[350px] 1xs:w-[380px] lg:w-[320px]'>
+                        <select className='border border-solid bg-[#F2F2F2] w-[444px] h-10 text-sm mb-[30px] xs:w-[350px] xs:mb-0 1xs:w-[380px] lg:w-[320px]'>
                           {variations.map(vari => (
                             <option key={vari.id} value={vari.id} className='text-sm text-[#29323A]'>{vari.name} - {vari.description}</option>
                           ))}
@@ -95,7 +96,7 @@ const ProductDetails : FunctionalComponent = () => {
                     </g>
                     </svg> */}
                       <a>
-                        <div class='group ml-[80px] mt-10 cursor-pointer'
+                        <div class='group ml-[80px] mt-10 cursor-pointer xs:mt-3 1xs:mt-3'
                           onClick={handleClick}
                         >
                           <svg class='xs:w-[180px] 1xs:w-[230px] lg:w-[180px]' id="botão_cotar" data-name="botão cotar" xmlns="http://www.w3.org/2000/svg" width="260" height="48" viewBox="0 0 260 48">
@@ -106,10 +107,10 @@ const ProductDetails : FunctionalComponent = () => {
                       </a>  
                     </div>
                   </div>
-                  <div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[100px] ml-[131px] xs:ml-0 xs:mt-[180px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[180px] 1xs:w-[380px] 1xs:h-[250px] md:ml-[100px] lg:ml-[120px]'
+                  <div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[100px] ml-[131px] xs:ml-0 xs:mt-[100px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[150px] 1xs:w-[380px] 1xs:h-[250px] md:ml-[100px] lg:ml-[120px]'
 
                   >
-                    <img class='max-h-[400px]  xs:w-[270px] xs:ml-10 xs:mt-10 1xs:w-[270px] 1xs:ml-10 1xs:mt-10' src={product.image}></img>
+                    <img class='max-h-[400px]  xs:w-[180px] xs:h-[180px] xs:mx-auto xs:my-[30px] 1xs:w-[220px] 1xs:m-auto' src={product.image}></img>
                   </div>
                 </>
             )}

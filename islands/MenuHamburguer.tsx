@@ -107,7 +107,7 @@ export const MenuHamburguer: FunctionalComponent = () => {
           id="menu-toggle"
           onMouseEnter={openMenu}
           onMouseLeave={closeMenu}
-          className="relative flex group ml-[130px] md:ml-0 lg:ml-20"
+          className="relative flex group ml-[130px] sm:ml-0 md:ml-0 lg:ml-20"
         >
           <svg
             className="group-hover:fill-[#E9F408]"
