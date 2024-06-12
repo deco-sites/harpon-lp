@@ -4,6 +4,7 @@ import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx"
 import { DEVELOPER_SITE } from '../../config.ts'
 
 export default function ImagesProducts() {
+  const isLocalhost = DEVELOPER_SITE === 'localhost';
  
     return (
       <>
@@ -39,7 +40,7 @@ export default function ImagesProducts() {
           <div className="image-container">
             <div className="image-zoom" style={{ overflow: "hidden" }}>
               <div className="zoomable-image">
-                <a href={`${DEVELOPER_SITE}/recauchutagem`}>
+                <a href={isLocalhost ? "#" : "https://www.harpon.com.br/recauchutagem"}>
                   <img
                     src="recauchutagem.png"
                     alt="Homem montando pneu"
@@ -50,7 +51,7 @@ export default function ImagesProducts() {
             </div>
             <a
               class="xs:text-[10px] 1xs:text-sm md:text-sm"
-              href={`!${DEVELOPER_SITE} www.harpon.com.br/recauchutagem`}
+              href={isLocalhost ? "#" : "https://www.harpon.com.br/recauchutagem"}
             >
               <p
                 style={{ border: "solid 1px white", padding: "8px" }}

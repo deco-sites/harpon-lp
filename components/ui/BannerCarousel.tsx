@@ -95,9 +95,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
   } = image;
 
   return (
-    <a
-      href={action?.href ?? "#"}
-      aria-label={action?.label}
+    <div
       class="relative 2xl:h-[800px] h-[600px] overflow-y-hidden w-full"
     >
       <Picture preload={lcp}>
@@ -139,7 +137,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           <Button class=" hidden glass">{action.label}</Button>
         </div>
       )} */}
-    </a>
+    </div>
   );
 }
 
