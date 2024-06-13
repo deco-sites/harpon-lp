@@ -131,7 +131,7 @@ export const MenuHamburguer: FunctionalComponent = () => {
               top: "100%",
               left: "0",
               width: "100%",
-              height: "30px",
+              height: "20px",
             }}
           ></div>
           {isMenuOpen && (

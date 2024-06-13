@@ -177,7 +177,7 @@ const ProductList : FunctionalComponent = () => {
                              <img class='h-[160px] xs:w-[75px] xs:h-[60px] 1xs:w-[90px] 1xs:h-20 sm:h-[120px] md:h-[100px] lg:w-[150px] lg:h-[90px]' src={prod.image}></img>
                          </div>
                          
-                         <p class='ml-5 mt-5 font-bold text-[20px] group xs:mt-0 xs:ml-0 xs:text-center xs:text-sm 1xs:mt-3 1xs:ml-0 1xs:text-sm 1xs:text-center sm:ml-0 sm:text-center md:text-lg md:text-center md:ml-0 lg:text-xl lg:text-center lg:ml-0 lg:mt-3'>{prod.name}</p>
+                         <p class='mt-5 font-bold text-[20px] text-center group xs:mt-0 xs:ml-0 xs:text-center xs:text-sm 1xs:mt-3 1xs:ml-0 1xs:text-sm 1xs:text-center sm:ml-0 sm:text-center md:text-lg md:text-center md:ml-0 lg:text-xl lg:text-center lg:ml-0 lg:mt-3'>{prod.name}</p>
                      </div>
                     </a>
                    ))}
