@@ -124,14 +124,15 @@ export const MenuHamburguer: FunctionalComponent = () => {
             Produtos
           </p>
           <div
+            class='-mt-[15px]'
             onMouseEnter={openMenu}
             onMouseLeave={closeMenu}
             style={{
               position: "absolute",
-              top: "100%",
+              top: "80%",
               left: "0",
               width: "100%",
-              height: "20px",
+              height: "40px",
             }}
           ></div>
           {isMenuOpen && (

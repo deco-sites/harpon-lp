@@ -65,7 +65,8 @@ function Navbar({ items, searchbar, logo }: {
         <div class="flex-auto flex justify-end ml-[500px] gap-[10px] text-white font-bold sm:ml-[350px] md:mr-0 md:ml-[320px] lg:ml-[50px] lg:mr-[-120px]">
           {items.map((item) => {
             if(item.label !== "Produtos") {
-              return <NavItem item={item} />
+              const href = item.label === "Sobre Nós" ? "/sobre-nos" : undefined;
+              return <NavItem item={item} href={href}/>
             } else {
               return null;
             }
