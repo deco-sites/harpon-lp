@@ -14,7 +14,7 @@ export const Preview = (props: Props) => {
 
   return (
     <div class="h-full w-full grid place-items-center">
-      <h1>Funciona Caralho!!!
+      <h1>
       </h1>
     </div>
   );
