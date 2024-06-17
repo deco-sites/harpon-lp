@@ -41,7 +41,7 @@ function ProductShelf({
   
 
   return (
-    <div class='xs:overflow-x-hidden 1xs:overflow-x-hidden sm:overflow-x-hidden md:overflow-x-hidden'>
+    <div class=' hidden xs:overflow-x-hidden 1xs:overflow-x-hidden sm:overflow-x-hidden md:overflow-x-hidden'>
       <LandingPageHeader />
       <ImagesProducts />
       <LandingPageFooter />

@@ -3,9 +3,11 @@ import { FunctionalComponent } from 'preact';
 import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
 import axios from 'https://cdn.skypack.dev/axios';
 import ProductContext from '../context/ProductContext.tsx'
+import SimpleText from "deco-sites/harpon-lp/components/news/SimpleText.tsx";
+import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx";
 
 interface Category {
-    id: string,
+    id: number,
     name: string,
 }
 
@@ -40,12 +42,10 @@ export const FeaturedProducts: FunctionalComponent = () => {
     
     return (
         <>
-            <div>
-                <a href="/promocao-carbide" target='_blank'><img class='w-full -mt-[70px] xs:-mt-[52px] 1xs:-mt-[70px] sm:-mt-[60px] 2xl:-mt-[110px]' src='banner-atual.png' alt='Banner Cabide' ></img></a>
-            </div>
+            
          <div class='container p-4 mb-[150px] xs:mt-0 xs:ml-5 xs:mb-[150px] 1xs:mt-0 1xs:-ml-[15px] md:h-[550px] lg:mt-[142px]'>
             <h1 class='text-[36px] ml-[20px] font-normal xs:text-[20px] xs:ml-0 sm:ml-0 sm:text-3xl 1xs:text-2xl md:ml-0'>
-                <span style={{ fontWeight: 'bold' }}>CATEGORIAS</span>
+                <span style={{ fontWeight: 'bold' }}>ETAPAS DA RECAUCHUTAGEM</span>
             </h1>
             {/* Exibe o GIF de carregamento enquanto as categorias estão sendo carregadas */}
             {loading ? (
@@ -57,9 +57,12 @@ export const FeaturedProducts: FunctionalComponent = () => {
                     <div class='flex items-center group'>
                         {/* Seu código para o botão "VER TODOS" */}
                     </div>
-                    <div class="grid grid-cols-4 ml-[20px] -mb-[150px] lg:gap-2 lg:mt-4 md:ml-0 md:grid-cols-4 gap-5 mt-4 xs:grid-cols-2 xs:ml-0 xs:gap-[40px] 1xs:grid-cols-2 1xs:gap-5 sm:grid-cols-3 xl:grid 2xl:grid">
+                    <div class="grid grid-cols-3 ml-[20px] -mb-[150px] lg:gap-2 lg:mt-4 md:ml-0 md:grid-cols-4 gap-5 mt-4 xs:grid-cols-2 xs:ml-0 xs:gap-[40px] 1xs:grid-cols-2 1xs:gap-5 sm:grid-cols-3 xl:grid 2xl:grid">
                         {/* Renderiza as categorias */}
-                        {categories.map(category => (
+                        
+                        {categories
+                        .filter(category => ![8, 10, 11].includes(category.id))
+                        .map(category => (
                             <a href='/productlist' onClick={() => handleCategoryClick(category.name)}>
                                 <div key={category.id} class="group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out hover:bg-[#E9F408] xs:w-[150px] xs:h-[150px] 1xs:w-[180px] 1xs:h-[200px] sm:h-20 md:w-[180px] md:h-[180px]">
                                     <p class='flex justify-center my-[30px] font-bold text-lg uppercase text-center font-[Albert Sans] group xs:mt-[50px] xs:ml-0 xs:pt-[10px] xs:text-sm  1xs:text-lg 1xs:ml-0 1xs:mt-[50px] 1xs:pt-[30px] sm:text-sm md:pl-0 md:pt-[50px]'>{category.name}</p>
@@ -70,7 +73,12 @@ export const FeaturedProducts: FunctionalComponent = () => {
                 </div>
             )}
         </div>
-        <div class='lg:mt-[150px]'>
+        <div>
+                <a href="/promocao-carbide" target='_blank'><img class='w-full xs:-mt-[52px] 1xs:-mt-[70px] sm:-mt-[60px]' src='banner-atual.png' alt='Banner Cabide' ></img></a>
+            </div>
+            <SimpleText />
+            <Diferencials />
+        <div class='lg:mt-[150px] 2xl:-mt-8'>
             <LandingPageFooter />
         </div>
         </>
