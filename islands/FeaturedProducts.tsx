@@ -20,6 +20,7 @@ interface Product {
 export const FeaturedProducts: FunctionalComponent = () => {
     const [categories, setCategories] = useState<Category[]>([]);
     const [loading, setLoading] = useState(true)
+    const order = [1, 2, 12, 3, 4, 6, 5, 7, 9]
 
      useEffect(() => {
         console.log("Teste")
@@ -37,6 +38,10 @@ export const FeaturedProducts: FunctionalComponent = () => {
     const handleCategoryClick = (categoryName: string) => {
         let newSelectedCategories = [categoryName]
         localStorage.setItem('selectedCategories', newSelectedCategories[0])
+    }
+
+    const compareCategories = (a, b) => {
+        return order.indexOf(a.id) - order.indexOf(b.id)
     }
 
     
@@ -62,6 +67,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
                         
                         {categories
                         .filter(category => ![8, 10, 11].includes(category.id))
+                        .sort(compareCategories)
                         .map(category => (
                             <a href='/productlist' onClick={() => handleCategoryClick(category.name)}>
                                 <div key={category.id} class="group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out hover:bg-[#E9F408] xs:w-[150px] xs:h-[150px] 1xs:w-[180px] 1xs:h-[200px] sm:h-20 md:w-[180px] md:h-[180px]">
@@ -74,7 +80,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
             )}
         </div>
         <div>
-                <a href="/promocao-carbide" target='_blank'><img class='w-full xs:-mt-[52px] 1xs:-mt-[70px] sm:-mt-[60px]' src='banner-atual.png' alt='Banner Cabide' ></img></a>
+                <a href="/promocao-carbide" target='_blank'><img class='w-full' src='banner-atual.png' alt='Banner Cabide' ></img></a>
             </div>
             <SimpleText />
             <Diferencials />
