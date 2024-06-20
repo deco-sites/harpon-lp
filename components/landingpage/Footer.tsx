@@ -41,9 +41,9 @@ export default function LandingPageFooter() {
             </h2>
           </div>
         </div> */}
-        <div class="inline-flex items-center ml-[400px] absolute mt-[50px] xs:block xs:relative xs:ml-0 xs:mt-[100px] 1xs:block 1xs:relative 1xs:ml-0 sm:ml-5 sm:mt-20 md:ml-5 md:mt-20 lg:ml-5 lg:mt-20">
+        <div class="inline-flex items-center ml-[400px] absolute mt-[50px] xs:block xs:relative xs:ml-0 xs:mt-[50px] 1xs:block 1xs:relative 1xs:ml-0 sm:ml-5 sm:mt-20 md:ml-5 md:mt-20 lg:ml-5 lg:mt-20">
           <img
-            class="xs:w-[14px] xs:absolute xs:ml-10 1xs:mt-5 1xs:mb-[-20px] 1xs:ml-10"
+            class="xs:w-[14px] xs:absolute xs:ml-[30px] 1xs:mt-5 1xs:mb-[-20px] 1xs:ml-10"
             src="icon-feather-phone.svg"
           >
           </img>
@@ -51,7 +51,7 @@ export default function LandingPageFooter() {
             +55(11)4556-0929
           </span>
           <img
-            class="ml-[180px] md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] xs:ml-10 1xs:mb-[-22px] 1xs:mt-5 1xs:ml-10 sm:ml-5 lg:pl-[15px] xl:pl-5"
+            class="ml-[180px] md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] xs:ml-[30px] 1xs:mb-[-22px] 1xs:mt-5 1xs:ml-10 sm:ml-5 lg:pl-[15px] xl:pl-5"
             src="icon-feather-map-pin.svg"
           >
           </img>
