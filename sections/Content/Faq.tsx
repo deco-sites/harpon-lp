@@ -97,7 +97,7 @@ export default function FAQ(props: Props) {
 
   return (
     <>
-    <div class='xs:overflow-x-hidden'>
+    <div class='xs:overflow-x-hidden 1xs:overflow-x-hidden'>
       <AboutUs />
     </div>
     {/* <WaterJetHome /> */}

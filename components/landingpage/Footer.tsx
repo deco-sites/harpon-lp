@@ -1,6 +1,6 @@
 export default function LandingPageFooter() {
     return (
-      <div class="bg-[#C8C8CA] w-full h-[150px] flex flex-col xs:w-auto xs:h-[220px] xs:mt-0 1xs:h-[310px] 1xs:mt-[150px] sm:w-[798px] lg:mt-4">
+      <div class="bg-[#C8C8CA] w-full h-[150px] flex flex-col xs:w-auto xs:h-[220px] xs:mt-0 1xs:h-[310px] 1xs:mt-0 sm:w-[798px] lg:mt-0">
         <a href="/"><img class="absolute ml-[50px] mt-[50px] xs:mt-3 xs:ml-5 1xs:mt-3 1xs:ml-5 sm:mt-3 sm:ml-5 md:mt-3 md:ml-5 lg:mt-3 lg:ml-5" src="logo-harpon.svg" /></a>
         <div class="w-[50px] h-[50px] ml-auto mr-[200px] xl:mr-[100px] 2xl:mr-[100px]">
           <a href="https://instagram.com/_harpon " target="_blank">
