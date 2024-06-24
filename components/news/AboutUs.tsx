@@ -1,3 +1,5 @@
+import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
+
 export default function AboutUs () {
 
     return (
@@ -19,26 +21,27 @@ export default function AboutUs () {
           </a>
         </div>
       </div>
-      <div class='bg-[#E4E4E4] h-[542px]'>
+      <div class='bg-[#E4E4E4] h-[542px] xs:h-[785px]'>
         <div class='bg-[#E4E4E4] h-5'></div>
-          <div class='bg-[#E4E4E4] w-[800px] m-auto'>
-          <p class='text-[#29323A] text-xl  text-justify mt-[50px]'>
+          <div class='bg-[#E4E4E4] w-[800px] m-auto xs:w-[300px]'>
+          <p class='text-[#29323A] text-base  text-justify mt-[50px]'>
             A Harpon foi idealizada para atender empresas de recapagem, pneu remold e truck centers que, assim como nós, olham sempre para a frente.
           </p>
           <br></br>
-          <p class='text-[#29323A] text-xl  text-justify mt-5'>
+          <p class='text-[#29323A] text-base  text-justify mt-5'>
             Verdade e vontade são os nossos principais valores, transmitidos em cada uma das nossas ações.
           </p>
           <br></br>
-          <p class='text-[#29323A] text-xl  text-justify mt-5'>
+          <p class='text-[#29323A] text-base  text-justify mt-5'>
           Nossas entregas contemplam a manutenção de máquinas, visitas técnicas e produtos para o processo de recapagem de pneus em todas as etapas: inspeção inicial, raspagem, escareação, cimentação, conserto, enchimento, cobertura, vulcanização e inspeção final.
           </p>
           <br></br>
-          <p class='text-[#29323A] text-xl  text-justify mt-5'>
-          Conte com a gente e conheça as melhores soluções para o seu negócio.
+          <p class='text-[#29323A] text-base  text-justify mt-5'>
+          Conte com a gente e conheça as melhores soluções para o seu negócio.
           </p>
           </div>
       </div>
+      <LandingPageFooter />
       </>
     )
 }

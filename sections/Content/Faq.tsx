@@ -97,7 +97,9 @@ export default function FAQ(props: Props) {
 
   return (
     <>
-    <AboutUs />
+    <div class='xs:overflow-x-hidden'>
+      <AboutUs />
+    </div>
     {/* <WaterJetHome /> */}
       {/* {(!layout?.variation || layout?.variation === "Compact") && (
         <div class="w-full container px-4 py-8 flex flex-col gap-4 lg:gap-8 lg:py-10 lg:px-40">

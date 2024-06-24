@@ -6,6 +6,7 @@ import ProductContext from '../context/ProductContext.tsx'
 import SimpleText from "deco-sites/harpon-lp/components/news/SimpleText.tsx";
 import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx";
 
+
 interface Category {
     id: number,
     name: string,
@@ -16,6 +17,8 @@ interface Product {
     name: string,
     categoryId: string,
 }
+
+
 
 export const FeaturedProducts: FunctionalComponent = () => {
     const [categories, setCategories] = useState<Category[]>([]);
@@ -55,7 +58,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
             {/* Exibe o GIF de carregamento enquanto as categorias estão sendo carregadas */}
             {loading ? (
                 <div class='flex justify-center items-center h-full'>
-                    <img src='loading.gif' alt='Carregando...' class='w-20' />
+                    <img src='loading.gif' alt='Carregando...' class='w-5' />
                 </div>
             ) : (
                 <div>
