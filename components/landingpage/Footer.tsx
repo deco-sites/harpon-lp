@@ -57,7 +57,7 @@ export default function LandingPageFooter() {
           </img>
           <span class="flex text-[#29323A] ml-[10px] xs:text-sm xs:px-2 xs:ml-[50px] 1xs:text-[17px] 1xs:pl-[15px] 1xs:ml-[50px] sm:whitespace-nowrap md:whitespace-nowrap">
             Av. Doutor Mauro Lindemberg Monteiro, 1259<br />Jardim Santa Fé,
-            Osasco São Paulo - Brasil
+            Osasco <br /> São Paulo - Brasil
           </span>
         </div>
         

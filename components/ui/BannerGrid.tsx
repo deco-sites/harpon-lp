@@ -183,12 +183,12 @@ export default function BannnerGrid(props: Props) {
         <div class='bg-[#E4E4E4] sm:w-[798px]'>
           <div class='bg-[#E4E4E4] h-[50px]'></div>
           <div class='flex justify-center h-[120px] w-[900px] bg-[#E9F408] mx-[300px] mb-[50px] xs:m-0 xs:w-auto 1xs:m-auto 1xs:w-auto sm:ml-5 sm:w-[750px] md:m-auto lg:ml-[50px]'>
-            <h1 class='text-[#29323A]  font-bold text-4xl text-center mb-[50px] pt-[15px] xs:text-base xs:mr-2 1xs:text-lg sm:text-2xl md:text-2xl md:mr-[120px]'>
+            <h1 class='text-[#29323A]  font-bold text-4xl text-center mb-[50px] pt-[15px] xs:text-base xs:mr-2 xs:py-[30px] 1xs:text-lg sm:text-2xl md:text-2xl md:mr-[120px]'>
               Participe do Programa Carbide Boomerang <br></br>
               e ganhe créditos para a sua próxima compra!
             </h1>
           </div>
-          <div class='grid justify-center w-[800px] mx-[370px] my-5 xs:m-0 xs:mt-5 xs:w-auto xs:p-2 1xs:m-0 1xs:mt-5 1xs:w-auto 1xs:p-2 sm:ml-[50px] sm:w-[700px] md:ml-0 md:w-[750px] md:p-5 lg:ml-[50px]'>
+          <div class='grid justify-center w-[800px] mx-[370px] my-5 xs:m-5 xs:w-auto xs:p-2 1xs:m-5 1xs:w-auto 1xs:p-2 sm:ml-[50px] sm:w-[700px] md:ml-0 md:w-[750px] md:p-5 lg:ml-[50px]'>
               <p class='text-[#29323A] text-xl  text-left xs:text-base 1xs:text-lg'>
             As regras são simples:
               </p>

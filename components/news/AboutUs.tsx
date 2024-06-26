@@ -21,9 +21,12 @@ export default function AboutUs () {
           </a>
         </div>
       </div>
-      <div class='bg-[#E4E4E4] h-[542px] xs:h-[785px] 1xs:h-[785px]'>
-        <div class='bg-[#E4E4E4] h-5'></div>
-          <div class='bg-[#E4E4E4] w-[800px] mx-[400px] xs:m-auto xs:w-[300px] 1xs:m-auto 1xs:w-[300px]'>
+      <div class='bg-[#E4E4E4] h-[543px] xs:h-[785px] 1xs:h-[785px]'>
+        <div class='bg-[#E4E4E4] h-[50px]'></div>
+        <div class='bg-[#E9F408] flex justify-center w-[150px] h-[50px] m-auto mt-5'>
+          <h1 class='flex items-center text-xl font-bold'>Sobre Nós</h1>
+        </div>
+          <div class='bg-[#E4E4E4] w-[800px] mx-[350px] xs:m-auto xs:w-[300px] 1xs:m-auto 1xs:w-[300px]'>
           <p class='text-[#29323A] text-base  text-justify mt-[50px]'>
             A Harpon foi idealizada para atender empresas de recapagem, pneu remold e truck centers que, assim como nós, olham sempre para a frente.
           </p>
