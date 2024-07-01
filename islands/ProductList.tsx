@@ -25,7 +25,7 @@ const ProductList : FunctionalComponent = () => {
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
      useEffect(() => {
-        axios.get('https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/categories')
+        axios.get('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/categories')
         .then((response:any) => {
            setCategories(response.data) 
         }).catch((error:any) =>{
@@ -78,7 +78,7 @@ const ProductList : FunctionalComponent = () => {
 
         setLoading(true); // Define como true no início da requisição
 
-        axios.post('https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories', {
+        axios.post('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories', {
             categories: selectedCategories
         })
         .then((response: any) => {

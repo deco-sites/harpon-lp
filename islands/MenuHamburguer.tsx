@@ -29,7 +29,7 @@ export const MenuHamburguer: FunctionalComponent = () => {
   const [additionalSecondSubMenuOpen, setAdditionalSecondSubMenuOpen] = useState(false);
 
   useEffect(() => {
-    axios.get("https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/categories")
+    axios.get("https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/categories")
       .then((response: any) => {
         setCategories(response.data);
       })
@@ -41,7 +41,7 @@ export const MenuHamburguer: FunctionalComponent = () => {
   useEffect(() => {
     if (selectedCategories.length > 0) {
       axios.post(
-        "https://interface-web-backend-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories",
+        "https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories",
         {
           categories: selectedCategories,
         }
