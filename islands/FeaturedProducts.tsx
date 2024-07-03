@@ -82,7 +82,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
             )}
         </div>
         <div>
-                <a href="/promocao-carbide" target='_blank'><img class='w-full' src='banner-atual.png' alt='Banner Cabide' ></img></a>
+                <a href="/promocao-carbide" target='_blank'><img class='w-full' src='banner-atual.avif' alt='Banner Cabide' ></img></a>
             </div>
             <SimpleText />
             <Diferencials />

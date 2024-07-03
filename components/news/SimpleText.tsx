@@ -8,7 +8,7 @@ export default function SimpleText() {
                     <p class='mt-5 text-left font-normal text-lg text-[#29323A] opacity-100 font-[Albert Sans xs:w-[200px] xs:text-sm 1xs:text-base 1xs:w-[250px] sm:text-base'>Somos o parceiro ideal para recapadoras que não param de crescer. Assim como você, estamos em constante movimento. Cada demanda nos impulsiona a agir, olhando sempre para a frente.</p>
                 </div>
                 <div class='w-1/2 xs:ml-[25px] md:mr-[15px]'>
-                    <img class='xs:w-[500px] 1xs:w-[550px] sm:mt-[60px]' src='man-tires.png' alt='Homem segurando um pneu'></img>
+                    <img class='xs:w-[500px] 1xs:w-[550px] sm:mt-[60px]' src='man-tires.webp' alt='Homem segurando um pneu'></img>
                 </div>
             </div>
         
