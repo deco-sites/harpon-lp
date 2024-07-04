@@ -17,8 +17,8 @@ const User: FunctionalComponent = () => {
 const RootUser: FunctionalComponent = () => {
     return (
         <AuthProvider>
-        <User />
-    </AuthProvider>
+            <User />
+        </AuthProvider>
     )
     
 }
