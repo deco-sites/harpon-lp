@@ -64,11 +64,15 @@ export const SearchResult: FunctionalComponent = () => {
   const handleCategoryClick = (categoryName: string) => {
     let newSelectedCategories = [categoryName]
     localStorage.setItem('selectedCategories', newSelectedCategories[0])
+    const encodedCategoryName = encodeURIComponent(categoryName);
+    return `/productlist?=${encodedCategoryName}`;
 }
 
 const handleProductClick = (productId: string) => {
     let newSelectedProduct = [productId]
     localStorage.setItem('selectedProduct', newSelectedProduct)
+    const encodedProductName = encodeURIComponent(productId);
+        return `/moredetails?=${encodedProductName}`;
 }
 
   return (
@@ -87,7 +91,7 @@ const handleProductClick = (productId: string) => {
         />
       </div>
       {term && (
-        <div className="absolute top-12 w-80 z-20 ml-[75.8%] mt-5 h-[260px] bg-white text-black p-4 rounded shadow-md overflow-y-auto">
+        <div className="absolute top-12 w-80 z-20 ml-[75.8%] mt-5 h-[260px] bg-white text-black p-4 rounded shadow-md overflow-y-auto xs:ml-[95px] xs:w-[240px]">
           {loading ? (
             <div className='flex justify-center items-center h-full'>
               <img src='loading.gif' alt='Carregando...' className='w-5' />
@@ -97,13 +101,13 @@ const handleProductClick = (productId: string) => {
               <h3 className='font-bold'>Categorias</h3>
               <ul>
                 {results.categories.length > 0 ? results.categories.map(category => (
-                  <li key={category.id}><a class='hover:bg-gray-100 pointer' href="/productlist" onClick={() => handleCategoryClick(category.name)}>{category.name}</a></li>
+                  <li key={category.id}><a class='pointer hover:bg-[#E9F408]' href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}>{category.name}</a></li>
                 )) : <li>Nenhuma categoria encontrada</li>}
               </ul>
               <h3 className='font-bold'>Produtos</h3>
               <ul>
                 {results.products.length > 0 ? results.products.map(product => (
-                  <li key={product.id}><a class='hover:bg-gray-100 pointer' href="/moredetails" onClick={() => handleProductClick(product.id)}>{product.name}</a></li>
+                  <li key={product.id}><a class='pointer hover:bg-[#E9F408]' href={handleProductClick(product.name)} onClick={() => handleProductClick(product.id)}>{product.name}</a></li>
                 )) : <li>Nenhum produto encontrado</li>}
               </ul>
             </>

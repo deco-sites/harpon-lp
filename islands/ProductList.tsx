@@ -109,6 +109,8 @@ const ProductList : FunctionalComponent = () => {
     const handleProductClick = (productId: string) => {
         let newSelectedProduct = [productId]
         localStorage.setItem('selectedProduct', newSelectedProduct)
+        const encodedProductName = encodeURIComponent(productId);
+        return `/moredetails?=${encodedProductName}`;
     }
     
  
@@ -170,7 +172,7 @@ const ProductList : FunctionalComponent = () => {
         ): (
             <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-320px] ml-[430px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-[50px] 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 sm:grid-cols-2 sm:w-max sm:ml-[310px] md:grid-cols-2 md:ml-[295px] lg:ml-[295px] ">
                    {products.map(prod => (
-                    <a href ='/moredetails' onClick={() => handleProductClick(prod.id)}>
+                    <a href ={handleProductClick(prod.name)} onClick={() => handleProductClick(prod.id)}>
                      <div key={prod.id} class="w-[260px] h-[299px] hover:border-[#E9F408] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 sm:w-[220px] sm:h-[250px] md:h-[200px] md:w-[220px] lg:w-[220px] lg:h-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"
                      >
                          <div class="flex items-center justify-center mb-2 mt-[15px] group xs:mt-[15px] 1xs:mt-2">

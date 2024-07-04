@@ -40,6 +40,8 @@ export const FeaturedProducts: FunctionalComponent = () => {
     const handleCategoryClick = (categoryName: string) => {
         let newSelectedCategories = [categoryName]
         localStorage.setItem('selectedCategories', newSelectedCategories[0])
+        const encodedCategoryName = encodeURIComponent(categoryName);
+        return `/productlist?=${encodedCategoryName}`;
     }
 
     const compareCategories = (a, b) => {
@@ -71,7 +73,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
                         .filter(category => ![8, 10, 11].includes(category.id))
                         .sort(compareCategories)
                         .map(category => (
-                            <a href='/productlist' onClick={() => handleCategoryClick(category.name)}>
+                            <a href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}>
                                 <div key={category.id} class="group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out hover:bg-[#E9F408] xs:w-[150px] xs:h-[150px] 1xs:w-[180px] 1xs:h-[200px] sm:h-20 md:w-auto md:h-[180px]">
                                     <p class='flex justify-center my-[30px] font-bold text-lg uppercase text-center font-[Albert Sans] group xs:mt-[50px] xs:ml-0 xs:pt-[10px] xs:text-sm  1xs:text-lg 1xs:ml-0 1xs:mt-[50px] 1xs:pt-[30px] sm:text-sm md:pl-0 md:pt-[50px]'>{category.name}</p>
                                 </div>
