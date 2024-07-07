@@ -91,7 +91,7 @@ const handleProductClick = (productId: string) => {
         />
       </div>
       {term && (
-        <div className="absolute top-12 w-80 z-20 ml-[75.8%] mt-5 h-[260px] bg-white text-black p-4 rounded shadow-md overflow-y-auto xs:ml-[95px] xs:w-[240px]">
+        <div className="absolute top-12 w-80 z-20 ml-[75.8%] mt-5 h-[260px] bg-white text-black p-4 rounded shadow-md overflow-y-auto xs:ml-[95px] xs:w-[240px] 1xs:ml-[95px] 1xs:w-[265px] md:ml-[64.6%] md:w-[240px] lg:ml-[63.5%] lg:w-[320px] xl:ml-[72.7%]">
           {loading ? (
             <div className='flex justify-center items-center h-full'>
               <img src='loading.gif' alt='Carregando...' className='w-5' />
