@@ -2,6 +2,9 @@ import { AppProps } from "$fresh/server.ts";
 import GlobalTags from "$store/components/GlobalTags.tsx";
 import Theme from "$store/sections/Theme/Theme.tsx";
 import RootUser from "deco-sites/harpon-lp/islands/User.tsx";
+import { Head } from "$fresh/runtime.ts";
+import GTM from "deco-sites/harpon-lp/components/googletag/gtm.tsx";
+import NoScriptGTM from "deco-sites/harpon-lp/components/googletag/noscript.tsx";
 
 // Função que registra o service worker ao carregar a página
 const sw = () =>
@@ -15,6 +18,9 @@ function App(props: AppProps) {
 
   return (
     <>
+    <Head>
+      <GTM />
+    </Head>
       {/* Inclui fontes padrão e variáveis CSS */}
       <Theme />
 
@@ -22,6 +28,7 @@ function App(props: AppProps) {
       <GlobalTags />
 
       {/* Renderiza o componente principal da árvore Preact */}
+      <NoScriptGTM />
       <props.Component />
 
       {/* Renderiza RootUser apenas se estiver na rota '/entrar' */}
