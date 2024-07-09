@@ -104,7 +104,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
               
               <span style={{ fontWeight: 'bold' }}>QUE NUNCA PARAM</span>
             </div>
-        <img class="object-cover w-full h-full xs:h-[600px]" src='banner-principal.avif'></img>
+        <img class="object-cover w-full h-full xs:h-[600px]" src='banner-principal.avif' alt='homem trabalhando'></img>
         {/* <Source
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
