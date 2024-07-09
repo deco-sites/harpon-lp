@@ -21,6 +21,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(({
     disabled={disabled || loading}
     type={type}
     ref={ref}
+    aria-label='teste'
   >
     {loading ? <span class="loading loading-spinner" /> : children}
   </button>
