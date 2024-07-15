@@ -2,7 +2,10 @@ import Image from "apps/website/components/Image.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
 import { useMemo } from "preact/hooks";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import WaterJetDetails from "deco-sites/harpon-lp/components/waterjet/WaterJetDetails.tsx";
+import LandingPageHeader from "deco-sites/harpon-lp/components/landingpage/Header.tsx"
+import ImagesProducts from "deco-sites/harpon-lp/components/landingpage/Body.tsx"
+import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx"
+
 
 export interface Image {
   image: ImageWidget;
@@ -48,7 +51,9 @@ function Logos(props: Props) {
 
   return (
     <>
-      {/* <WaterJetDetails /> */}
+      <LandingPageHeader />
+      <ImagesProducts />
+      <LandingPageFooter />
     </>
   );
 }

@@ -1,20 +1,14 @@
-import SimpleText from "deco-sites/harpon-lp/components/news/SimpleText.tsx";
-import BannerCarousel from "deco-sites/harpon-lp/components/ui/BannerCarousel.tsx";
-import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx";
-import { DEVELOPER_SITE } from '../../config.ts'
-
 export default function ImagesProducts() {
-  const isLocalhost = DEVELOPER_SITE === 'localhost';
+ 
  
     return (
       <>
-      <BannerCarousel />
       <div className="flex relative gap-[20px] justify-center mb-[150px] mt-[142px] xs:w-auto xs:flex-col xs:mt-[100px] xs:ml-0 xs:mb-0 1xs:w-max 1xs:flex-col 1xs:mt-[100px] sm:mb-0 md:w-auto 2xl:justify-center 2xl:mt-[200px]">
         <div className="relative group">
           <div className="image-container">
             <div className="image-zoom" style={{ overflow: "hidden" }}>
               <div className="zoomable-image">
-                <a href='#'>
+                <a href='https://www.harpon.com.br/waterjet'>
                   <img
                     src="waterjet.png"
                     alt="Homem montando pneu"
@@ -24,12 +18,16 @@ export default function ImagesProducts() {
               </div>
             </div>
            {/*  <a class="xs:text-[10px] 1xs:text-sm md:text-sm" href="https://www.harpon.com.br/waterjet"> */}
-              <p
-                style={{ border: "solid 1px white", padding: "8px" }}
-                className="absolute z-10 mt-[-20px] ml-[200px] image-overlay font-bold text-[#29323A] bg-[#E9F408] xs:text-sm xs:ml-[140px] xs:-mt-5 1xs:ml-[160px] sm:text-sm sm:ml-20 md:ml-[130px]"
-              >
-                EM BREVE
-              </p>
+              <a 
+                  class="xs:text-[10px] 1xs:text-sm md:text-sm"
+                  href="https://www.harpon.com.br/waterjet">
+                <p
+                  style={{ border: "solid 1px white", padding: "8px" }}
+                  className="absolute z-10 mt-[-20px] ml-[200px] image-overlay font-bold text-[#29323A] bg-[#E9F408] xs:text-sm xs:ml-[140px] xs:-mt-5 1xs:ml-[160px] sm:text-sm sm:ml-20 md:ml-[130px]"
+                >
+                  VISITE A LOJA
+                </p>
+              </a>
             {/* </a> */}
             <div className="absolute bottom-[190px]  left-[30px] text-[32px]  font-normal text-white xs:text-[20px] xs:mb-0 xs:mt-5 xs:relative 1xs:text-2xl 1xs:relative sm:relative sm:text-2xl sm:mt-20 md:relative md:mt-5 md:text-2xl lg:-mb-5">
               <span style={{ fontWeight: "bold" }}>WATERJET</span>
@@ -40,7 +38,7 @@ export default function ImagesProducts() {
           <div className="image-container">
             <div className="image-zoom" style={{ overflow: "hidden" }}>
               <div className="zoomable-image">
-                <a href={isLocalhost ? "#" : "https://www.harpon.com.br/recauchutagem"}>
+                <a href= "https://www.harpon.com.br/recauchutagem">
                   <img
                     src="recauchutagem.png"
                     alt="Homem montando pneu"
@@ -51,7 +49,7 @@ export default function ImagesProducts() {
             </div>
             <a
               class="xs:text-[10px] 1xs:text-sm md:text-sm"
-              href={isLocalhost ? "#" : "https://www.harpon.com.br/recauchutagem"}
+              href= "https://www.harpon.com.br/recauchutagem"
             >
               <p
                 style={{ border: "solid 1px white", padding: "8px" }}
@@ -67,12 +65,6 @@ export default function ImagesProducts() {
           </div>
         </div>
       </div>
-        <div>
-        <SimpleText />
-        </div>
-        <div>
-        <Diferencials />
-        </div>
       </>
     );
   }

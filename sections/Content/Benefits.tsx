@@ -1,6 +1,7 @@
 import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
-import WaterJetProducts from "deco-sites/harpon-lp/components/waterjet/WaterJetProducts.tsx";
+import WaterJetProductList from "deco-sites/harpon-lp/islands/WaterJetProducts.tsx"
+
 
 export interface Props {
   title?: string;
@@ -54,7 +55,7 @@ export default function Benefits(
 
   return (
     <>
-      {/* <WaterJetProducts /> */}
+      <WaterJetProductList />
     </>
   );
 }
