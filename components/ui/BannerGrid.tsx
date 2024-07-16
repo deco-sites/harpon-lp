@@ -1,6 +1,6 @@
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import LandingPageHeader from "deco-sites/harpon-lp/components/landingpage/Header.tsx";
+import LandingPageHeader from "site/components/landingpage/Header.tsx";
 
 /**
  * @titleBy alt

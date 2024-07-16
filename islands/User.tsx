@@ -1,8 +1,8 @@
 import { FunctionalComponent, h } from 'preact';
 import { useContext } from 'preact/hooks';
-import AuthProvider, { AuthContext } from "deco-sites/harpon-lp/context/AuthProvider.tsx"
-import Login from 'deco-sites/harpon-lp/islands/Login.tsx';
-import Register from 'deco-sites/harpon-lp/islands/Register.tsx';
+import AuthProvider, { AuthContext } from "site/context/AuthProvider.tsx"
+import Login from 'site/islands/Login.tsx';
+import Register from 'site/islands/Register.tsx';
 
 const User: FunctionalComponent = () => {
     const { isLogin } = useContext(AuthContext)

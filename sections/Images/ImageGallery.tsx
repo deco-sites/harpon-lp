@@ -1,8 +1,8 @@
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-/* import Login from "deco-sites/harpon-lp/islands/Login.tsx"; */
-import RootUser from "deco-sites/harpon-lp/islands/User.tsx";
+/* import Login from "site/islands/Login.tsx"; */
+import RootUser from "site/islands/User.tsx";
 
 /**
  * @titleBy alt

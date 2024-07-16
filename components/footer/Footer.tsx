@@ -12,7 +12,7 @@ import Social from "$store/components/footer/Social.tsx";
 import Newsletter from "$store/islands/Newsletter.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
-import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
+import LandingPageFooter from "site/components/landingpage/Footer.tsx";
 
 
 

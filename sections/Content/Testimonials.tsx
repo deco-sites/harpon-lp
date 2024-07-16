@@ -5,7 +5,7 @@ import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
 import { useId } from "$store/sdk/useId.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import ProductDetails from "deco-sites/harpon-lp/islands/ProductDetails.tsx";
+import ProductDetails from "site/islands/ProductDetails.tsx";
 
 export interface Testimonial {
   text?: string;

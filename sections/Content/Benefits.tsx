@@ -1,6 +1,6 @@
 import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
-import WaterJetProductList from "deco-sites/harpon-lp/islands/WaterJetProducts.tsx"
+import WaterJetProductList from "site/islands/WaterJetProducts.tsx"
 
 
 export interface Props {

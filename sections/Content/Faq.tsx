@@ -1,6 +1,6 @@
 import Header from "$store/components/ui/SectionHeader.tsx";
-import WaterJetHome from "deco-sites/harpon-lp/components/waterjet/WaterJetHome.tsx";
-import AboutUs from "deco-sites/harpon-lp/components/news/AboutUs.tsx";
+import WaterJetHome from "site/components/waterjet/WaterJetHome.tsx";
+import AboutUs from "site/components/news/AboutUs.tsx";
 
 export interface Question {
   question: string;

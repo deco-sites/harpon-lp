@@ -2,7 +2,7 @@ import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
 import { useId } from "$store/sdk/useId.ts";
 import Icon from "$store/components/ui/Icon.tsx";
-import SearchResult from "deco-sites/harpon-lp/islands/SearchResult.tsx";
+import SearchResult from "site/islands/SearchResult.tsx";
 
 export interface Props {
   alerts: string[];

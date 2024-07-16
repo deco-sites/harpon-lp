@@ -1,4 +1,4 @@
-import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
+import LandingPageFooter from "site/components/landingpage/Footer.tsx";
 
 export default function AboutUs () {
 

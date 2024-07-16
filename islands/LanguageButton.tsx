@@ -1,5 +1,5 @@
 /* import { h } from 'preact';
-import { useLanguage } from "deco-sites/harpon-lp/context/LanguageContext.tsx";
+import { useLanguage } from "site/context/LanguageContext.tsx";
 
 function LanguageSelector() {
     const { language, changeLanguage } = useLanguage();
