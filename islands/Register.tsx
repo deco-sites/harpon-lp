@@ -1,8 +1,8 @@
 import { FunctionalComponent } from "preact";
 import { useState, useEffect, useContext } from "preact/hooks";
-import { AuthContext } from "deco-sites/harpon-lp/context/AuthProvider.tsx"
-import LandingPageHeader from "deco-sites/harpon-lp/components/landingpage/Header.tsx";
-import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
+import { AuthContext } from "site/context/AuthProvider.tsx"
+import LandingPageHeader from "site/components/landingpage/Header.tsx";
+import LandingPageFooter from "site/components/landingpage/Footer.tsx";
 
 export const Register: FunctionalComponent = () => {
     const [showPassword, setShowPassword] = useState(false);

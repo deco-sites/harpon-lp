@@ -7,7 +7,7 @@ import { useOffer } from "$store/sdk/useOffer.ts";
 import type { ProductListingPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductGallery, { Columns } from "../product/ProductGallery.tsx";
-import ProductList from "deco-sites/harpon-lp/islands/ProductList.tsx";
+import ProductList from "site/islands/ProductList.tsx";
 
 export interface Layout {
   /**

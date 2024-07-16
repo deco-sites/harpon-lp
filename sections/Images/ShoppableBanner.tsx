@@ -1,6 +1,6 @@
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import Register from "deco-sites/harpon-lp/islands/Register.tsx";
+import Register from "site/islands/Register.tsx";
 
 
 export interface Props {
