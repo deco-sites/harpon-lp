@@ -1,9 +1,9 @@
 import { FunctionalComponent } from "preact";
 import { useState, useContext } from "preact/hooks";
-import { AuthContext } from "deco-sites/harpon-lp/context/AuthProvider.tsx";
-import LandingPageHeader from "deco-sites/harpon-lp/components/landingpage/Header.tsx";
-import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
-import { ForggotPassword } from "deco-sites/harpon-lp/islands/ForggotPassword.tsx"
+import { AuthContext } from "site/context/AuthProvider.tsx";
+import LandingPageHeader from "site/components/landingpage/Header.tsx";
+import LandingPageFooter from "site/components/landingpage/Footer.tsx";
+import { ForggotPassword } from "site/islands/ForggotPassword.tsx"
 
 export const Login: FunctionalComponent = () => {
   const [showPassword, setShowPassword] = useState(false);

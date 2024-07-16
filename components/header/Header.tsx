@@ -7,7 +7,7 @@ import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
 import WhatsAppButon from "$store/islands/WhatsAppButon.tsx";
-/* import { LanguageProvider } from "deco-sites/harpon-lp/context/LanguageContext.tsx"; */
+/* import { LanguageProvider } from "site/context/LanguageContext.tsx"; */
 
 export interface NavItem {
   label: string;
