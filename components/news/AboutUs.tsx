@@ -17,7 +17,7 @@ export default function AboutUs () {
             <p class='px-4 py-3 hover:text-[#E9F408]'>Home</p>
           </a>
           <a href='#'>
-            <p class='px-4 py-3 hover:text-[#E9F408]'>Suporte</p>
+            <p class='px-4 py-3 hover:text-[#E9F408]'>Contato</p>
           </a>
         </div>
       </div>

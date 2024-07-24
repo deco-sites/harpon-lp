@@ -23,6 +23,7 @@ const ProductList : FunctionalComponent = () => {
 /*     const {selectedCategories, setSelectedCategories} = useContext(ProductContext) */
     const [categories, setCategories] = useState<Category[]>([]);
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+    const ordercategories = [1, 2, 12, 3, 4, 6, 5, 7, 9]
 
      useEffect(() => {
         axios.get('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/categories')
@@ -106,11 +107,20 @@ const ProductList : FunctionalComponent = () => {
     }, [selectedCategories]);
 
     
-    const handleProductClick = (productId: string) => {
-        let newSelectedProduct = [productId]
-        localStorage.setItem('selectedProduct', newSelectedProduct)
-        const encodedProductName = encodeURIComponent(productId);
-        return `/moredetails?=${encodedProductName}`;
+    const handleProductClick = (productName: string) => {
+        let newSelectedProduct = [productName];
+        localStorage.setItem('selectedProduct', newSelectedProduct);
+    
+        // Convert product name to lowercase and replace spaces with hyphens
+        const formattedProductName = productName.toLowerCase().replace(/\s+/g, '-');
+        const encodedProductName = encodeURIComponent(formattedProductName);
+    
+        return `/moredetails?product=${encodedProductName}`;
+    }
+    
+
+    const newCompareCategories = (a, b) => {
+        return ordercategories.indexOf(a.id) - ordercategories.indexOf(b.id)
     }
     
  
@@ -126,7 +136,7 @@ const ProductList : FunctionalComponent = () => {
         </h1>
         <div class='inline-flex'>
           <h2 class='text-[24px] font-bold ml-[139px] mt-[100px] xs:ml-[10px] xs:mt-5 xs:text-xl 1xs:ml-[10px] 1xs:mt-5 1xs:text-xl sm:ml-5 md:ml-5 lg:ml-5'>
-            CATEGORIAS
+            ETAPAS
           </h2>
           <div class="inline-flex items-center ml-[130px] mt-[100px] xs:mt-5 xs:ml-[-120px] 1xs:mt-5 1xs:ml-[-120px] sm:ml-[50px] md:ml-10 lg:ml-20">
           <svg class='mr-[-30px] z-10 xs:mt-[50px] 1xs:mt-[50px] ' xmlns="http://www.w3.org/2000/svg" width="16.419" height="16.423" viewBox="0 0 16.419 16.423">
@@ -146,7 +156,34 @@ const ProductList : FunctionalComponent = () => {
                 <p class='text-normal font-bold ml-[139px] xs:mt-5 xs:ml-[10px] 1xs:mt-5 1xs:ml-[10px] sm:ml-5 md:mt-[50px] md:ml-5 lg:mt-[50px] lg:ml-5 xl:mt-[30px]'>Recauchutagem</p>
             </div>
             <div class='xs:mt-0 xs:grid xs:grid-cols-2 mt-5 1xs:mt-0 1xs:grid 1xs:grid-cols-2 md:mt-5 lg:mt-5 xl:mt-[10px]'>
-            {categories.map(category => (
+            {categories
+            .filter(category => ![8, 10, 11].includes(category.id))
+            .sort(newCompareCategories)
+            .map(category => (
+                <div key={category.id} class="xs:text-xs 1xs:text-sm uppercase">
+                    <label className="flex items-center">
+                        <input
+                            className="hidden"
+                            type="checkbox"
+                            value={category.id}
+                            checked={selectedCategories.includes(category.name)}
+                            onChange={(e) => handleCategoryChange(category.id, category.name, e.target.checked)}
+                            disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
+                        />
+                        <span className={`ml-[139px] mt-2 cursor-pointer hover:bg-[#E9F408] hover:border-black xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px]  sm:ml-5 md:ml-5 lg:ml-5 w-5 h-5 border ${selectedCategories.includes(category.name) ? 'border-black bg-[#E9F408]' : 'border-gray-400'}`}></span>
+                        <span className="ml-2 cursor-pointer">{category.name}</span>
+                        </label>
+                </div>
+            ))}
+            </div>
+            <hr class='w-[260px] ml-[139px] mt-5'></hr>
+            <div>
+                <p class='text-normal font-bold ml-[139px] xs:mt-5 xs:ml-[10px] 1xs:mt-5 1xs:ml-[10px] sm:ml-5 md:mt-[50px] md:ml-5 lg:mt-[50px] lg:ml-5 xl:mt-[30px]'>Outras linhas </p>
+            </div>
+            <div class='xs:mt-0 xs:grid xs:grid-cols-2 mt-5 1xs:mt-0 1xs:grid 1xs:grid-cols-2 md:mt-5 lg:mt-5 xl:mt-[10px]'>
+            {categories
+            .filter(category => ![1, 2, 12, 3, 4, 6, 5, 7, 9].includes(category.id))
+            .map(category => (
                 <div key={category.id} class="xs:text-xs 1xs:text-sm uppercase">
                     <label className="flex items-center">
                         <input
@@ -170,7 +207,7 @@ const ProductList : FunctionalComponent = () => {
                 <img src='loading.gif' alt='Carregando...' class='w-5' />
             </div>
         ): (
-            <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-320px] ml-[430px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-[50px] 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 sm:grid-cols-2 sm:w-max sm:ml-[310px] md:grid-cols-2 md:ml-[295px] lg:ml-[295px] ">
+            <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-420px] ml-[430px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-[50px] 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 sm:grid-cols-2 sm:w-max sm:ml-[310px] md:grid-cols-2 md:ml-[295px] lg:ml-[295px] ">
                    {products.map(prod => (
                     <a href ={handleProductClick(prod.name)} onClick={() => handleProductClick(prod.id)}>
                      <div key={prod.id} class="w-[260px] h-[299px] hover:border-[#E9F408] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 sm:w-[220px] sm:h-[250px] md:h-[200px] md:w-[220px] lg:w-[220px] lg:h-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"

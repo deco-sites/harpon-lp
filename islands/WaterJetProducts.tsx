@@ -109,8 +109,8 @@ const WaterJetProductList : FunctionalComponent = () => {
     const handleProductClick = (productId: string) => {
         let newSelectedProduct = [productId]
         localStorage.setItem('selectedProduct', newSelectedProduct)
-        /* const encodedProductName = encodeURIComponent(productId);
-        return `/moredetails?=${encodedProductName}`; */
+        const encodedProductName = encodeURIComponent(productId);
+        return `/productdetails?=${encodedProductName}`;
     }
     
  
