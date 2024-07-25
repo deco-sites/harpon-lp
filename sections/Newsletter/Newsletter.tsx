@@ -1,6 +1,5 @@
 import Header from "$store/components/ui/SectionHeader.tsx";
 import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx"
-import WaterJetProductDetails from "deco-sites/harpon-lp/islands/WaterJetProductDetail.tsx"
 
 export interface Form {
   placeholder?: string;
@@ -126,7 +125,6 @@ export default function Newsletter(props: Props) {
     </div> */}
   return (
     <>
-      {/* <WaterJetProductDetails /> */}
       <LandingPageFooter />
     </>
   );
