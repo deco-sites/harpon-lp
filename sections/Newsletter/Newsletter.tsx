@@ -126,7 +126,7 @@ export default function Newsletter(props: Props) {
     </div> */}
   return (
     <>
-      <WaterJetProductDetails />
+      {/* <WaterJetProductDetails /> */}
       <LandingPageFooter />
     </>
   );
