@@ -117,7 +117,7 @@ const ProductList : FunctionalComponent = () => {
     
         return `/moredetails?product=${encodedProductName}`;
     }
-    
+    // Teste
 
     const newCompareCategories = (a, b) => {
         return ordercategories.indexOf(a.id) - ordercategories.indexOf(b.id)
