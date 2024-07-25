@@ -32,7 +32,6 @@ import * as $$25 from "./islands/ShippingSimulation.tsx";
 import * as $$26 from "./islands/SliderJS.tsx";
 import * as $$27 from "./islands/TesteWaterJet.tsx";
 import * as $$28 from "./islands/User.tsx";
-import * as $$29 from "./islands/WaterJetProductdetail.tsx";
 import * as $$30 from "./islands/WaterJetProducts.tsx";
 import * as $$31 from "./islands/WhatsAppButon.tsx";
 import * as $$32 from "./islands/WishlistButton.tsx";
