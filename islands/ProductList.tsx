@@ -111,7 +111,7 @@ const ProductList : FunctionalComponent = () => {
         let newSelectedProduct = [productName];
         localStorage.setItem('selectedProduct', newSelectedProduct);
     
-        // Convert product name to lowercase and replace spaces with hyphens
+        // Converte o nome em letras minúsculas e separa pelos hífens
         const formattedProductName = productName.toLowerCase().replace(/\s+/g, '-');
         const encodedProductName = encodeURIComponent(formattedProductName);
     
