@@ -71,7 +71,6 @@ const manifest = {
     "./islands/SliderJS.tsx": $$26,
     "./islands/TesteWaterJet.tsx": $$27,
     "./islands/User.tsx": $$28,
-    "./islands/WaterJetProductdetail.tsx": $$29,
     "./islands/WaterJetProducts.tsx": $$30,
     "./islands/WhatsAppButon.tsx": $$31,
     "./islands/WishlistButton.tsx": $$32,
