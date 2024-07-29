@@ -65,7 +65,7 @@ export const SearchResult: FunctionalComponent = () => {
     let newSelectedCategories = [categoryName]
     localStorage.setItem('selectedCategories', newSelectedCategories[0])
     const encodedCategoryName = encodeURIComponent(categoryName);
-    return `/productlist?=${encodedCategoryName}`;
+    return `/produtos?=${encodedCategoryName}`;
 }
 
 const handleProductClick = (productName: string) => {

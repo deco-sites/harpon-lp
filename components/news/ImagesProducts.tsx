@@ -12,7 +12,7 @@ export default function ImagesProducts() {
                 />
               </div>
             </div>
-            <a class='xs:text-[10px] 1xs:text-sm md:text-sm' href='/productlist'>
+            <a class='xs:text-[10px] 1xs:text-sm md:text-sm' href='/produtos'>
               <p
                 style={{border: "solid 1px white", padding: "8px"}}
                 className="absolute z-10 mt-[-70px] ml-8 image-overlay text-white group-hover:text-[#29323A] group-hover:bg-[#E9F408]"
@@ -36,7 +36,7 @@ export default function ImagesProducts() {
                 />
               </div>
             </div>
-            <a class='xs:text-[10px] 1xs:text-sm md:text-sm' href='/productlist'>
+            <a class='xs:text-[10px] 1xs:text-sm md:text-sm' href='/produtos'>
               <p
                 style={{border: "solid 1px white", padding: "8px"}}
                 className="absolute z-10 mt-[-70px] ml-8 image-overlay text-white group-hover:text-[#29323A] group-hover:bg-[#E9F408]"

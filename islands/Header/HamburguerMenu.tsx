@@ -2019,7 +2019,7 @@ export default function Navbar()  {
             </li>
             
             <div class='block group'>
-            <a href='/productlist'>
+            <a href='/produtos'>
               <p class='w-[120px] group m-auto py-1 px-1 text-sm text-center mt-[300px] border border-solid bg-[#29323A] text-white hover:bg-[#E9F408] hover:text-[#29323A]'>Ver todos</p>
             </a>
               <svg class='ml-[125px] mt-[-24px]' xmlns="http://www.w3.org/2000/svg" width="19.987" height="22.25" viewBox="0 0 19.987 22.25">
