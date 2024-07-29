@@ -115,7 +115,7 @@ const ProductList : FunctionalComponent = () => {
         const formattedProductName = productName.toLowerCase().replace(/\s+/g, '-');
         const encodedProductName = encodeURIComponent(formattedProductName);
     
-        return `/moredetails?product=${encodedProductName}`;
+        return `/${encodedProductName}`;
     }
     // Teste
 
@@ -138,12 +138,12 @@ const ProductList : FunctionalComponent = () => {
           <h2 class='text-[24px] font-bold ml-[139px] mt-[100px] xs:ml-[10px] xs:mt-5 xs:text-xl 1xs:ml-[10px] 1xs:mt-5 1xs:text-xl sm:ml-5 md:ml-5 lg:ml-5'>
             ETAPAS
           </h2>
-          <div class="inline-flex items-center ml-[130px] mt-[100px] xs:mt-5 xs:ml-[-120px] 1xs:mt-5 1xs:ml-[-120px] sm:ml-[50px] md:ml-10 lg:ml-20">
+          <div class="inline-flex items-center ml-[210px] mt-[100px] xs:mt-5 xs:ml-[-120px] 1xs:mt-5 1xs:ml-[-120px] sm:ml-[50px] md:ml-10 lg:ml-20 2xl:ml-[280px]">
           <svg class='mr-[-30px] z-10 xs:mt-[50px] 1xs:mt-[50px] ' xmlns="http://www.w3.org/2000/svg" width="16.419" height="16.423" viewBox="0 0 16.419 16.423">
             <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search" d="M20.726,19.727,16.16,15.118a6.508,6.508,0,1,0-.988,1L19.709,20.7a.7.7,0,0,0,.992.026A.707.707,0,0,0,20.726,19.727Zm-9.68-3.553a5.139,5.139,0,1,1,3.634-1.505A5.107,5.107,0,0,1,11.046,16.174Z" transform="translate(-4.5 -4.493)" fill="#29323A"/>
            </svg>
              <input class="w-[444px] h-10 pl-[70px] text-left bg-[#F2F2F2] text-[#29323A] text-sm xs:block xs:text-base xs:w-[350px] xs:mt-[50px] 1xs:block 1xs:text-lg 1xs:w-[400px] 1xs:mt-[50px] sm:w-[300px] md:w-[280px]" type="search" id="MagnifyingGlass" placeholder="Faça uma busca" />
-            <p class='font-bold text-[#29323A] ml-[120px] xs:text-xs xs:ml-[-180px] xs:mt-[-60px] xs:w-min 1xs:mt-[-60px] 1xs:w-min 1xs:text-sm 1xs:ml-[-220px] sm:whitespace-nowrap sm:ml-5 md:ml-[15px] lg:ml-[10px]'>Ordenar por:</p>
+            <p class='font-bold text-[#29323A] ml-[120px] xs:text-xs xs:ml-[-180px] xs:mt-[-60px] xs:w-min 1xs:mt-[-60px] 1xs:w-min 1xs:text-sm 1xs:ml-[-220px] sm:whitespace-nowrap sm:ml-5 md:ml-[15px] lg:ml-[10px] 2xl:ml-[400px]'>Ordenar por:</p>
             <select class='border border-solid bg-[#F2F2F2] w-[157px] h-10 ml-[5px] p-[2px] text-sm xs:text-xs xs:w-[125px] xs:h-[30px] xs:mt-[-60px] 1xs:text-sm 1xs:w-[145px] 1xs:h-[30px] 1xs:mt-[-60px] md:ml-0 md:w-[145px]'>
                 <option class='text-sm text-[#29323A]'>Mais Relevantes</option>
                 <option class='text-sm text-[#29323A]'>Maiores Preços</option>
@@ -207,7 +207,7 @@ const ProductList : FunctionalComponent = () => {
                 <img src='loading.gif' alt='Carregando...' class='w-5' />
             </div>
         ): (
-            <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-420px] ml-[430px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-[50px] 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 sm:grid-cols-2 sm:w-max sm:ml-[310px] md:grid-cols-2 md:ml-[295px] lg:ml-[295px] ">
+            <div class="w-fit grid grid-cols-3 gap-[1.5rem] mt-[-420px] ml-[430px] mb-[100px] xs:mt-[50px] xs:ml-3 xs:grid-cols-2 1xs:mb-[50px] 1xs:mt-[50px] 1xs:ml-3 1xs:grid-cols-2 sm:grid-cols-2 sm:w-max sm:ml-[310px] md:grid-cols-2 md:ml-[295px] lg:ml-[295px] 2xl:grid-cols-4 2xl:ml-[500px]">
                    {products.map(prod => (
                     <a href ={handleProductClick(prod.name)} onClick={() => handleProductClick(prod.id)}>
                      <div key={prod.id} class="w-[260px] h-[299px] hover:border-[#E9F408] xs:w-[160px] xs:h-[150px] xs:mt-0 xs:ml-0 1xs:w-[180px] 1xs:h-[160px] 1xs:mt-0 1xs:ml-0 sm:w-[220px] sm:h-[250px] md:h-[200px] md:w-[220px] lg:w-[220px] lg:h-[220px] group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out"

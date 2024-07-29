@@ -68,11 +68,15 @@ export const SearchResult: FunctionalComponent = () => {
     return `/productlist?=${encodedCategoryName}`;
 }
 
-const handleProductClick = (productId: string) => {
-    let newSelectedProduct = [productId]
-    localStorage.setItem('selectedProduct', newSelectedProduct)
-    const encodedProductName = encodeURIComponent(productId);
-        return `/moredetails?=${encodedProductName}`;
+const handleProductClick = (productName: string) => {
+  let newSelectedProduct = [productName];
+  localStorage.setItem('selectedProduct', newSelectedProduct);
+
+  // Converte o nome em letras minúsculas e separa pelos hífens
+  const formattedProductName = productName.toLowerCase().replace(/\s+/g, '-');
+  const encodedProductName = encodeURIComponent(formattedProductName);
+
+  return `/${encodedProductName}`;
 }
 
   return (
