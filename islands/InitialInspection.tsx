@@ -16,7 +16,7 @@ interface Category {
     name: string,
 }
 
-const ProductList : FunctionalComponent = () => {
+const InitialInspection : FunctionalComponent = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
 /*     const {selectedCategories, setSelectedCategories} = useContext(ProductContext) */
@@ -51,6 +51,8 @@ const ProductList : FunctionalComponent = () => {
             return updatedCategories;
         });
     };
+    
+    
 
     useEffect(() => {
         // Obtém a string armazenada no localStorage
@@ -104,6 +106,27 @@ const ProductList : FunctionalComponent = () => {
     }, [selectedCategories]);
 
     
+    const replaceSpecialChars = (str: string) => {
+        return str
+            .normalize("NFD") // Normaliza o texto
+            .replace(/[\u0300-\u036f]/g, "") // Remove diacríticos
+            .replace(/[^a-zA-Z0-9 ]/g, '') // Remove caracteres não alfanuméricos e não espaços
+            .toLowerCase(); // Converte para minúsculas
+    };
+
+    const handleCategoryClick = (categoryName: string) => {
+        const normalizedCategoryName = replaceSpecialChars(categoryName);
+        let newSelectedCategories = [categoryName]
+        localStorage.setItem('selectedCategories', newSelectedCategories[0])
+    
+        const formattedCategoryName = normalizedCategoryName
+            .replace(/\s+/g, '-') // Substitui espaços por hífens
+            .replace(/--+/g, '-'); // Substitui múltiplos hífens por um único hífen
+    
+        // Retorna a URL formatada
+        return `/${formattedCategoryName}`;
+    };
+
     const handleProductClick = (productName: string) => {
         let newSelectedProduct = [productName];
         localStorage.setItem('selectedProduct', newSelectedProduct);
@@ -119,27 +142,6 @@ const ProductList : FunctionalComponent = () => {
     const newCompareCategories = (a, b) => {
         return ordercategories.indexOf(a.id) - ordercategories.indexOf(b.id)
     }
-
-    const replaceSpecialChars = (str: string) => {
-        return str
-            .normalize("NFD") // Normaliza o texto
-            .replace(/[\u0300-\u036f]/g, "") // Remove diacríticos
-            .replace(/[^a-zA-Z0-9 ]/g, '') // Remove caracteres não alfanuméricos e não espaços
-            .toLowerCase(); // Converte para minúsculas
-    };
-    
-    const handleCategoryClick = (categoryName: string) => {
-        const normalizedCategoryName = replaceSpecialChars(categoryName);
-        let newSelectedCategories = [categoryName]
-        localStorage.setItem('selectedCategories', newSelectedCategories[0])
-    
-        const formattedCategoryName = normalizedCategoryName
-            .replace(/\s+/g, '-') // Substitui espaços por hífens
-            .replace(/--+/g, '-'); // Substitui múltiplos hífens por um único hífen
-    
-        // Retorna a URL formatada
-        return `/${formattedCategoryName}`;
-    };
     
  
     return (
@@ -174,56 +176,52 @@ const ProductList : FunctionalComponent = () => {
                 <p class='text-normal font-bold ml-[139px] xs:mt-5 xs:ml-[10px] 1xs:mt-5 1xs:ml-[10px] sm:ml-5 md:mt-[50px] md:ml-5 lg:mt-[50px] lg:ml-5 xl:mt-[30px]'>Recauchutagem</p>
             </div>
             <div class='xs:mt-0 xs:grid xs:grid-cols-2 mt-5 1xs:mt-0 1xs:grid 1xs:grid-cols-2 md:mt-5 lg:mt-5 xl:mt-[10px]'>
-    {categories
-    .filter(category => ![8, 10, 11].includes(category.id))
-    .sort(newCompareCategories)
-    .map(category => (
-        <div key={category.id} class="xs:text-xs 1xs:text-sm uppercase">
-            <a
-                href={handleCategoryClick(category.name)}
-                className="flex items-center"
-            >
-                <input
-                    className="hidden"
-                    type="checkbox"
-                    value={category.id}
-                    checked={selectedCategories.includes(category.name)}
-                    onChange={(e) => handleCategoryChange(category.id, category.name, e.target.checked)}
-                    disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
-                />
-                <span className={`ml-[139px] mt-2 cursor-pointer hover:bg-[#E9F408] hover:border-black xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px]  sm:ml-5 md:ml-5 lg:ml-5 w-5 h-5 border ${selectedCategories.includes(category.name) ? 'border-black bg-[#E9F408]' : 'border-gray-400'}`}></span>
-                <a href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}><span className="ml-2 cursor-pointer">{category.name}</span></a>
-            </a>
-        </div>
-    ))}
-</div>
+            {categories
+            .filter(category => ![8, 10, 11].includes(category.id))
+            .sort(newCompareCategories)
+            .map(category => (
+                <div key={category.id} class="xs:text-xs 1xs:text-sm uppercase">
+                    <label className="flex items-center">
+                        <input
+                            className="hidden"
+                            type="checkbox"
+                            value={category.id}
+                            checked={selectedCategories.includes(category.name)}
+                            onChange={(e) => handleCategoryChange(category.id, category.name, e.target.checked)}
+                            disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
+                        />
+                            <span className={`ml-[139px] mt-2 cursor-pointer hover:bg-[#E9F408] hover:border-black xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px]  sm:ml-5 md:ml-5 lg:ml-5 w-5 h-5 border ${selectedCategories.includes(category.name) ? 'border-black bg-[#E9F408]' : 'border-gray-400'}`}></span>
+                        <a href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}>
+                            <span className="ml-2 cursor-pointer">{category.name}</span>
+                        </a>
+                        </label>
+                </div>
+            ))}
+            </div>
             <hr class='w-[260px] ml-[139px] mt-5'></hr>
             <div>
                 <p class='text-normal font-bold ml-[139px] xs:mt-5 xs:ml-[10px] 1xs:mt-5 1xs:ml-[10px] sm:ml-5 md:mt-[50px] md:ml-5 lg:mt-[50px] lg:ml-5 xl:mt-[30px]'>Outras linhas </p>
             </div>
             <div class='xs:mt-0 xs:grid xs:grid-cols-2 mt-5 1xs:mt-0 1xs:grid 1xs:grid-cols-2 md:mt-5 lg:mt-5 xl:mt-[10px]'>
-    {categories
-    .filter(category => ![1, 2, 12, 3, 4, 6, 5, 7, 9].includes(category.id))
-    .map(category => (
-        <div key={category.id} class="xs:text-xs 1xs:text-sm uppercase">
-            <a
-                href={handleCategoryClick(category.name)}
-                className="flex items-center"
-            >
-                <input
-                    className="hidden"
-                    type="checkbox"
-                    value={category.id}
-                    checked={selectedCategories.includes(category.name)}
-                    onChange={(e) => handleCategoryChange(category.id, category.name, e.target.checked)}
-                    disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
-                />
-                <span className={`ml-[139px] mt-2 cursor-pointer hover:bg-[#E9F408] hover:border-black xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px]  sm:ml-5 md:ml-5 lg:ml-5 w-5 h-5 border ${selectedCategories.includes(category.name) ? 'border-black bg-[#E9F408]' : 'border-gray-400'}`}></span>
-                <a href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}><span className="ml-2 cursor-pointer">{category.name}</span></a>
-            </a>
-        </div>
-    ))}
-</div>
+            {categories
+            .filter(category => ![1, 2, 12, 3, 4, 6, 5, 7, 9].includes(category.id))
+            .map(category => (
+                <div key={category.id} class="xs:text-xs 1xs:text-sm uppercase">
+                    <label className="flex items-center">
+                        <input
+                            className="hidden"
+                            type="checkbox"
+                            value={category.id}
+                            checked={selectedCategories.includes(category.name)}
+                            onChange={(e) => handleCategoryChange(category.id, category.name, e.target.checked)}
+                            disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
+                        />
+                        <span className={`ml-[139px] mt-2 cursor-pointer hover:bg-[#E9F408] hover:border-black xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px]  sm:ml-5 md:ml-5 lg:ml-5 w-5 h-5 border ${selectedCategories.includes(category.name) ? 'border-black bg-[#E9F408]' : 'border-gray-400'}`}></span>
+                        <a href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}><span className="ml-2 cursor-pointer">{category.name}</span></a>
+                        </label>
+                </div>
+            ))}
+            </div>
         </div>
             
         {loading ? (
@@ -250,4 +248,4 @@ const ProductList : FunctionalComponent = () => {
     )
 }
 
-export default ProductList;
+export default InitialInspection;

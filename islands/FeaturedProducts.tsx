@@ -37,12 +37,32 @@ export const FeaturedProducts: FunctionalComponent = () => {
         });
     },[])
 
+    const replaceSpecialChars = (str: string) => {
+        return str
+            .normalize("NFD") // Normaliza o texto
+            .replace(/[\u0300-\u036f]/g, "") // Remove diacríticos
+            .replace(/[^a-zA-Z0-9 ]/g, '') // Remove caracteres não alfanuméricos e não espaços
+            .toLowerCase(); // Converte para minúsculas
+    };
+    
     const handleCategoryClick = (categoryName: string) => {
+        const normalizedCategoryName = replaceSpecialChars(categoryName);
         let newSelectedCategories = [categoryName]
         localStorage.setItem('selectedCategories', newSelectedCategories[0])
-        const encodedCategoryName = encodeURIComponent(categoryName);
-        return `/produtos?=${encodedCategoryName}`;
-    }
+    
+        const formattedCategoryName = normalizedCategoryName
+            .replace(/\s+/g, '-') // Substitui espaços por hífens
+            .replace(/--+/g, '-'); // Substitui múltiplos hífens por um único hífen
+    
+        // Retorna a URL formatada
+        return `/${formattedCategoryName}`;
+    };
+    
+    
+    
+    
+    
+    
 
     const compareCategories = (a, b) => {
         return order.indexOf(a.id) - order.indexOf(b.id)
