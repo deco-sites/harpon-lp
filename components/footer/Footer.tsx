@@ -279,7 +279,7 @@ function Footer({
         <div class='flex items-center h-[10px] mb-5 ml-[139px] xs:w-[250px] xs:block xs:ml-[70px] 1xs:block md:ml-[90px]'>
             
                 <img class='xs:w-[14px] xs:absolute 1xs:mt-5 1xs:mb-[-20px]' src='icon-feather-phone.svg'></img>			
-                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-[5px] 1xs:pl-[15px] 1xs:text-[17px] md:whitespace-nowrap'>+55(11)4556-0929</span>
+                      <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-[5px] 1xs:pl-[15px] 1xs:text-[17px] md:whitespace-nowrap'>+55(11)3658-1390</span>
                       <img class='ml-[180px] md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] 1xs:mb-[-22px] 1xs:mt-5 lg:pl-[15px] xl:pl-5' src='icon-feather-map-pin.svg'></img>
                       <span class='text-[#29323A] text-center  ml-[10px] xs:text-sm xs:px-2 1xs:text-[17px] 1xs:pl-[15px] md:whitespace-nowrap'> Av. Doutor Mauro Lindemberg Monteiro, 1259 Jardim Santa Fé, Osasco São Paulo - Brasil</span>
         </div>
