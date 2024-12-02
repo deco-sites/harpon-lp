@@ -1,6 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 import { FunctionalComponent } from "preact";
-import axios from "https://cdn.skypack.dev/axios";
+import axios from "https://cdn.skypack.dev/axios@1.5.0";
 
 interface Category {
   id: string;

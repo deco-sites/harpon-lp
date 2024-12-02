@@ -1,5 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
-import axios from 'https://cdn.skypack.dev/axios';
+import axios from 'https://cdn.skypack.dev/axios@1.5.0';
 
 interface Category {
   id: string,
