@@ -27,7 +27,7 @@ export const Teste: FunctionalComponent = () => {
 
      useEffect(() => {
         console.log("Teste")
-        axios.get('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/waterjet-products/categories')
+        axios.get('https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/categories')
         .then((response:any) => {
            setCategories(response.data) 
         }).catch((error:any) =>{

@@ -46,7 +46,7 @@ export const SearchResult: FunctionalComponent = () => {
       if (debouncedTerm.length > 0) {
         setLoading(true);
         try {
-          const response = await axios.get<SearchResults>(`https://backend-harpon-hjk3p7rq3q-rj.a.run.app/search?term=${debouncedTerm}`);
+          const response = await axios.get<SearchResults>(`https://backend-harpon-260311756054.southamerica-east1.run.app/search?term=${debouncedTerm}`);
           setResults(response.data);
         } catch (error) {
           console.error('Erro ao buscar:', error);
