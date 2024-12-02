@@ -6,7 +6,6 @@ import ProductContext from '../context/ProductContext.tsx'
 import SimpleText from "deco-sites/harpon-lp/components/news/SimpleText.tsx";
 import Diferencials from "deco-sites/harpon-lp/components/news/Diferencials.tsx";
 import { config } from "https://deno.land/x/dotenv@v3.2.2/mod.ts";
-/** */
 interface Category {
     id: number,
     name: string,
