@@ -218,7 +218,7 @@ const InitialInspection : FunctionalComponent = () => {
                             disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
                         />
                         <span className={`ml-[139px] mt-2 cursor-pointer hover:bg-[#E9F408] hover:border-black xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px]  sm:ml-5 md:ml-5 lg:ml-5 w-5 h-5 border ${selectedCategories.includes(category.name) ? 'border-black bg-[#E9F408]' : 'border-gray-400'}`}></span>
-                        <a href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}><span className="ml-2 cursor-pointer">{category.name}</span></a>
+                        <a href={`/recauchutagem/${handleCategoryClick(category.name)}`} onClick={() => handleCategoryClick(category.name)}><span className="ml-2 cursor-pointer">{category.name}</span></a>
                         </label>
                 </div>
             ))}
