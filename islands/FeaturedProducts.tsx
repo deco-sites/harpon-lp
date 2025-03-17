@@ -37,12 +37,32 @@ export const FeaturedProducts: FunctionalComponent = () => {
         });
     },[])
 
+    const replaceSpecialChars = (str: string) => {
+        return str
+            .normalize("NFD") // Normaliza o texto
+            .replace(/[\u0300-\u036f]/g, "") // Remove diacríticos
+            .replace(/[^a-zA-Z0-9 ]/g, '') // Remove caracteres não alfanuméricos e não espaços
+            .toLowerCase(); // Converte para minúsculas
+    };
+    
     const handleCategoryClick = (categoryName: string) => {
+        const normalizedCategoryName = replaceSpecialChars(categoryName);
         let newSelectedCategories = [categoryName]
         localStorage.setItem('selectedCategories', newSelectedCategories[0])
-        const encodedCategoryName = encodeURIComponent(categoryName);
-        return `/produtos?=${encodedCategoryName}`;
-    }
+    
+        const formattedCategoryName = normalizedCategoryName
+            .replace(/\s+/g, '-') // Substitui espaços por hífens
+            .replace(/--+/g, '-'); // Substitui múltiplos hífens por um único hífen
+    
+        // Retorna a URL formatada
+        return `/${formattedCategoryName}`;
+    };
+    
+    
+    
+    
+    
+    
 
     const compareCategories = (a, b) => {
         return order.indexOf(a.id) - order.indexOf(b.id)
@@ -75,7 +95,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
                         .map(category => (
                             <a href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}>
                                 <div key={category.id} class="group section border border-solid border-[#E6E6E6] relative transition duration-300 ease-in-out hover:bg-[#E9F408] xs:w-[150px] xs:h-[150px] 1xs:w-[180px] 1xs:h-[200px] sm:h-20 md:w-auto md:h-[180px]">
-                                    <p class='flex justify-center my-[30px] font-bold text-lg uppercase text-center font-[Albert Sans] group xs:mt-[50px] xs:ml-0 xs:pt-[10px] xs:text-sm  1xs:text-lg 1xs:ml-0 1xs:mt-[50px] 1xs:pt-[30px] sm:text-sm md:pl-0 md:pt-[50px]'>{category.name}</p>
+                                    <p class='flex flex-col-2 justify-center my-[30px] font-bold text-lg uppercase text-center font-[Albert Sans] group xs:mt-[50px] xs:ml-0 xs:pt-[10px] xs:text-sm  1xs:text-lg 1xs:ml-0 1xs:mt-[50px] 1xs:pt-[30px] sm:text-sm md:pl-0 md:pt-[50px]'>{category.name}</p>
                                 </div>
                             </a>
                         ))}

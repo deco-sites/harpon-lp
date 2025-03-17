@@ -38,46 +38,35 @@ export const SearchResult: FunctionalComponent = () => {
   const [results, setResults] = useState<SearchResults>({ categories: [], products: [] });
   const [loading, setLoading] = useState<boolean>(false);
   const debouncedTerm = useDebounce(term, 300); // 300ms debounce delay
-  const [categories, setCategories] = useState<Category[]>([])
-  const [products, setProducts] = useState<Product[]>([])
+
+  const currentPath = window.location.pathname; // Obter o caminho atual da URL
 
   useEffect(() => {
     const handleSearch = async () => {
-      if (debouncedTerm.length > 0) {
-        setLoading(true);
-        try {
-          const response = await axios.get<SearchResults>(`https://backend-harpon-hjk3p7rq3q-rj.a.run.app/search?term=${debouncedTerm}`);
-          setResults(response.data);
-        } catch (error) {
-          console.error('Erro ao buscar:', error);
-        } finally {
-          setLoading(false);
+      setLoading(true);
+      try {
+        let response;
+        // Verificar o caminho da URL e realizar a requisição adequada
+        if (currentPath.includes('waterjet')) {
+          response = await axios.get<SearchResults>(`https://backend-harpon-hjk3p7rq3q-rj.a.run.app/search-waterjet?term=${debouncedTerm}`);
+        } else {
+          response = await axios.get<SearchResults>(`https://backend-harpon-hjk3p7rq3q-rj.a.run.app/search?term=${debouncedTerm}`);
         }
-      } else {
-        setResults({ categories: [], products: [] });
+
+        setResults(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
-    handleSearch();
-  }, [debouncedTerm]);
-
-  const handleCategoryClick = (categoryName: string) => {
-    let newSelectedCategories = [categoryName]
-    localStorage.setItem('selectedCategories', newSelectedCategories[0])
-    const encodedCategoryName = encodeURIComponent(categoryName);
-    return `/produtos?=${encodedCategoryName}`;
-}
-
-const handleProductClick = (productName: string) => {
-  let newSelectedProduct = [productName];
-  localStorage.setItem('selectedProduct', newSelectedProduct);
-
-  // Converte o nome em letras minúsculas e separa pelos hífens
-  const formattedProductName = productName.toLowerCase().replace(/\s+/g, '-');
-  const encodedProductName = encodeURIComponent(formattedProductName);
-
-  return `/${encodedProductName}`;
-}
+    if (debouncedTerm.length > 0) {
+      handleSearch();
+    } else {
+      setResults({ categories: [], products: [] });
+    }
+  }, [debouncedTerm, currentPath]);
 
   return (
     <>
@@ -87,7 +76,7 @@ const handleProductClick = (productName: string) => {
         </svg>
         <input
           className="w-80 h-10 pl-[50px] ml-[-20px] text-left bg-[#3D4B58] text-[#C8C8CA] pointer-events-auto xs:w-[240px] 1xs:block md:w-[240px]"
-          type="search"
+          type="text"
           id="MagnifyingGlass"
           placeholder="O que você procura?"
           value={term}
@@ -105,13 +94,13 @@ const handleProductClick = (productName: string) => {
               <h3 className='font-bold'>Categorias</h3>
               <ul>
                 {results.categories.length > 0 ? results.categories.map(category => (
-                  <li key={category.id}><a class='pointer hover:bg-[#E9F408]' href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}>{category.name}</a></li>
+                  <li key={category.id}><a class='pointer hover:bg-[#E9F408]' href={`/categoria/${category.id}`}>{category.name}</a></li>
                 )) : <li>Nenhuma categoria encontrada</li>}
               </ul>
               <h3 className='font-bold'>Produtos</h3>
               <ul>
                 {results.products.length > 0 ? results.products.map(product => (
-                  <li key={product.id}><a class='pointer hover:bg-[#E9F408]' href={handleProductClick(product.name)} onClick={() => handleProductClick(product.id)}>{product.name}</a></li>
+                  <li key={product.id}><a class='pointer hover:bg-[#E9F408]' href={`/produto/${product.id}`}>{product.name}</a></li>
                 )) : <li>Nenhum produto encontrado</li>}
               </ul>
             </>

@@ -177,7 +177,7 @@ export default function BannnerGrid(props: Props) {
   return (
     <>
       <div class='xs:overflow-x-hidden 1xs:overflow-x-hidden  md:overflow-x-hidden lg:overflow-x-hidden'>
-        <div>
+        <div class='hidden'>
           <LandingPageHeader />
         </div>
         <div class='bg-[#E4E4E4] sm:w-[798px]'>
