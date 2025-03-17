@@ -51,7 +51,7 @@ function Navbar({ items, searchbar, logo }: {
       {/* Desktop Version */}
       <div class="hidden -mt-[60px] 2xl:flex xl:flex lg:flex md:flex sm:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 h-20">
         {/* <MenuHamburguer /> */}
-        <div class="flex-none w-44 md:ml-[-130px] lg:ml-[-140px]">
+        <div class="flex-none w-44 md:ml-[-130px] lg:ml-[-140px]"> 
           {logo && (
             <a
               href="/"
@@ -75,5 +75,5 @@ function Navbar({ items, searchbar, logo }: {
     </>
   );
 }
-
+/* Testando o css*/ 
 export default Navbar;
