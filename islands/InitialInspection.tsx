@@ -1,6 +1,6 @@
 import {useState, useEffect, useContext } from 'preact/hooks';
 import { FunctionalComponent } from 'preact';
-import axios from 'https://cdn.skypack.dev/axios';
+import axios from 'https://cdn.skypack.dev/axios@1.5.0';
 
 interface Product {
     id: string;
@@ -25,7 +25,7 @@ const InitialInspection : FunctionalComponent = () => {
     const ordercategories = [1, 2, 12, 3, 4, 6, 5, 7, 9]
 
      useEffect(() => {
-        axios.get('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/categories')
+        axios.get('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/categories')
         .then((response:any) => {
            setCategories(response.data) 
         }).catch((error:any) =>{
@@ -78,7 +78,7 @@ const InitialInspection : FunctionalComponent = () => {
 
         setLoading(true); // Define como true no início da requisição
 
-        axios.post('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories', {
+        axios.post('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/get-products-by-categories', {
             categories: selectedCategories
         })
         .then((response: any) => {
@@ -142,8 +142,6 @@ const InitialInspection : FunctionalComponent = () => {
     const newCompareCategories = (a, b) => {
         return ordercategories.indexOf(a.id) - ordercategories.indexOf(b.id)
     }
-
-    
     
  
     return (
@@ -220,7 +218,7 @@ const InitialInspection : FunctionalComponent = () => {
                             disabled={selectedCategories.length === 1 && selectedCategories.includes(category.name)}
                         />
                         <span className={`ml-[139px] mt-2 cursor-pointer hover:bg-[#E9F408] hover:border-black xs:w-3 xs:ml-[15px] 1xs:w-3 1xs:ml-[15px]  sm:ml-5 md:ml-5 lg:ml-5 w-5 h-5 border ${selectedCategories.includes(category.name) ? 'border-black bg-[#E9F408]' : 'border-gray-400'}`}></span>
-                        <a href=""><span className="ml-2 cursor-pointer">{category.name}</span></a>
+                        <a href={handleCategoryClick(category.name)} onClick={() => handleCategoryClick(category.name)}><span className="ml-2 cursor-pointer">{category.name}</span></a>
                         </label>
                 </div>
             ))}

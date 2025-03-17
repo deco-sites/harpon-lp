@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'preact/hooks';
 import { FunctionalComponent } from 'preact';
-import axios from "https://cdn.skypack.dev/axios";
+import axios from "https://cdn.skypack.dev/axios@1.5.0";
 
 interface Product {
     id: string;
@@ -28,7 +28,7 @@ const ProductDetails : FunctionalComponent = () => {
         const selectedProduct= localStorage.getItem('selectedProduct')
         // Verifica se a string existe e não está vazia
         if (selectedProduct) {
-            axios.get(`https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/get-product-information/${selectedProduct}`)
+            axios.get(`https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/get-product-information/${selectedProduct}`)
                 .then((response: any) => {
                     setProduct(response.data);
                     setVariations(response.data.variations);

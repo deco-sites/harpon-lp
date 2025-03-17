@@ -48,7 +48,7 @@ export default function LandingPageFooter() {
           >
           </img>
           <span class="flex text-[#29323A] ml-[10px] xs:text-sm xs:px-[5px] xs:ml-[50px] 1xs:ml-[50px] 1xs:pl-[15px] 1xs:text-[17px] sm:whitespace-nowrap md:whitespace-nowrap">
-            +55(11)4556-0929
+            +55(11)3658-1390
           </span>
           <img
             class="ml-[180px] md:ml-[30px] xs:w-[14px] xs:mt-[30px] xs:mb-[-20px] xs:ml-[30px] 1xs:mb-[-22px] 1xs:mt-5 1xs:ml-10 sm:ml-5 lg:pl-[15px] xl:pl-5"

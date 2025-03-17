@@ -1,6 +1,6 @@
 import {useState, useEffect, useContext } from 'preact/hooks';
 import { FunctionalComponent } from 'preact';
-import axios from 'https://cdn.skypack.dev/axios';
+import axios from 'https://cdn.skypack.dev/axios@1.5.0';
 import ProductContext from '../context/ProductContext.tsx'
 
 interface Product {
@@ -25,7 +25,7 @@ const WaterJetProductList : FunctionalComponent = () => {
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
      useEffect(() => {
-        axios.get('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/waterjet-products/categories')
+        axios.get('https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/categories')
         .then((response:any) => {
            setCategories(response.data) 
         }).catch((error:any) =>{
@@ -78,7 +78,7 @@ const WaterJetProductList : FunctionalComponent = () => {
 
         setLoading(true); // Define como true no início da requisição
 
-        axios.post('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/waterjet-products/get-waterjet-products-by-categories', {
+        axios.post('https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-waterjet-products-by-categories', {
             categories: selectedCategories
         })
         .then((response: any) => {

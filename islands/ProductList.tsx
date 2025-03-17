@@ -1,6 +1,6 @@
 import {useState, useEffect, useContext } from 'preact/hooks';
 import { FunctionalComponent } from 'preact';
-import axios from 'https://cdn.skypack.dev/axios';
+import axios from 'https://cdn.skypack.dev/axios@1.5.0';
 
 interface Product {
     id: string;
@@ -25,7 +25,7 @@ const ProductList : FunctionalComponent = () => {
     const ordercategories = [1, 2, 12, 3, 4, 6, 5, 7, 9]
 
      useEffect(() => {
-        axios.get('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/categories')
+        axios.get('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/categories')
         .then((response:any) => {
            setCategories(response.data) 
         }).catch((error:any) =>{
@@ -76,7 +76,7 @@ const ProductList : FunctionalComponent = () => {
 
         setLoading(true); // Define como true no início da requisição
 
-        axios.post('https://backend-harpon-hjk3p7rq3q-rj.a.run.app/harpon-products/get-products-by-categories', {
+        axios.post('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/get-products-by-categories', {
             categories: selectedCategories
         })
         .then((response: any) => {

@@ -1,8 +1,12 @@
 import { useId } from "$store/sdk/useId.ts";
 import InitialInspection from "deco-sites/harpon-lp/islands/InitialInspection.tsx";
+<<<<<<< HEAD
 import Scraping from "deco-sites/harpon-lp/islands/Scraping.tsx";
 import Countersinking from "deco-sites/harpon-lp/islands/Countersinking.tsx";
 import Cementation from "deco-sites/harpon-lp/islands/Cementation.tsx";
+=======
+
+>>>>>>> 6d386bb5cd9aa4b5d31c032962fc1a2a5d3a0395
 
 const script = (id: string) => {
   const callback = () => {
