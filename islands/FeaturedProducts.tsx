@@ -59,7 +59,7 @@ export const FeaturedProducts: FunctionalComponent = () => {
     };
     
     
-    
+    //Funciona
     
     
     
