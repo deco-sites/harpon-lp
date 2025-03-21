@@ -48,9 +48,9 @@ export const SearchResult: FunctionalComponent = () => {
         let response;
         // Verificar o caminho da URL e realizar a requisição adequada
         if (currentPath.includes('waterjet')) {
-          response = await axios.get<SearchResults>(`https://backend-harpon-hjk3p7rq3q-rj.a.run.app/search-waterjet?term=${debouncedTerm}`);
+          response = await axios.get<SearchResults>(`https://backend-harpon-260311756054.southamerica-east1.run.app/search-waterjet?term=${debouncedTerm}`);
         } else {
-          response = await axios.get<SearchResults>(`https://backend-harpon-hjk3p7rq3q-rj.a.run.app/search?term=${debouncedTerm}`);
+          response = await axios.get<SearchResults>(`https://backend-harpon-260311756054.southamerica-east1.run.app/search?term=${debouncedTerm}`);
         }
 
         setResults(response.data);

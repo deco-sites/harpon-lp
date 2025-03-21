@@ -124,7 +124,7 @@ const InitialInspection : FunctionalComponent = () => {
             .replace(/--+/g, '-'); // Substitui múltiplos hífens por um único hífen
     
         // Retorna a URL formatada
-        return `/${formattedCategoryName}`;
+        return `${formattedCategoryName}`;
     };
 
     const handleProductClick = (productName: string) => {
