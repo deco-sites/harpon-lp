@@ -42,8 +42,6 @@ const ProductDetails : FunctionalComponent = () => {
     }, [])
 
     useEffect(()=> {
-        console.log(product)
-        console.log(variations)
     }, [product])
 
     const handleClick = () => {

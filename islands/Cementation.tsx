@@ -82,7 +82,6 @@ const Cementation : FunctionalComponent = () => {
             categories: selectedCategories
         })
         .then((response: any) => {
-            console.log(response.data);
 
             // Colocar os produtos da última categoria selecionada no início
             const allProducts = selectedCategories.reduce((acc, category, index) => {

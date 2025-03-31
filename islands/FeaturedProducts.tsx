@@ -25,7 +25,6 @@ export const FeaturedProducts: FunctionalComponent = () => {
     const order = [1, 2, 12, 3, 4, 6, 5, 7, 9]
 
      useEffect(() => {
-        console.log("Teste")
         axios.get('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/categories')
         .then((response:any) => {
            setCategories(response.data) 

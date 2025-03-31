@@ -45,9 +45,6 @@ const Scraping : FunctionalComponent = () => {
                 updatedCategories = prevCategories.filter(cat => cat !== categoryName);
             }
     
-            // Log da ordem atual das categorias
-            console.log('Ordem das categorias:', updatedCategories);
-    
             return updatedCategories;
         });
     };
@@ -69,7 +66,7 @@ const Scraping : FunctionalComponent = () => {
     
     
     useEffect(() => {
-        console.log("Novo estado de selectedCategories:", selectedCategories);
+        
 
         if (selectedCategories.length === 0) {
             setProducts([]);
@@ -82,7 +79,7 @@ const Scraping : FunctionalComponent = () => {
             categories: selectedCategories
         })
         .then((response: any) => {
-            console.log(response.data);
+            
 
             // Colocar os produtos da última categoria selecionada no início
             const allProducts = selectedCategories.reduce((acc, category, index) => {

@@ -44,10 +44,7 @@ const ProductList : FunctionalComponent = () => {
                 // Remover a categoria do array
                 updatedCategories = prevCategories.filter(cat => cat !== categoryName);
             }
-    
-            // Log da ordem atual das categorias
-            console.log('Ordem das categorias:', updatedCategories);
-    
+            
             return updatedCategories;
         });
     };
@@ -71,10 +68,10 @@ const ProductList : FunctionalComponent = () => {
 
         if (selectedCategories.length === 0) {
             setProducts([]);
-            return; // Certifica-se de que a função não continue se não houver categorias selecionadas
+            return; 
         }
 
-        setLoading(true); // Define como true no início da requisição
+        setLoading(true); 
 
         axios.post('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/get-products-by-categories', {
             categories: selectedCategories
@@ -98,7 +95,7 @@ const ProductList : FunctionalComponent = () => {
             console.log(error);
         })
         .finally(() => {
-            setLoading(false); // Define como false após a conclusão da requisição
+            setLoading(false); 
         });
 
     }, [selectedCategories]);
@@ -114,7 +111,7 @@ const ProductList : FunctionalComponent = () => {
     
         return `/${encodedProductName}`;
     }
-    // Teste
+
 
     const newCompareCategories = (a, b) => {
         return ordercategories.indexOf(a.id) - ordercategories.indexOf(b.id)

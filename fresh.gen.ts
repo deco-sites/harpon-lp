@@ -28,6 +28,7 @@ import * as $OutOfStock from "./islands/OutOfStock.tsx";
 import * as $ProductDetails from "./islands/ProductDetails.tsx";
 import * as $ProductImageZoom from "./islands/ProductImageZoom.tsx";
 import * as $ProductList from "./islands/ProductList.tsx";
+import * as $ProductSearch from "./islands/ProductSearch.tsx";
 import * as $Register from "./islands/Register.tsx";
 import * as $Scraping from "./islands/Scraping.tsx";
 import * as $SearchControls from "./islands/SearchControls.tsx";
@@ -36,6 +37,7 @@ import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
 import * as $TesteWaterJet from "./islands/TesteWaterJet.tsx";
 import * as $User from "./islands/User.tsx";
+import * as $WaterJetProductSearch from "./islands/WaterJetProductSearch.tsx";
 import * as $WaterJetProducts from "./islands/WaterJetProducts.tsx";
 import * as $WhatsAppButon from "./islands/WhatsAppButon.tsx";
 import * as $WishlistButton from "./islands/WishlistButton.tsx";
@@ -71,6 +73,7 @@ const manifest = {
     "./islands/ProductDetails.tsx": $ProductDetails,
     "./islands/ProductImageZoom.tsx": $ProductImageZoom,
     "./islands/ProductList.tsx": $ProductList,
+    "./islands/ProductSearch.tsx": $ProductSearch,
     "./islands/Register.tsx": $Register,
     "./islands/Scraping.tsx": $Scraping,
     "./islands/SearchControls.tsx": $SearchControls,
@@ -79,6 +82,7 @@ const manifest = {
     "./islands/SliderJS.tsx": $SliderJS,
     "./islands/TesteWaterJet.tsx": $TesteWaterJet,
     "./islands/User.tsx": $User,
+    "./islands/WaterJetProductSearch.tsx": $WaterJetProductSearch,
     "./islands/WaterJetProducts.tsx": $WaterJetProducts,
     "./islands/WhatsAppButon.tsx": $WhatsAppButon,
     "./islands/WishlistButton.tsx": $WishlistButton,

@@ -33,7 +33,6 @@ export default function Navbar()  {
     const [isVulcanizacao2MenuOpen, setVulcanizacao2MenuOpen] = useState(false)
 
     useEffect(() => {
-      console.log("Teste")
       axios.get('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/categories')
       .then((response:any) => {
          setCategories(response.data) 
