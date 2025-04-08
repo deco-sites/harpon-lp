@@ -54,7 +54,7 @@ export const SearchResult: FunctionalComponent = () => {
         if (currentPath.includes('waterjet')) {
           response = await axios.get<SearchResults>(`https://backend-harpon-260311756054.southamerica-east1.run.app/search/water-jet?term=${debouncedTerm}`);
         } else {
-          response = await axios.get<SearchResults>(`https://backend-harpon-260311756054.southamerica-east1.run.app/search?term=${debouncedTerm}`);
+          response = await axios.get<SearchResults>(`https://backend-harpon-260311756054.southamerica-east1.run.app/search/recauchutagem?term=${debouncedTerm}`);
         }
 
         setResults(response.data);

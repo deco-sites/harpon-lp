@@ -37,6 +37,7 @@ import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
 import * as $TesteWaterJet from "./islands/TesteWaterJet.tsx";
 import * as $User from "./islands/User.tsx";
+import * as $WaterJetProductDetails from "./islands/WaterJetProductDetails.tsx";
 import * as $WaterJetProductSearch from "./islands/WaterJetProductSearch.tsx";
 import * as $WaterJetProducts from "./islands/WaterJetProducts.tsx";
 import * as $WhatsAppButon from "./islands/WhatsAppButon.tsx";
@@ -82,6 +83,7 @@ const manifest = {
     "./islands/SliderJS.tsx": $SliderJS,
     "./islands/TesteWaterJet.tsx": $TesteWaterJet,
     "./islands/User.tsx": $User,
+    "./islands/WaterJetProductDetails.tsx": $WaterJetProductDetails,
     "./islands/WaterJetProductSearch.tsx": $WaterJetProductSearch,
     "./islands/WaterJetProducts.tsx": $WaterJetProducts,
     "./islands/WhatsAppButon.tsx": $WhatsAppButon,

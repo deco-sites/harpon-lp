@@ -107,7 +107,12 @@ export const WaterJetProductSearch: FunctionalComponent = () => {
                             <ul>
                                 {results.products.length > 0 ? results.products.map(product => (
                                     <li key={product.id}>
-                                        <a href ={handleProductClick(product.name)} onClick={() => handleProductClick(product.id)}>{product.name}</a>
+                                        <a 
+                                        class="pointer hover:text-[#E9F408]"
+                                        href ={`/waterjet${handleProductClick(product.name)}`} 
+                                        onClick={() => handleProductClick(product.id)}>
+                                            {product.name}
+                                        </a>
                                     </li>
                                 )) : <li>Nenhum produto encontrado</li>}
                             </ul>

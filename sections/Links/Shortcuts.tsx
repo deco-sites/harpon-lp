@@ -1,6 +1,7 @@
 import Icon from "$store/components/ui/Icon.tsx";
 import { AvailableIcons } from "$store/components/ui/Icon.tsx";
 import Teste from "deco-sites/harpon-lp/islands/TesteWaterJet.tsx"
+import WaterJetProductDetails from "deco-sites/harpon-lp/islands/WaterJetProductDetails.tsx";
 
 export interface Shortcut {
   label?: string;
@@ -39,7 +40,8 @@ export interface Props {
 export default function Shortcuts({ shortcuts, onHover }: Props) {
   return (
     <>
-      <Teste />
+      {/* <Teste /> */}
+      <WaterJetProductDetails />
     </>
   );
 }
