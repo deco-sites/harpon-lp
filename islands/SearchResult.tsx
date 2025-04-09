@@ -86,25 +86,26 @@ export const SearchResult: FunctionalComponent = () => {
     const normalizedCategoryName = replaceSpecialChars(categoryName);
     let newSelectedCategories = [categoryName];
     localStorage.setItem('selectedCategories', newSelectedCategories[0]);
-
+  
     const formattedCategoryName = normalizedCategoryName
-      .replace(/\s+/g, '-') // Substitui espaços por hífens
-      .replace(/--+/g, '-'); // Substitui múltiplos hífens por um único hífen
-
-    // Retorna a URL formatada
-    return `${formattedCategoryName}`;
+      .replace(/\s+/g, '-')
+      .replace(/--+/g, '-');
+  
+    const prefix = currentPath.includes('waterjet') ? '/waterjet' : '/recauchutagem';
+    return `${prefix}/${formattedCategoryName}`;
   };
-
+  
   const handleProductClick = (productName: string) => {
     let newSelectedProduct = [productName];
     localStorage.setItem('selectedProduct', newSelectedProduct);
-
-    // Converte o nome em letras minúsculas e separa pelos hífens
+  
     const formattedProductName = productName.toLowerCase().replace(/\s+/g, '-');
     const encodedProductName = encodeURIComponent(formattedProductName);
-
-    return `/${encodedProductName}`;
+  
+    const prefix = currentPath.includes('waterjet') ? '/waterjet' : '';
+    return `${prefix}/${encodedProductName}`;
   };
+  
 
   // Função para fechar os resultados quando clicar fora
   const handleClickOutside = (event: MouseEvent) => {
@@ -151,14 +152,15 @@ export const SearchResult: FunctionalComponent = () => {
             </div>
           ) : (
             <>
-              <h3 className="font-bold">Categorias</h3>
-              <ul>
+              {!currentPath.includes('waterjet') && (
+                <ul>
+                  <h3 className="font-bold">Categorias</h3>
                 {results.categories.length > 0 ? (
                   results.categories.map((category) => (
                     <li key={category.id}>
                       <a
                         class="pointer hover:text-[#E9F408]"
-                        href={`/recauchutagem/${handleCategoryClick(category.name)}`}
+                        href={handleCategoryClick(category.name)}
                         onClick={() => handleCategoryClick(category.name)}
                       >
                         {category.name}
@@ -169,6 +171,7 @@ export const SearchResult: FunctionalComponent = () => {
                   <li>Nenhuma categoria encontrada</li>
                 )}
               </ul>
+              )}
               <h3 className="font-bold">Produtos</h3>
               <ul>
                 {results.products.length > 0 ? (
