@@ -47,7 +47,7 @@ const WaterJetProductDetails : FunctionalComponent = () => {
     const handleClick = () => {
         const mensagem = `Gostaria de solicitar um orçamento deste produto: ${product.name}.`;
         const mensagemCodificada = encodeURIComponent(mensagem);
-        globalThis.open(`https://api.whatsapp.com/send?phone=5511977205601&text=${mensagemCodificada}`, '_blank');
+        globalThis.open(`https://api.whatsapp.com/send?phone=5511977205417&text=${mensagemCodificada}`, '_blank');
 
     };
 

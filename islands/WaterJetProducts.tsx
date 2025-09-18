@@ -3,6 +3,7 @@ import { FunctionalComponent } from 'preact';
 import axios from 'https://cdn.skypack.dev/axios@1.5.0';
 import ProductContext from '../context/ProductContext.tsx'
 import WaterJetProductSearch from "deco-sites/harpon-lp/islands/WaterJetProductSearch.tsx";
+import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
 
 interface Product {
     id: string;
@@ -184,6 +185,7 @@ const WaterJetProductList : FunctionalComponent = () => {
                    ))}
             </div>
         )}
+        <LandingPageFooter />
         </>
     )
 }
