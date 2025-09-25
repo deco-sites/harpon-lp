@@ -4,6 +4,7 @@ import axios from 'https://cdn.skypack.dev/axios@1.5.0';
 import ProductContext from '../context/ProductContext.tsx'
 import WaterJetProductSearch from "deco-sites/harpon-lp/islands/WaterJetProductSearch.tsx";
 import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
+import { Picture } from "apps/website/components/Picture.tsx";
 
 interface Product {
     id: string;
@@ -118,7 +119,15 @@ const WaterJetProductList : FunctionalComponent = () => {
  
     return (
         <>
-            
+             <Picture>
+      <div className="absolute w-[500px] pl-[130px] pt-[150px] pb-[150px] text-[42px] font-[Albert Sans] font-normal text-white xs:w-min xs:text-2xl xs:mt-[90px] xs:pl-[80px] 1xs:text-[26px] 1xs:w-min 1xs:mt-[90px] 1xs:pl-[100px] sm:pl-5 sm:mt-[100px] md:pl-[50px]">
+              PARA EMPRESAS E PROJETOS{' '}
+              
+              <span style={{ fontWeight: 'bold', color: '#e9f507' }}>QUE NUNCA PARAM</span>
+            </div>
+        <img class="object-cover w-full h-600px xs:h-[600px]" style="
+    height: 500px" src='waterjet-harpon.png' alt='Máquina de corte'></img>
+      </Picture>  
       <div class='xs:overflow-x-hidden 1xs:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden'>
         <h1 class='hidden text-[36px] font-normal ml-5 mt-[100px] xs:text-2xl xs:ml-[10px] xs:mt-[30px] 1xs:ml-[10px] 1xs:mt-[30px] 1xs:text-3xl sm:ml-5 md:ml-5 md:mt-[50px] lg:ml-5'>TODOS OS {' '} 
            <span style={{ fontWeight: 'bold' }}>PRODUTOS</span>
