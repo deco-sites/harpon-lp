@@ -12,6 +12,7 @@ import WhatsAppButon from "$store/islands/WhatsAppButon.tsx";
 export interface NavItem {
   label: string;
   href: string;
+  enabled?: boolean;
   children?: Array<{
     label: string;
     href: string;
@@ -49,6 +50,8 @@ function Header({
 }: Props) {
   const platform = usePlatform();
 
+  const filteredNavItems = navItems.filter((item) => item.enabled !== false);
+
   return (
     <>
       {/* <LanguageProvider> */}
@@ -60,7 +63,7 @@ function Header({
         >
           <div class="bg-[#29323A] fixed w-full z-50">
             <Alert alerts={alerts} />
-            <Navbar items={navItems} searchbar={searchbar} logo={logo} />
+            <Navbar items={filteredNavItems} searchbar={searchbar} logo={logo} />
           </div>
         </Drawers>
         <WhatsAppButon />

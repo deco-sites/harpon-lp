@@ -2020,7 +2020,8 @@
         "href": "/contato",
         "image": {},
         "label": "Contato",
-        "children": []
+        "children": [],
+        "enabled": false
       }
     ],
     "searchbar": {
