@@ -28,7 +28,7 @@ export default function AboutUs () {
         </div>
           <div class='bg-[#E4E4E4] w-[800px] mx-[350px] xs:m-auto xs:w-[300px] 1xs:m-auto 1xs:w-[300px] md:w-[500px] md:m-auto lg:m-auto lg:w-[600px] lg:h-[886px] lg:mt-20'>
           <p class='text-[#29323A] text-base  text-justify mt-[50px] md:text-xl md:mt-5 lg:text-2xl lg:mt-10'>
-            A Harpon foi idealizada para atender empresas de recapagem, pneu remold e truck centers que, assim como nós, olham sempre para a frente.
+            A Harpon foi idealizada para atender empresas de máquinas de corte a jato d'água, que, assim como nós, sempre olham para o futuro.
           </p>
           <br></br>
           <p class='text-[#29323A] text-base  text-justify mt-5 md:text-xl lg:text-2xl lg:mt-10'>
@@ -36,11 +36,11 @@ export default function AboutUs () {
           </p>
           <br></br>
           <p class='text-[#29323A] text-base  text-justify mt-5 md:text-xl lg:text-2xl lg:mt-10'>
-          Nossas entregas contemplam a manutenção de máquinas, visitas técnicas e produtos para o processo de recapagem de pneus em todas as etapas: inspeção inicial, raspagem, escareação, cimentação, conserto, enchimento, cobertura, vulcanização e inspeção final.
+            Nossas entregas contemplam o fornecimento de abrasivos e consumíveis para máquinas de corte a jato d'água em todas as etapas do processo, garantindo desempenho, precisão e eficiência, além de oferecer manutenção de máquinas e visitas técnicas.
           </p>
           <br></br>
           <p class='text-[#29323A] text-base  text-justify mt-5 md:text-xl md:mb-5 lg:text-2xl lg:mt-10'>
-          Conte com a gente e conheça as melhores soluções para o seu negócio.
+            Conte com a gente e conheça as melhores soluções para o seu negócio.
           </p>
           </div>
       </div>
