@@ -16,33 +16,68 @@ interface Variations {
     name: string;
     description: string;
     price: number;
+    image?: string;
 }
 
 const WaterJetProductDetails : FunctionalComponent = () => {
     const [product, setProduct] = useState<Product>({});
-    const [variations, setVariations] = useState<any[]>([]);
+    const [variations, setVariations] = useState<Variations[]>([]);
+    const [selectedVariation, setSelectedVariation] = useState<Variations | null>(null);
     const [loading, setLoading] = useState(true);
 
+    // Oculta o footer quando o componente é montado
     useEffect(() => {
-        // Obtém a string armazenada no localStorage
-        const selectedProduct= localStorage.getItem('selectedProduct')
-        // Verifica se a string existe e não está vazia
-        if (selectedProduct) {
-            axios.get(`https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-product-information/${selectedProduct}`)
-                .then((response: any) => {
-                    setProduct(response.data);
-                    setVariations(response.data.variations);
-                }).catch((error: any) => {
-                    console.log(error);
-                })
-                .finally(()=> {
-                    setLoading(false)
-                })
+        const footer = Array.from(document.querySelectorAll('section')).find(
+            section => section.textContent?.includes('+55(11)3658')
+        ) as HTMLElement;
+
+        footer.style.display = 'none';
+        return () => { footer.style.display = 'block'; };
+    }, []);
+
+    useEffect(() => {
+        const slug = window.location.pathname.split('/').pop();
+        if (slug) {
+            const productName = decodeURIComponent(slug).replace(/-/g, ' ');
+            
+            axios.post('https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-waterjet-products-by-categories', {
+                categories: ["ABRASIVOS", "ACESSÓRIOS", "FILTROS", "KIT VÁLVULAS", "TUBOS"]
+            })
+            .then((response: any) => {
+                const allProducts = response.data.flat().filter((prod: Product, i: number, arr: Product[]) => 
+                    arr.findIndex(p => p.id === prod.id) === i
+                );
+                
+                const foundProduct = allProducts.find((p: Product) => 
+                    p.name.toLowerCase() === productName.toLowerCase()
+                );
+                
+                if (foundProduct) {
+                    axios.get(`https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-product-information/${foundProduct.id}`)
+                        .then((detailResponse: any) => {
+                            setProduct(detailResponse.data);
+                            const vars = detailResponse.data.variations || [];
+                            setVariations(vars);
+                            if (vars.length > 0) setSelectedVariation(vars[0]);
+                        })
+                        .catch((error: any) => {
+                            console.log(error);
+                        });
+                }
+            })
+            .catch((error: any) => {
+                console.log(error);
+            })
+            .finally(() => {
+                setLoading(false);
+            })
         }
     }, [])
 
-    useEffect(()=> {
-    }, [product])
+    const handleVariationChange = (e: Event) => {
+        const selected = variations[(e.target as HTMLSelectElement).selectedIndex];
+        if (selected) setSelectedVariation(selected);
+    };
 
     const handleClick = () => {
         const mensagem = `Gostaria de solicitar um orçamento deste produto: ${product.name}.`;
@@ -60,25 +95,28 @@ const WaterJetProductDetails : FunctionalComponent = () => {
             ): (
                 <>
                 <div class='flex ml-[139px] mt-[50px] xs:mt-0 xs:-ml-3 xs:whitespace-nowrap xs:text-sm 1xs:mt-0 1xs:-ml-3 1xs:whitespace-nowrap 1xs:text-sm 1xs:w-[365px] md:mt-0 md:ml-0 lg:ml-[50px] lg:mt-0 lg:text-2xl'>
-                  <a href='/'><p class='font-bold'>Home &#62;</p></a> <a href='productlist'><p class='font-bold'>Todos os produtos &#62;</p></a> <span class='xs:overflow-x-hidden 1xs:overflow-x-hidden'>{product.name}</span>
+                  <a href='/'><p class='font-bold'>Home &#62;</p></a> <a href='/'><p class='font-bold'>Todos os produtos &#62;</p></a> <span class='xs:overflow-x-hidden 1xs:overflow-x-hidden'>{product.name}</span>
                 </div><div class='ml-[683px] -mt-3 xs:ml-0 1xs:ml-0 md:ml-0 lg:ml-[633px]'>
                     <h1 class='text-4xl text-[#29323A] font-bold xs:text-xl 1xs:text-xl md:ml-[420px] md:mt-[30px]'>{product.name}</h1>
                   </div>
                   <div class='ml-[683px] mt-[-50px] xs:ml-0 xs:mt-[240px] 1xs:mt-[260px] 1xs:ml-0 md:ml-[400px] md:mt-0 lg:ml-[633px] '>
-                    {product.description && (
+                    {(selectedVariation?.description || product.description) && (
                       <>
                         <h2 class='text-[#29323A] text-base font-bold md:ml-5 lg:text-lg'>Descrição:</h2>
-                        <p class='text-sm text-[#29323A] mb-5 w-[490px] xs:w-[350px] 1xs:w-[350px] md:ml-5 lg:w-auto lg:text-lg'>{product.description}</p>
+                        <p class='text-sm text-[#29323A] mb-5 w-[490px] xs:w-[350px] 1xs:w-[350px] md:ml-5 lg:w-auto lg:text-lg'>
+                          {selectedVariation?.description || product.description}
+                        </p>
                       </>
                     )}
-                    <p class='inline text-[#29323A] text-base font-bold md:ml-5 lg:text-lg'>Código:</p>
-                    <span class='text-sm ml-[10px] lg:text-lg'>{product.code}</span>
-                    {variations && variations.length > 0 && (
+                    {variations.length > 0 && (
                       <>
-                        <p className='text-[#29323A] text-base font-bold mt-5 mb-[10px] md:ml-5'>Selecione o tamanho:</p>
-                        <select className='border border-solid bg-[#F2F2F2] w-[444px] h-10 text-sm mb-[30px] xs:w-[350px] xs:mb-0 1xs:w-[380px] md:ml-5 md:w-[300px] lg:w-[320px]'>
+                        <p className='text-[#29323A] text-base font-bold mb-[10px] mt-5 md:ml-5 lg:text-lg'>Selecione a variação:</p>
+                        <select 
+                          className='border border-solid bg-[#F2F2F2] w-[444px] h-10 text-sm mb-5 xs:w-[350px] 1xs:w-[380px] md:ml-5 md:w-[300px] lg:w-[320px]'
+                          onChange={handleVariationChange}
+                        >
                           {variations.map(vari => (
-                            <option key={vari.id} value={vari.id} className='text-sm text-[#29323A]'>{vari.name} - {vari.description}</option>
+                            <option key={vari.id} value={vari.id} className='text-sm text-[#29323A]'>{vari.name}</option>
                           ))}
                         </select>
                       </>
@@ -105,10 +143,8 @@ const WaterJetProductDetails : FunctionalComponent = () => {
                       </a>  
                     </div>
                   </div>
-                  <div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[100px] ml-[131px] xs:ml-0 xs:mt-[100px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[120px] 1xs:w-[380px] 1xs:h-[250px] md:ml-0 md:w-[400px] md:h-[300px] lg:ml-[50px]'
-
-                  >
-                    <img class='max-h-[400px]  xs:w-[180px] xs:h-[180px] xs:mx-auto xs:my-[30px] 1xs:w-[250px] 1xs:h-[180px] 1xs:mx-auto 1xs:mt-[30px] md:h-[250px]' src={product.image}></img>
+                  <div class='border border-solid text-[#E6E6E6] w-[536px] h-[427px] absolute mt-[100px] ml-[131px] flex items-center justify-center xs:ml-0 xs:mt-[100px] xs:w-[350px] xs:h-[250px] 1xs:ml-0 1xs:mt-[120px] 1xs:w-[380px] 1xs:h-[250px] md:ml-0 md:w-[400px] md:h-[300px] lg:ml-[50px]'>
+                    <img class='max-h-[400px] xs:w-[180px] xs:h-[180px] 1xs:w-[250px] 1xs:h-[180px] md:h-[250px]' src={selectedVariation?.image || product.image}></img>
                   </div>
                 </>
             )}
