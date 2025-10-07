@@ -16,6 +16,17 @@ export interface Props {
 export function Search() {
   return (
     <>
+      <style>{`
+        input#MagnifyingGlass,
+        input[placeholder*="O que você procura"] {
+          visibility: hidden !important;
+          pointer-events: none !important;
+        }
+        svg[id*="Icon_ionic-ios-search"] {
+          visibility: hidden !important;
+        }
+      `}</style>
+
       <SearchResult />
       {/* <div class="inline-flex items-center mt-5 ml-[77%] z-10 xs:ml-[100px] 1xs:ml-[100px] 1xs:w-[260px] sm:ml-[20%] md:ml-[67%] lg:ml-[65%] xl:ml-[74%]"> */}
       {/* <select class='hidden border-solid bg-[#3D4B58] w-[120px] h-10 ml-[-160px] mr-[60px] p-2 text-sm text-[#C8C8CA]'>
