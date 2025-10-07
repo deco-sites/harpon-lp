@@ -127,6 +127,20 @@ export const SearchResult: FunctionalComponent = () => {
 
   return (
     <>
+      <style>{`
+        /* Ocultar apenas o input e SVG deste componente específico */
+        .inline-flex.mt-5 input#MagnifyingGlass {
+          visibility: hidden !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+        }
+        .inline-flex.mt-5 svg path#Icon_ionic-ios-search,
+        .inline-flex.mt-5 svg[class*="mr-[-15px]"] {
+          visibility: hidden !important;
+          opacity: 0 !important;
+        }
+      `}</style>
+      
       <div className="inline-flex items-center mt-5 ml-[77%] z-10 xs:ml-[100px] 1xs:ml-[100px] 1xs:w-[260px] sm:ml-[20%] md:ml-[67%] lg:ml-[65%] xl:ml-[74%]">
         <svg className='mr-[-15px] z-10 pointer-events-auto xs:w-[30px] xs:h-5 1xs:w-[35px] 1xs:h-[25px]' xmlns="http://www.w3.org/2000/svg" width="16.419" height="16.423" viewBox="0 0 16.419 16.423">
           <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search" d="M20.726,19.727,16.16,15.118a6.508,6.508,0,1,0-.988,1L19.709,20.7a.7.7,0,0,0,.992.026A.707.707,0,0,0,20.726,19.727Zm-9.68-3.553a5.139,5.139,0,1,1,3.634-1.505A5.107,5.107,0,0,1,11.046,16.174Z" transform="translate(-4.5 -4.493)" fill="#fff" />
