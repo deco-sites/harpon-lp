@@ -40,9 +40,7 @@ const WaterJetProductDetails : FunctionalComponent = () => {
         if (slug) {
             const productName = decodeURIComponent(slug).replace(/-/g, ' ');
             
-            axios.post('https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-waterjet-products-by-categories', {
-                categories: ["ABRASIVOS", "ACESSÓRIOS", "FILTROS", "KIT VÁLVULAS", "TUBOS"]
-            })
+            axios.get(`https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-all-products`)
             .then((response: any) => {
                 const allProducts = response.data.flat().filter((prod: Product, i: number, arr: Product[]) => 
                     arr.findIndex(p => p.id === prod.id) === i

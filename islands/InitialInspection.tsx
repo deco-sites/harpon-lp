@@ -26,7 +26,7 @@ const InitialInspection : FunctionalComponent = () => {
     const ordercategories = [1, 2, 12, 3, 4, 6, 5, 7, 9]
 
      useEffect(() => {
-        axios.get('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/categories')
+        axios.get(`https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/categories`)
         .then((response:any) => {
            setCategories(response.data) 
         }).catch((error:any) =>{
@@ -79,7 +79,7 @@ const InitialInspection : FunctionalComponent = () => {
 
         setLoading(true); // Define como true no início da requisição
 
-        axios.post('https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/get-products-by-categories', {
+        axios.post(`https://backend-harpon-260311756054.southamerica-east1.run.app/harpon-products/get-products-by-categories`, {
             categories: selectedCategories
         })
         .then((response: any) => {

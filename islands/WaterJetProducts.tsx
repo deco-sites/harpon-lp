@@ -19,7 +19,7 @@ const WaterJetProductList : FunctionalComponent = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.post('https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-waterjet-products-by-categories', {
+        axios.post(`https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-waterjet-products-by-categories`, {
             categories: ["ABRASIVOS", "ACESSÓRIOS", "FILTROS", "KIT VÁLVULAS", "TUBOS"]
         })
         .then((response: any) => {
