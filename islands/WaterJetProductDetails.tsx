@@ -49,6 +49,8 @@ const WaterJetProductDetails : FunctionalComponent = () => {
                 const foundProduct = allProducts.find((p: Product) => 
                     p.name.toLowerCase() === productName.toLowerCase()
                 );
+
+                console.log(foundProduct)
                 
                 if (foundProduct) {
                     axios.get(`https://backend-harpon-260311756054.southamerica-east1.run.app/waterjet-products/get-product-information/${foundProduct.id}`)
