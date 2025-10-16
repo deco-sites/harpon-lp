@@ -13,9 +13,9 @@ export default function LandingPageHeader() {
           <a href='/sobre-nos'>
             <p class='px-4 py-3 hover:text-[#E9F408]'>Sobre Nós</p>
           </a>
-          <a href='#'>
+{/*           <a href='#'>
             <p class='px-4 py-3 hover:text-[#E9F408]'>Contato</p>
-          </a>
+          </a> */}
         </div>
       </div>
       </>
