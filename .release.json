@@ -2021,7 +2021,7 @@
         "image": {},
         "label": "Contato",
         "children": [],
-        "enabled": false
+        "enabled": true
       }
     ],
     "searchbar": {

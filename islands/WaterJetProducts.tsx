@@ -1,6 +1,6 @@
 import {useState, useEffect } from 'preact/hooks';
 import { FunctionalComponent } from 'preact';
-import axios from 'https://cdn.skypack.dev/axios@1.5.0';
+import axios from 'npm:axios';
 import WaterJetProductSearch from "deco-sites/harpon-lp/islands/WaterJetProductSearch.tsx";
 import LandingPageFooter from "deco-sites/harpon-lp/components/landingpage/Footer.tsx";
 import { Picture } from "apps/website/components/Picture.tsx";

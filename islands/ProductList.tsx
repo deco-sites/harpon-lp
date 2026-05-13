@@ -1,6 +1,6 @@
 import {useState, useEffect, useContext } from 'preact/hooks';
 import { FunctionalComponent } from 'preact';
-import axios from 'https://cdn.skypack.dev/axios@1.5.0';
+import axios from 'npm:axios';
 
 interface Product {
     id: string;
