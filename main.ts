@@ -3,13 +3,15 @@
 /// <reference lib="deno.ns" />
 /// <reference lib="esnext" />
 
-// Fall back to the committed .release.json when DECO_RELEASE is not injected by the environment
+// DECO_RELEASE must be set BEFORE fresh.config.ts is imported.
+// fresh.config.ts calls plugins() → Deco.init() at module evaluation,
+// so a static import would hoist it before any code here can run.
 if (!Deno.env.get("DECO_RELEASE")) {
   Deno.env.set("DECO_RELEASE", import.meta.resolve("./.release.json"));
 }
 
 import { start } from "$fresh/server.ts";
-import config from "./fresh.config.ts";
 import manifest from "./fresh.gen.ts";
+const { default: config } = await import("./fresh.config.ts");
 
 await start(manifest, config);
