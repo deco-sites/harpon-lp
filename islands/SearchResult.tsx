@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'preact/hooks';
 import { FunctionalComponent } from 'preact';
-import axios from 'https://cdn.skypack.dev/axios@1.5.0';
+import axios from 'npm:axios';
 
 interface SearchResults {
   categories: Category[];
@@ -40,7 +40,7 @@ export const SearchResult: FunctionalComponent = () => {
   const [showResults, setShowResults] = useState<boolean>(false); // Estado para controlar a visibilidade dos resultados
   const debouncedTerm = useDebounce(term, 300); // 300ms debounce delay
 
-  const currentPath = window.location.pathname; // Obter o caminho atual da URL
+  const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
 
   const searchInputRef = useRef<HTMLInputElement | null>(null); // Definindo o ref para o input
   const resultsRef = useRef<HTMLDivElement | null>(null); // Ref para o container dos resultados

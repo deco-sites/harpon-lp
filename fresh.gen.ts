@@ -42,7 +42,7 @@ import * as $WaterJetProductSearch from "./islands/WaterJetProductSearch.tsx";
 import * as $WaterJetProducts from "./islands/WaterJetProducts.tsx";
 import * as $WhatsAppButon from "./islands/WhatsAppButon.tsx";
 import * as $WishlistButton from "./islands/WishlistButton.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
